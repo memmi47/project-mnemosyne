@@ -1,0 +1,83 @@
+[
+  {
+    "learning_object_id": "lo_000001",
+    "expression": "look up",
+    "sense_id": "look_up_01",
+    "base_verb": "look",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to search for information",
+    "definition_ko": "정보를 찾아보다",
+    "grammar_pattern": "look something up / look up something",
+    "separability": "separable",
+    "transitivity": "transitive",
+    "examples": [
+      {
+        "text": "I looked up the word in a dictionary.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "search",
+      "information"
+    ],
+    "context_tags": [
+      "study",
+      "internet",
+      "dictionary"
+    ],
+    "confusing_objects": [
+      "lo_000002",
+      "lo_000003"
+    ],
+    "source_references": [
+      {
+        "unit": 1,
+        "page": null,
+        "exercise": null
+      }
+    ],
+    "status": "draft"
+  },
+  {
+    "learning_object_id": "lo_000002",
+    "expression": "look into",
+    "sense_id": "look_into_01",
+    "base_verb": "look",
+    "particles": [
+      "into"
+    ],
+    "definition_en": "to investigate or examine",
+    "definition_ko": "조사하다, 검토하다",
+    "grammar_pattern": "look into something",
+    "separability": "inseparable",
+    "transitivity": "transitive",
+    "examples": [
+      {
+        "text": "We need to look into the issue.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "investigate",
+      "examine"
+    ],
+    "context_tags": [
+      "business",
+      "problem_solving"
+    ],
+    "confusing_objects": [
+      "lo_000001",
+      "lo_000003"
+    ],
+    "source_references": [
+      {
+        "unit": null,
+        "page": null,
+        "exercise": null
+      }
+    ],
+    "status": "draft"
+  }
+]

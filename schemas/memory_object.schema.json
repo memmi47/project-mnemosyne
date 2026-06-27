@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://project-mnemosyne.local/schemas/memory_object.schema.json",
+  "title": "MemoryObject",
+  "type": "object",
+  "required": [
+    "memory_object_id",
+    "user_id",
+    "learning_object_id",
+    "mastery_score",
+    "memory_strength",
+    "forgetting_risk",
+    "learning_stage"
+  ],
+  "properties": {
+    "memory_object_id": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "learning_object_id": {
+      "type": "string"
+    },
+    "mastery_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "memory_strength": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "forgetting_risk": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "learning_stage": {
+      "type": "string",
+      "enum": [
+        "exposure",
+        "recognition",
+        "retrieval",
+        "application",
+        "conversation",
+        "automaticity"
+      ]
+    },
+    "last_reviewed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "next_review_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "correct_count": {
+      "type": "integer"
+    },
+    "incorrect_count": {
+      "type": "integer"
+    },
+    "avg_response_latency_ms": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "confusion_targets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version": "3.0",
+  "generated_at": "2026-06-27",
+  "learning_object_count": 1909,
+  "quiz_template_count": 11454,
+  "answer_graph_count": 1909,
+  "book_exercise_scaffold_count": 1909,
+  "minimum_examples_per_object": 3,
+  "minimum_exercises_per_object": 6,
+  "quality_warning": "OCR/book examples are unverified and require QA against source pages. Generated examples/exercises are scaffolds designed to make MVP learning flow usable."
+}

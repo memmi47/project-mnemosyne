@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://project-mnemosyne.local/schemas/event.schema.json",
+  "title": "LearningEvent",
+  "type": "object",
+  "required": [
+    "event_id",
+    "event_type",
+    "timestamp",
+    "user_id",
+    "session_id"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "learning_object_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "activity_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "is_correct": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "response_latency_ms": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "hint_used": {
+      "type": "boolean"
+    },
+    "attempt_count": {
+      "type": "integer"
+    },
+    "error_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "metadata": {
+      "type": "object"
+    }
+  }
+}

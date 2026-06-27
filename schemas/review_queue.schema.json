@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ReviewQueueItem",
+  "type": "object",
+  "required": [
+    "queue_id",
+    "user_id",
+    "learning_object_id",
+    "activity_type",
+    "priority_score",
+    "scheduled_at",
+    "status"
+  ],
+  "properties": {
+    "queue_id": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "learning_object_id": {
+      "type": "string"
+    },
+    "activity_type": {
+      "type": "string"
+    },
+    "priority_score": {
+      "type": "number"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "scheduled_at": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "completed",
+        "skipped",
+        "cancelled"
+      ]
+    }
+  }
+}

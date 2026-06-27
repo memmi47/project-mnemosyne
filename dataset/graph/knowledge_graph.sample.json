@@ -1,0 +1,14 @@
+[
+  {
+    "source": "lo_000001",
+    "target": "lo_000002",
+    "relation": "same_base_verb",
+    "weight": 0.7
+  },
+  {
+    "source": "lo_000001",
+    "target": "lo_000002",
+    "relation": "confused_with",
+    "weight": 0.6
+  }
+]

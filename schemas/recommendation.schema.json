@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Recommendation",
+  "type": "object",
+  "required": [
+    "recommendation_id",
+    "learning_object_id",
+    "activity_type",
+    "priority_score",
+    "reason",
+    "source_signals"
+  ],
+  "properties": {
+    "recommendation_id": {
+      "type": "string"
+    },
+    "learning_object_id": {
+      "type": "string"
+    },
+    "activity_type": {
+      "type": "string",
+      "enum": [
+        "review",
+        "recognition",
+        "retrieval",
+        "application",
+        "conversation",
+        "contrast",
+        "new_learning",
+        "hold"
+      ]
+    },
+    "priority_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "reason": {
+      "type": "string"
+    },
+    "source_signals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "created_at": {
+      "type": "string"
+    }
+  }
+}

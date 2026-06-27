@@ -1,0 +1,66 @@
+[
+  {
+    "edge_id": "edge_040068",
+    "source": "lo_000026",
+    "target": "lo_000677",
+    "relation": "confused_with",
+    "weight": 0.9,
+    "status": "draft"
+  },
+  {
+    "edge_id": "edge_040069",
+    "source": "lo_000677",
+    "target": "lo_000026",
+    "relation": "confused_with",
+    "weight": 0.9,
+    "status": "draft"
+  },
+  {
+    "edge_id": "edge_040070",
+    "source": "lo_001431",
+    "target": "lo_000310",
+    "relation": "confused_with",
+    "weight": 0.9,
+    "status": "draft"
+  },
+  {
+    "edge_id": "edge_040071",
+    "source": "lo_000310",
+    "target": "lo_001431",
+    "relation": "confused_with",
+    "weight": 0.9,
+    "status": "draft"
+  },
+  {
+    "edge_id": "edge_040072",
+    "source": "lo_000083",
+    "target": "lo_001503",
+    "relation": "confused_with",
+    "weight": 0.9,
+    "status": "draft"
+  },
+  {
+    "edge_id": "edge_040073",
+    "source": "lo_001503",
+    "target": "lo_000083",
+    "relation": "confused_with",
+    "weight": 0.9,
+    "status": "draft"
+  },
+  {
+    "edge_id": "edge_040074",
+    "source": "lo_000253",
+    "target": "lo_001873",
+    "relation": "confused_with",
+    "weight": 0.9,
+    "status": "draft"
+  },
+  {
+    "edge_id": "edge_040075",
+    "source": "lo_001873",
+    "target": "lo_000253",
+    "relation": "confused_with",
+    "weight": 0.9,
+    "status": "draft"
+  }
+]

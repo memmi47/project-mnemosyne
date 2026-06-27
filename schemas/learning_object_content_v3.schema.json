@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LearningObjectContentV3",
+  "type": "object",
+  "required": [
+    "learning_object_id",
+    "expression",
+    "examples_v3",
+    "exercises_v3",
+    "common_mistakes",
+    "hints",
+    "learning_path"
+  ],
+  "properties": {
+    "learning_object_id": {
+      "type": "string"
+    },
+    "expression": {
+      "type": "string"
+    },
+    "examples_v3": {
+      "type": "object"
+    },
+    "exercises_v3": {
+      "type": "array",
+      "minItems": 6
+    },
+    "common_mistakes": {
+      "type": "array",
+      "minItems": 2
+    },
+    "hints": {
+      "type": "array",
+      "minItems": 3
+    },
+    "learning_path": {
+      "type": "array"
+    },
+    "content_completeness": {
+      "type": "object"
+    }
+  }
+}

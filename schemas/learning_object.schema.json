@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://project-mnemosyne.local/schemas/learning_object.schema.json",
+  "title": "LearningObject",
+  "type": "object",
+  "required": [
+    "learning_object_id",
+    "expression",
+    "sense_id",
+    "definition_ko",
+    "grammar_pattern",
+    "source_references",
+    "status"
+  ],
+  "properties": {
+    "learning_object_id": {
+      "type": "string",
+      "pattern": "^lo_[0-9]{6}$"
+    },
+    "expression": {
+      "type": "string"
+    },
+    "sense_id": {
+      "type": "string"
+    },
+    "base_verb": {
+      "type": "string"
+    },
+    "particles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "definition_en": {
+      "type": "string"
+    },
+    "definition_ko": {
+      "type": "string"
+    },
+    "grammar_pattern": {
+      "type": "string"
+    },
+    "separability": {
+      "type": "string",
+      "enum": [
+        "separable",
+        "inseparable",
+        "not_applicable",
+        "unknown"
+      ]
+    },
+    "transitivity": {
+      "type": "string",
+      "enum": [
+        "transitive",
+        "intransitive",
+        "both",
+        "unknown"
+      ]
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "semantic_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "context_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confusing_objects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_references": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "raw",
+        "normalized",
+        "review_required",
+        "verified",
+        "released"
+      ]
+    }
+  }
+}

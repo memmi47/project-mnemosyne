@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-06-27",
+  "source": "phrasal_verbs_units_01_70_with_unit06_70_ocr_data.zip",
+  "learning_object_count": 1909,
+  "source_reference_count": 2906,
+  "knowledge_graph_edge_count": 40075,
+  "quiz_template_count": 3818,
+  "answer_graph_count": 1909,
+  "chunk_files": [
+    {
+      "file": "learning_objects_u01_u10.json",
+      "count": 329
+    },
+    {
+      "file": "learning_objects_u11_u20.json",
+      "count": 380
+    },
+    {
+      "file": "learning_objects_u21_u30.json",
+      "count": 363
+    },
+    {
+      "file": "learning_objects_u31_u40.json",
+      "count": 359
+    },
+    {
+      "file": "learning_objects_u41_u50.json",
+      "count": 372
+    },
+    {
+      "file": "learning_objects_u51_u60.json",
+      "count": 361
+    },
+    {
+      "file": "learning_objects_u61_u70.json",
+      "count": 378
+    }
+  ],
+  "quality_note": "OCR-derived draft. All objects are review_required/draft unless manually verified."
+}

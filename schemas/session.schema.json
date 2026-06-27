@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LearningSession",
+  "type": "object",
+  "required": [
+    "session_id",
+    "user_id",
+    "started_at",
+    "status",
+    "recommendations"
+  ],
+  "properties": {
+    "session_id": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "started_at": {
+      "type": "string"
+    },
+    "completed_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "completed",
+        "abandoned"
+      ]
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  }
+}

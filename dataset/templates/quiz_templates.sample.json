@@ -1,0 +1,12 @@
+[
+  {
+    "template_id": "qt_000001",
+    "learning_object_id": "lo_000001",
+    "activity_type": "retrieval",
+    "prompt": "‘정보를 찾아보다’에 해당하는 phrasal verb를 입력하세요.",
+    "choices": [],
+    "answer_ref": "ans_000001",
+    "difficulty": 3,
+    "status": "draft"
+  }
+]

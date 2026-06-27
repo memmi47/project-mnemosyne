@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import type { AnswerGraphEntry } from "../../domain/models";
 
-const ANSWER_GRAPH_PATH = path.join(process.cwd(), "dataset", "metadata", "answer_graph.content_v3.json");
+const ANSWER_GRAPH_PATH = path.join(process.cwd(), "dataset", "metadata", "answer_graph_verified.json");
 
 let cachedAnswers: AnswerGraphEntry[] | null = null;
 

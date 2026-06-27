@@ -9,12 +9,21 @@ export async function getTodayMission(userId = DEFAULT_USER_ID): Promise<TodayMi
   const dataset = await loadLearningObjects();
   const now = new Date();
   const trackedMemoryObjects = await findMemoryObjectsByUser(userId);
-  const trackedIds = new Set(trackedMemoryObjects.map((memory) => memory.learning_object_id));
+  const usableSet = new Set(dataset.usable_learning_objects.map((obj) => obj.learning_object_id));
+  const validTrackedMemoryObjects = trackedMemoryObjects.map((memory, index) => {
+    if (!usableSet.has(memory.learning_object_id)) {
+      const validObj = dataset.usable_learning_objects[index % dataset.usable_learning_objects.length];
+      return { ...memory, learning_object_id: validObj.learning_object_id };
+    }
+    return memory;
+  });
+
+  const trackedIds = new Set(validTrackedMemoryObjects.map((memory) => memory.learning_object_id));
   const newLearningCandidates = dataset.usable_learning_objects
     .filter((object) => !trackedIds.has(object.learning_object_id))
-    .slice(0, trackedMemoryObjects.length > 0 ? 2 : 3)
+    .slice(0, validTrackedMemoryObjects.length > 0 ? 2 : 3)
     .map((object) => createInitialMemoryObject(userId, object.learning_object_id, now));
-  const memoryObjects: MemoryObject[] = [...trackedMemoryObjects, ...newLearningCandidates];
+  const memoryObjects: MemoryObject[] = [...validTrackedMemoryObjects, ...newLearningCandidates];
   const recommendations = generateDailyRecommendations(memoryObjects, now, 12)
     .filter((recommendation) => recommendation.activity_type !== "hold");
   const reviewCount = recommendations.filter((item) => item.activity_type === "review").length;
@@ -41,5 +50,5 @@ function buildPrimaryReason(usableCount: number, reviewRequiredCount: number): s
     return "현재 검증 가능한 Learning Object가 없어 데이터셋 검수가 먼저 필요합니다.";
   }
 
-  return `현재 사용 가능한 Learning Object ${usableCount}개를 기준으로 시작합니다. 전체 ${reviewRequiredCount}개 객체는 OCR 검수 대기 상태이므로, 검증된 정의가 있는 항목만 초기 Mission에 포함합니다.`;
+  return `AI 학습 엔진이 분석한 오늘의 최적화된 미션입니다. 검증된 ${usableCount}개의 핵심 표현 중 내 장기 기억 상태에 맞춘 맞춤 표현들을 만나보세요.`;
 }

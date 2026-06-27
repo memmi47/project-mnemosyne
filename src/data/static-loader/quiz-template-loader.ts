@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import type { ActivityType, QuizTemplate } from "../../domain/models";
 
-const QUIZ_TEMPLATE_PATH = path.join(process.cwd(), "dataset", "templates", "quiz_templates.content_v3.json");
+const QUIZ_TEMPLATE_PATH = path.join(process.cwd(), "dataset", "templates", "quiz_templates_verified.json");
 
 let cachedTemplates: QuizTemplate[] | null = null;
 

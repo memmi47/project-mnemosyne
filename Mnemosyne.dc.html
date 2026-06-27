@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Plus Jakarta Sans", "Noto Sans KR", sans-serif;
+    color: #2d3436;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: rgba(108,92,231,.18); }
+  @keyframes mnFadeUp { from { opacity:0; transform: translateY(14px); } to { opacity:1; transform:none; } }
+  @keyframes mnScaleIn { from { opacity:0; transform: scale(.96); } to { opacity:1; transform:none; } }
+  @keyframes mnPop { 0%{transform:scale(.8);opacity:0;} 60%{transform:scale(1.08);} 100%{transform:scale(1);opacity:1;} }
+  @keyframes mnFloat { 0%,100%{ transform: translate(0,0); } 50%{ transform: translate(0,-18px); } }
+  @keyframes mnFloat2 { 0%,100%{ transform: translate(0,0); } 50%{ transform: translate(0,22px); } }
+  @keyframes mnPulse { 0%,100%{ transform:scale(1); opacity:1; } 50%{ transform:scale(1.35); opacity:.55; } }
+  @keyframes mnShake { 0%,100%{transform:translateX(0);} 18%,58%{transform:translateX(-9px);} 38%,78%{transform:translateX(9px);} }
+  @keyframes mnSheen { from { transform: translateX(-120%) skewX(-18deg); } to { transform: translateX(320%) skewX(-18deg); } }
+  @keyframes mnSpinGlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+</style>
+</helmet>
+
+<div style="position:relative; min-height:100vh; background:
+    radial-gradient(900px 520px at 8% -6%, rgba(108,92,231,.13), transparent 60%),
+    radial-gradient(820px 480px at 96% 2%, rgba(253,112,98,.11), transparent 58%),
+    radial-gradient(700px 700px at 78% 88%, rgba(0,184,148,.06), transparent 60%),
+    #faf9fd; overflow-x:hidden;">
+
+  <div style="position:fixed; top:-120px; left:-80px; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle, rgba(140,126,250,.20), transparent 70%); filter:blur(8px); animation:mnFloat 13s ease-in-out infinite; pointer-events:none; z-index:0;"></div>
+  <div style="position:fixed; bottom:-140px; right:-60px; width:380px; height:380px; border-radius:50%; background:radial-gradient(circle, rgba(253,112,98,.16), transparent 70%); filter:blur(10px); animation:mnFloat2 16s ease-in-out infinite; pointer-events:none; z-index:0;"></div>
+
+  <!-- HEADER -->
+  <header style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; height:68px; padding:0 26px; background:rgba(255,255,255,.72); backdrop-filter:blur(18px) saturate(160%); -webkit-backdrop-filter:blur(18px) saturate(160%); border-bottom:1px solid rgba(235,237,240,.9);">
+    <div onClick="{{ goHome }}" style="display:flex; align-items:center; gap:12px; cursor:pointer;">
+      <div style="position:relative; display:flex; height:38px; width:38px; align-items:center; justify-content:center; border-radius:13px; background:linear-gradient(135deg,#6c5ce7,#8c7efa); color:#fff; font-weight:800; font-size:17px; box-shadow:0 8px 18px -5px rgba(108,92,231,.5); overflow:hidden;">
+        M
+        <div style="position:absolute; inset:0; width:40%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent); animation:mnSheen 4.5s ease-in-out infinite;"></div>
+      </div>
+      <div style="display:flex; flex-direction:column; line-height:1;">
+        <span style="font-size:18px; font-weight:800; letter-spacing:-.02em; color:#2d3436;">Mnemosyne</span>
+        <span style="font-size:10px; font-weight:600; letter-spacing:.14em; color:#b2bec3; text-transform:uppercase; margin-top:3px;">Learning&nbsp;OS</span>
+      </div>
+    </div>
+
+    <nav style="display:flex; align-items:center; gap:6px;">
+      <button onClick="{{ goHome }}" style-hover="background:rgba(108,92,231,.07);" style="display:flex; align-items:center; gap:7px; border:none; cursor:pointer; border-radius:12px; padding:9px 14px; font-family:inherit; font-size:13.5px; font-weight:700; transition:all .2s; background:{{ navHomeBg }}; color:{{ navHomeColor }};">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        홈
+      </button>
+      <button onClick="{{ goUnits }}" style-hover="background:rgba(108,92,231,.07);" style="display:flex; align-items:center; gap:7px; border:none; cursor:pointer; border-radius:12px; padding:9px 14px; font-family:inherit; font-size:13.5px; font-weight:700; transition:all .2s; background:{{ navUnitsBg }}; color:{{ navUnitsColor }};">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Units
+      </button>
+      <button onClick="{{ goProgress }}" style-hover="background:rgba(108,92,231,.07);" style="display:flex; align-items:center; gap:7px; border:none; cursor:pointer; border-radius:12px; padding:9px 14px; font-family:inherit; font-size:13.5px; font-weight:700; transition:all .2s; background:{{ navProgressBg }}; color:{{ navProgressColor }};">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 20 18 10 12 20 12 4 6 20 6 14"/></svg>
+        진행
+      </button>
+    </nav>
+  </header>
+
+  <main style="position:relative; z-index:1; max-width:1080px; margin:0 auto; padding:38px 28px 90px;">
+
+    <!-- ===================== HOME ===================== -->
+    <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+    <div>
+      <div style="animation:mnFadeUp .55s ease-out both;">
+        <p style="display:inline-flex; align-items:center; gap:7px; font-size:12px; font-weight:700; letter-spacing:.04em; color:#6c5ce7; background:rgba(108,92,231,.08); padding:5px 12px; border-radius:999px;">
+          <span style="width:7px; height:7px; border-radius:50%; background:#6c5ce7; animation:mnPulse 2.6s ease-in-out infinite;"></span>
+          오늘의 학습 · TODAY
+        </p>
+        <h1 style="margin:16px 0 0; font-size:38px; line-height:1.08; font-weight:800; letter-spacing:-.03em; color:#1d2224;">
+          Phrasal Verbs<br><span style="background:linear-gradient(120deg,#6c5ce7,#fd7062); -webkit-background-clip:text; background-clip:text; color:transparent;">마스터하기</span> <span style="font-size:30px;">✨</span>
+        </h1>
+        <p style="margin:14px 0 0; max-width:620px; font-size:14.5px; line-height:1.65; color:#636e72;">
+          AI 학습 엔진이 분석한 오늘의 최적화된 미션입니다. 검증된 <strong style="color:#2d3436;">195개</strong>의 핵심 표현 중 내 장기 기억 상태에 맞춘 맞춤 표현들을 만나보세요.
+        </p>
+      </div>
+
+      <!-- stat cards -->
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:30px;">
+        <div style="animation:mnFadeUp .55s .05s ease-out both; position:relative; overflow:hidden; border-radius:20px; border:1px solid #eef0f3; background:#fff; padding:22px; box-shadow:0 10px 30px -14px rgba(108,92,231,.18); transition:transform .25s, box-shadow .25s;" style-hover="transform:translateY(-4px); box-shadow:0 24px 44px -18px rgba(108,92,231,.34);">
+          <div style="display:flex; align-items:center; gap:9px;">
+            <span style="width:9px; height:9px; border-radius:50%; background:#6c5ce7; box-shadow:0 0 0 4px rgba(108,92,231,.14); animation:mnPulse 3s ease-in-out infinite;"></span>
+            <span style="font-size:12px; font-weight:700; color:#636e72;">오늘 학습</span>
+          </div>
+          <div style="margin-top:14px; font-family:'Space Grotesk',sans-serif; font-size:40px; font-weight:700; letter-spacing:-.02em; color:#6c5ce7; line-height:1;">{{ statToday }}<span style="font-size:20px; color:#8c7efa;">개</span></div>
+          <p style="margin:10px 0 0; font-size:12px; line-height:1.5; color:#8a929a;">복습 1개, 비교 학습 1개, 신규 학습 2개를 추천합니다.</p>
+          <div style="position:absolute; right:-26px; top:-26px; width:96px; height:96px; border-radius:50%; background:radial-gradient(circle, rgba(108,92,231,.10), transparent 70%);"></div>
+        </div>
+        <div style="animation:mnFadeUp .55s .12s ease-out both; position:relative; overflow:hidden; border-radius:20px; border:1px solid #eef0f3; background:#fff; padding:22px; box-shadow:0 10px 30px -14px rgba(0,184,148,.16); transition:transform .25s, box-shadow .25s;" style-hover="transform:translateY(-4px); box-shadow:0 24px 44px -18px rgba(0,184,148,.30);">
+          <div style="display:flex; align-items:center; gap:9px;">
+            <span style="width:9px; height:9px; border-radius:50%; background:#00b894; box-shadow:0 0 0 4px rgba(0,184,148,.14); animation:mnPulse 3s .4s ease-in-out infinite;"></span>
+            <span style="font-size:12px; font-weight:700; color:#636e72;">학습 진행률</span>
+          </div>
+          <div style="margin-top:14px; font-family:'Space Grotesk',sans-serif; font-size:40px; font-weight:700; letter-spacing:-.02em; color:#00b894; line-height:1;">{{ statProgress }}<span style="font-size:20px;">%</span></div>
+          <p style="margin:10px 0 0; font-size:12px; line-height:1.5; color:#8a929a;">2 / 195 표현 추적 중</p>
+          <div style="position:absolute; right:-26px; top:-26px; width:96px; height:96px; border-radius:50%; background:radial-gradient(circle, rgba(0,184,148,.10), transparent 70%);"></div>
+        </div>
+        <div style="animation:mnFadeUp .55s .19s ease-out both; position:relative; overflow:hidden; border-radius:20px; border:1px solid #eef0f3; background:#fff; padding:22px; box-shadow:0 10px 30px -14px rgba(253,112,98,.16); transition:transform .25s, box-shadow .25s;" style-hover="transform:translateY(-4px); box-shadow:0 24px 44px -18px rgba(253,112,98,.30);">
+          <div style="display:flex; align-items:center; gap:9px;">
+            <span style="width:9px; height:9px; border-radius:50%; background:#fd7062; box-shadow:0 0 0 4px rgba(253,112,98,.14); animation:mnPulse 3s .8s ease-in-out infinite;"></span>
+            <span style="font-size:12px; font-weight:700; color:#636e72;">기억 강도</span>
+          </div>
+          <div style="margin-top:14px; font-family:'Space Grotesk',sans-serif; font-size:40px; font-weight:700; letter-spacing:-.02em; color:#fd7062; line-height:1;">{{ statMemory }}<span style="font-size:20px;">%</span></div>
+          <p style="margin:10px 0 0; font-size:12px; line-height:1.5; color:#8a929a;">망각 위험 0개 · 안정 구간</p>
+          <div style="position:absolute; right:-26px; top:-26px; width:96px; height:96px; border-radius:50%; background:radial-gradient(circle, rgba(253,112,98,.10), transparent 70%);"></div>
+        </div>
+      </div>
+
+      <!-- hero CTA -->
+      <div onClick="{{ startSession }}" style="animation:mnFadeUp .6s .26s ease-out both; position:relative; overflow:hidden; margin-top:24px; border-radius:24px; padding:34px 36px; cursor:pointer; background:linear-gradient(120deg,#5849c4 0%,#6c5ce7 42%,#8c7efa 100%); box-shadow:0 26px 50px -18px rgba(108,92,231,.55); transition:transform .25s, box-shadow .25s;" style-hover="transform:translateY(-3px); box-shadow:0 34px 60px -20px rgba(108,92,231,.62);">
+        <div style="position:relative; z-index:2; max-width:560px;">
+          <span style="display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:700; letter-spacing:.1em; color:#fff; background:rgba(255,255,255,.16); padding:5px 11px; border-radius:999px; backdrop-filter:blur(6px);">AI MISSION · 추천 미션</span>
+          <h2 style="margin:16px 0 0; font-size:25px; font-weight:800; letter-spacing:-.02em; color:#fff; line-height:1.3;">복습 1개, 비교 학습 1개, 신규 학습 2개를 추천합니다.</h2>
+          <p style="margin:10px 0 0; font-size:14px; color:rgba(255,255,255,.82);">새로운 표현을 배우고, 기억 속 표현을 복습하세요.</p>
+          <div style="display:inline-flex; align-items:center; gap:10px; margin-top:22px; height:50px; padding:0 26px; border-radius:14px; background:#fff; color:#6c5ce7; font-size:14.5px; font-weight:800; box-shadow:0 10px 22px -8px rgba(0,0,0,.25);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            학습 시작하기
+          </div>
+        </div>
+        <div style="position:absolute; right:-30px; top:-40px; width:200px; height:200px; border-radius:50%; background:rgba(255,255,255,.10);"></div>
+        <div style="position:absolute; right:90px; bottom:-70px; width:150px; height:150px; border-radius:50%; background:rgba(255,255,255,.07);"></div>
+        <svg style="position:absolute; right:34px; bottom:24px; z-index:2; opacity:.9;" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2a2.5 2.5 0 0 1 2.5 2.5v15a2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1-1-4.5A2.5 2.5 0 0 1 4 7a2.5 2.5 0 0 1 2-2.5A2.5 2.5 0 0 1 9.5 2z"/><path d="M14.5 2a2.5 2.5 0 0 0-2.5 2.5v15a2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0 1-4.5A2.5 2.5 0 0 0 20 7a2.5 2.5 0 0 0-2-2.5A2.5 2.5 0 0 0 14.5 2z"/></svg>
+      </div>
+
+      <!-- queue -->
+      <div style="margin-top:40px;">
+        <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:16px; border-bottom:1px solid #ebedf0; padding-bottom:16px;">
+          <div>
+            <h2 style="margin:0; font-size:19px; font-weight:800; letter-spacing:-.02em; color:#2d3436;">AI 맞춤 학습 큐 <span style="color:#b2bec3; font-weight:700;">Today's Queue</span></h2>
+            <p style="margin:5px 0 0; font-size:12.5px; color:#8a929a;">내 장기 기억 전환을 위해 오늘 우선적으로 학습·복습할 추천 표현 목록입니다.</p>
+          </div>
+          <span style="white-space:nowrap; border-radius:999px; background:rgba(108,92,231,.08); padding:6px 13px; font-size:12px; font-weight:700; color:#6c5ce7;">{{ queueCount }}개 대기 중</span>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:18px;">
+          <sc-for list="{{ queue }}" as="q" hint-placeholder-count="4">
+            <div onClick="{{ q.start }}" style="animation:mnFadeUp .5s ease-out both; display:flex; align-items:center; gap:15px; border-radius:18px; border:1px solid #eef0f3; background:#fff; padding:17px 18px; cursor:pointer; box-shadow:0 8px 22px -16px rgba(45,52,54,.4); transition:transform .2s, box-shadow .2s, border-color .2s;" style-hover="transform:translateY(-3px); box-shadow:0 20px 38px -20px rgba(108,92,231,.4); border-color:rgba(108,92,231,.35);">
+              <div style="display:flex; height:42px; width:42px; flex:none; align-items:center; justify-content:center; border-radius:13px; background:linear-gradient(135deg,#f3f1f9,#ece9fb); font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:700; color:#6c5ce7;">{{ q.n }}</div>
+              <div style="min-width:0; flex:1;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <p style="margin:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:15.5px; font-weight:800; color:#2d3436;">{{ q.expression }}</p>
+                  <span style="flex:none; border-radius:7px; background:#f4f5f7; padding:2px 7px; font-size:10px; font-weight:700; color:#8a929a;">Unit {{ q.unit }}</span>
+                </div>
+                <p style="margin:3px 0 0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:12.5px; color:#7b848b;">{{ q.ko }}</p>
+                <div style="display:flex; align-items:center; gap:7px; margin-top:7px; font-size:11px; font-weight:600; color:#a6adb3;">
+                  <span style="color:#6c5ce7;">{{ q.activityLabel }}</span><span>·</span><span>우선도 {{ q.priority }}</span>
+                </div>
+              </div>
+              <span style="flex:none; border-radius:10px; padding:6px 11px; font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; background:{{ q.badgeBg }}; color:{{ q.badgeColor }};">{{ q.priority }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ===================== UNITS ===================== -->
+    <sc-if value="{{ isUnits }}" hint-placeholder-val="{{ true }}">
+    <div>
+      <div style="animation:mnFadeUp .5s ease-out both;">
+        <p style="font-size:12px; font-weight:700; letter-spacing:.04em; color:#6c5ce7;">교재 탐색 · LIBRARY</p>
+        <h1 style="margin:10px 0 0; font-size:34px; font-weight:800; letter-spacing:-.03em; color:#1d2224;">Units 📖</h1>
+        <p style="margin:10px 0 0; font-size:14px; color:#636e72;">English Phrasal Verbs in Use Intermediate — 유닛별로 표현을 탐색하세요.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:28px;">
+        <sc-for list="{{ units }}" as="u" hint-placeholder-count="6">
+          <div style="animation:mnFadeUp .5s ease-out both; position:relative; overflow:hidden; border-radius:20px; border:1px solid #eef0f3; background:#fff; padding:22px; box-shadow:0 10px 30px -18px rgba(45,52,54,.32); transition:transform .22s, box-shadow .22s, border-color .22s;" style-hover="transform:translateY(-4px); box-shadow:0 24px 44px -22px rgba(108,92,231,.4); border-color:rgba(108,92,231,.3);">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between;">
+              <div style="display:flex; height:44px; width:44px; align-items:center; justify-content:center; border-radius:14px; background:linear-gradient(135deg,#f3f1f9,#ece9fb); font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:700; color:#6c5ce7;">{{ u.unit }}</div>
+              <span style="border-radius:8px; background:#f4f5f7; padding:5px 10px; font-size:11px; font-weight:700; color:#8a929a;">{{ u.count }}개 표현</span>
+            </div>
+            <h3 style="margin:16px 0 0; font-size:17px; font-weight:800; letter-spacing:-.01em; color:#2d3436; line-height:1.3;">{{ u.title }}</h3>
+            <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:14px;">
+              <sc-for list="{{ u.chips }}" as="c" hint-placeholder-count="4">
+                <span style="border-radius:8px; background:#f6f6f8; padding:5px 9px; font-size:11.5px; font-weight:600; color:#7b848b;">{{ c }}</span>
+              </sc-for>
+              <sc-if value="{{ u.hasMore }}" hint-placeholder-val="{{ false }}">
+                <span style="border-radius:8px; background:rgba(108,92,231,.09); padding:5px 9px; font-size:11.5px; font-weight:700; color:#6c5ce7;">+{{ u.more }}</span>
+              </sc-if>
+            </div>
+            <div style="position:absolute; right:-30px; bottom:-30px; width:90px; height:90px; border-radius:50%; background:radial-gradient(circle, rgba(108,92,231,.06), transparent 70%);"></div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ===================== PROGRESS ===================== -->
+    <sc-if value="{{ isProgress }}" hint-placeholder-val="{{ true }}">
+    <div>
+      <div style="animation:mnFadeUp .5s ease-out both;">
+        <p style="font-size:12px; font-weight:700; letter-spacing:.04em; color:#6c5ce7;">학습 현황 · STATS</p>
+        <h1 style="margin:10px 0 0; font-size:34px; font-weight:800; letter-spacing:-.03em; color:#1d2224;">Progress 📊</h1>
+        <p style="margin:10px 0 0; font-size:14px; color:#636e72;">전체 학습 진행 상황과 기억 상태를 확인하세요.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:28px;">
+        <sc-for list="{{ progressCards }}" as="p" hint-placeholder-count="4">
+          <div style="animation:mnFadeUp .5s ease-out both; border-radius:18px; border:1px solid #eef0f3; background:#fff; padding:18px; box-shadow:0 10px 28px -18px rgba(45,52,54,.3); transition:transform .2s;" style-hover="transform:translateY(-3px);">
+            <div style="display:flex; height:38px; width:38px; align-items:center; justify-content:center; border-radius:12px; font-size:18px; background:{{ p.iconBg }};">{{ p.icon }}</div>
+            <p style="margin:14px 0 0; font-size:12px; font-weight:700; color:#7b848b;">{{ p.label }}</p>
+            <p style="margin:4px 0 0; font-family:'Space Grotesk',sans-serif; font-size:30px; font-weight:700; color:{{ p.color }};">{{ p.value }}</p>
+            <p style="margin:2px 0 0; font-size:11px; color:#b2bec3;">{{ p.sub }}</p>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1.1fr 1.4fr; gap:16px; margin-top:18px;">
+        <div style="animation:mnFadeUp .5s .05s ease-out both; border-radius:20px; border:1px solid #eef0f3; background:#fff; padding:24px; box-shadow:0 12px 32px -20px rgba(45,52,54,.32);">
+          <h2 style="margin:0; font-size:16px; font-weight:800; color:#2d3436;">평균 기억 강도</h2>
+          <div style="display:flex; align-items:center; gap:20px; margin-top:18px;">
+            <div style="position:relative; width:108px; height:108px; flex:none;">
+              <svg viewBox="0 0 100 100" style="width:108px; height:108px; transform:rotate(-90deg);">
+                <circle cx="50" cy="50" r="42" fill="none" stroke="#f3f1f9" stroke-width="9"></circle>
+                <circle cx="50" cy="50" r="42" fill="none" stroke="#fd7062" stroke-width="9" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="{{ avgRingOffset }}" style="transition:stroke-dashoffset 1.3s cubic-bezier(.16,1,.3,1);"></circle>
+              </svg>
+              <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; color:#2d3436;">{{ avgStrength }}%</div>
+            </div>
+            <div>
+              <p style="margin:0; font-size:13.5px; line-height:1.6; color:#636e72;">기억 강도가 낮습니다. 지금 바로 복습하여 장기 기억으로 전환하세요!</p>
+              <button onClick="{{ startSession }}" style="margin-top:14px; height:42px; padding:0 22px; border:none; cursor:pointer; border-radius:13px; font-family:inherit; font-size:13.5px; font-weight:700; color:#fff; background:linear-gradient(135deg,#6c5ce7,#8c7efa); box-shadow:0 10px 22px -10px rgba(108,92,231,.6); transition:transform .15s;" style-hover="transform:translateY(-2px);">학습 시작 →</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="animation:mnFadeUp .5s .1s ease-out both; border-radius:20px; border:1px solid #eef0f3; background:#fff; padding:24px; box-shadow:0 12px 32px -20px rgba(45,52,54,.32);">
+          <h2 style="margin:0; font-size:16px; font-weight:800; color:#2d3436;">데이터셋 현황</h2>
+          <div style="display:flex; flex-direction:column; gap:18px; margin-top:18px;">
+            <sc-for list="{{ bars }}" as="b" hint-placeholder-count="3">
+              <div>
+                <div style="display:flex; align-items:center; justify-content:space-between; font-size:13px;">
+                  <span style="font-weight:600; color:#2d3436;">{{ b.label }}</span>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; color:#8a929a;">{{ b.value }} / {{ b.max }}</span>
+                </div>
+                <div style="margin-top:8px; height:9px; border-radius:999px; background:#f3f1f9; overflow:hidden;">
+                  <div style="height:9px; border-radius:999px; width:{{ b.width }}; background:{{ b.color }}; transition:width 1.2s cubic-bezier(.16,1,.3,1);"></div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ===================== SESSION ===================== -->
+    <sc-if value="{{ isSession }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:640px; margin:0 auto;">
+
+      <!-- EXPOSURE -->
+      <sc-if value="{{ sExposure }}" hint-placeholder-val="{{ false }}">
+      <div style="animation:mnFadeUp .45s ease-out both;">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <button onClick="{{ exitSession }}" style="border:none; background:none; cursor:pointer; color:#b2bec3; font-size:13px; font-weight:700; padding:0;" style-hover="color:#6c5ce7;">← 나가기</button>
+          <div style="flex:1; height:8px; border-radius:999px; background:#f0eef7; overflow:hidden;">
+            <div style="height:8px; border-radius:999px; background:linear-gradient(90deg,#6c5ce7,#8c7efa); width:{{ expoProgress }}; transition:width .5s cubic-bezier(.16,1,.3,1);"></div>
+          </div>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:#8a929a;">{{ expoLabel }}</span>
+        </div>
+
+        <div style="margin-top:22px; perspective:1600px;">
+          <div onClick="{{ flipCard }}" style="position:relative; cursor:pointer; min-height:380px; transition:transform .7s cubic-bezier(.16,1,.3,1); transform-style:preserve-3d; transform:{{ flipTransform }};">
+
+            <!-- FRONT -->
+            <div style="position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; display:flex; flex-direction:column; border-radius:24px; border:1px solid #eef0f3; background:linear-gradient(160deg,#fff,#fbfaff); padding:34px; box-shadow:0 24px 50px -24px rgba(108,92,231,.32);">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="border-radius:999px; background:rgba(108,92,231,.1); padding:5px 12px; font-size:11px; font-weight:700; color:#6c5ce7;">학습 카드</span>
+                <span style="border-radius:999px; background:#f4f5f7; padding:5px 12px; font-size:11px; font-weight:700; color:#8a929a;">Unit {{ curUnit }}</span>
+              </div>
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:18px;">
+                <h1 style="margin:0; font-size:44px; font-weight:800; letter-spacing:-.03em; color:#1d2224;">{{ curExpression }}</h1>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:13px; color:#b2bec3;">{{ curGrammar }}</span>
+              </div>
+              <div style="display:flex; align-items:center; justify-content:center; gap:8px; color:#a6adb3; font-size:12.5px; font-weight:600;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9"/><polyline points="3 3 3 7 7 7"/></svg>
+                탭하여 뜻 보기
+              </div>
+            </div>
+
+            <!-- BACK -->
+            <div style="position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; transform:rotateY(180deg); display:flex; flex-direction:column; border-radius:24px; border:1px solid rgba(108,92,231,.22); background:linear-gradient(160deg,#fff,#f7f5ff); padding:30px; box-shadow:0 24px 50px -24px rgba(108,92,231,.4); overflow:auto;">
+              <div style="display:flex; align-items:baseline; gap:12px;">
+                <h2 style="margin:0; font-size:26px; font-weight:800; letter-spacing:-.02em; color:#1d2224;">{{ curExpression }}</h2>
+                <span style="border-radius:8px; background:#f4f5f7; padding:3px 9px; font-size:10px; font-weight:700; color:#8a929a;">{{ curSepLabel }}</span>
+              </div>
+              <div style="margin-top:14px; border-radius:14px; background:rgba(108,92,231,.07); padding:16px;">
+                <p style="margin:0; font-size:18px; font-weight:800; color:#6c5ce7;">{{ curKo }}</p>
+                <p style="margin:5px 0 0; font-size:13px; color:rgba(108,92,231,.7);">{{ curEn }}</p>
+              </div>
+              <p style="margin:18px 0 0; font-size:11px; font-weight:700; letter-spacing:.1em; color:#b2bec3; text-transform:uppercase;">예문 · Examples</p>
+              <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
+                <sc-for list="{{ curExamples }}" as="ex" hint-placeholder-count="2">
+                  <div style="border-left:3px solid #8c7efa; border-radius:0 12px 12px 0; background:#f8f8fb; padding:12px 14px; font-size:13.5px; line-height:1.55; color:#3a4145;">{{ ex }}</div>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:12px; margin-top:22px;">
+          <sc-if value="{{ showPrev }}" hint-placeholder-val="{{ false }}">
+            <button onClick="{{ prevExpo }}" style="flex:1; height:52px; border:1px solid #ebedf0; cursor:pointer; border-radius:15px; background:#fff; font-family:inherit; font-size:14px; font-weight:700; color:#7b848b; transition:background .15s;" style-hover="background:#f6f6f8;">← 이전</button>
+          </sc-if>
+          <button onClick="{{ nextExpo }}" style="flex:1; height:52px; border:none; cursor:pointer; border-radius:15px; background:linear-gradient(135deg,#6c5ce7,#8c7efa); font-family:inherit; font-size:14px; font-weight:800; color:#fff; box-shadow:0 14px 28px -12px rgba(108,92,231,.6); transition:transform .15s;" style-hover="transform:translateY(-2px);">{{ nextLabel }}</button>
+        </div>
+      </div>
+      </sc-if>
+
+      <!-- QUIZ -->
+      <sc-if value="{{ sQuiz }}" hint-placeholder-val="{{ false }}">
+      <div style="animation:mnFadeUp .45s ease-out both;">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <button onClick="{{ exitSession }}" style="border:none; background:none; cursor:pointer; color:#b2bec3; font-size:13px; font-weight:700; padding:0;" style-hover="color:#fd7062;">← 나가기</button>
+          <div style="flex:1; height:8px; border-radius:999px; background:#fdeeec; overflow:hidden;">
+            <div style="height:8px; border-radius:999px; background:linear-gradient(90deg,#fd7062,#ff9a8f); width:{{ quizProgress }}; transition:width .5s cubic-bezier(.16,1,.3,1);"></div>
+          </div>
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:#8a929a;">{{ quizLabel }}</span>
+        </div>
+
+        <div style="margin-top:22px; border-radius:24px; border:2px solid {{ quizBorder }}; background:{{ quizBg }}; padding:32px; box-shadow:0 24px 50px -26px rgba(45,52,54,.4); transition:border-color .3s, background .3s; animation:{{ quizAnim }};">
+          <span style="border-radius:999px; background:rgba(253,112,98,.1); padding:5px 12px; font-size:11px; font-weight:700; color:#fd7062;">{{ quizTypeLabel }}</span>
+          <p style="margin:18px 0 0; font-size:13px; font-weight:600; color:#8a929a;">{{ quizInstruction }}</p>
+          <h2 style="margin:8px 0 0; font-size:24px; font-weight:800; letter-spacing:-.02em; color:#1d2224;">{{ quizPrompt }}</h2>
+
+          <!-- multiple choice -->
+          <sc-if value="{{ quizIsChoice }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:11px; margin-top:24px;">
+            <sc-for list="{{ quizChoices }}" as="ch" hint-placeholder-count="4">
+              <button onClick="{{ ch.onClick }}" style="height:58px; padding:0 18px; cursor:pointer; text-align:left; border-radius:15px; border:2px solid {{ ch.border }}; background:{{ ch.bg }}; color:{{ ch.color }}; font-family:inherit; font-size:15px; font-weight:700; transition:all .18s;">{{ ch.text }}{{ ch.suffix }}</button>
+            </sc-for>
+          </div>
+          </sc-if>
+
+          <!-- text input -->
+          <sc-if value="{{ quizIsInput }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:22px;">
+            <input value="{{ quizInputValue }}" onInput="{{ onQuizInput }}" onKeyDown="{{ onQuizKey }}" disabled="{{ quizSubmitted }}" placeholder="phrasal verb를 입력하세요" style="width:100%; height:58px; border-radius:15px; border:2px solid {{ inputBorder }}; background:#fff; padding:0 18px; font-family:inherit; font-size:17px; font-weight:700; color:#2d3436; outline:none; transition:border-color .2s;" />
+          </div>
+          </sc-if>
+
+          <!-- submit / next -->
+          <sc-if value="{{ showSubmit }}" hint-placeholder-val="{{ true }}">
+            <button onClick="{{ submitQuiz }}" disabled="{{ submitDisabled }}" style="margin-top:20px; height:50px; width:100%; border:none; cursor:pointer; border-radius:14px; background:linear-gradient(135deg,#6c5ce7,#8c7efa); font-family:inherit; font-size:14px; font-weight:800; color:#fff; box-shadow:0 12px 24px -10px rgba(108,92,231,.55); opacity:{{ submitOpacity }}; transition:transform .15s;" style-hover="transform:translateY(-2px);">제출하기</button>
+          </sc-if>
+
+          <sc-if value="{{ quizSubmitted }}" hint-placeholder-val="{{ false }}">
+            <div style="margin-top:18px; animation:mnPop .4s cubic-bezier(.16,1,.3,1) both; border-radius:14px; background:{{ feedbackBg }}; padding:15px 18px;">
+              <p style="margin:0; font-size:14px; font-weight:800; color:{{ feedbackColor }};">{{ feedbackText }}</p>
+              <sc-if value="{{ showFeedbackKo }}" hint-placeholder-val="{{ false }}">
+                <p style="margin:5px 0 0; font-size:12.5px; color:#7b848b;">{{ curKoQuiz }}</p>
+              </sc-if>
+            </div>
+            <button onClick="{{ nextQuiz }}" style="margin-top:14px; height:50px; width:100%; border:none; cursor:pointer; border-radius:14px; background:#2d3436; font-family:inherit; font-size:14px; font-weight:800; color:#fff; transition:transform .15s;" style-hover="transform:translateY(-2px);">{{ nextQuizLabel }}</button>
+          </sc-if>
+        </div>
+      </div>
+      </sc-if>
+
+      <!-- SUMMARY -->
+      <sc-if value="{{ sSummary }}" hint-placeholder-val="{{ false }}">
+      <div style="animation:mnScaleIn .5s cubic-bezier(.16,1,.3,1) both;">
+        <div style="border-radius:24px; border:1px solid #eef0f3; background:#fff; padding:36px; text-align:center; box-shadow:0 24px 50px -26px rgba(108,92,231,.35);">
+          <div style="font-size:54px; animation:mnPop .6s cubic-bezier(.16,1,.3,1) both;">{{ summaryEmoji }}</div>
+          <h1 style="margin:14px 0 0; font-size:26px; font-weight:800; letter-spacing:-.02em; color:#1d2224;">세션 완료!</h1>
+          <p style="margin:8px 0 0; font-size:14px; color:#636e72;">{{ totalQ }}문제 중 <strong style="color:#6c5ce7;">{{ correctCount }}문제</strong> 정답</p>
+
+          <div style="display:flex; justify-content:center; margin-top:24px;">
+            <div style="position:relative; width:130px; height:130px;">
+              <svg viewBox="0 0 100 100" style="width:130px; height:130px; transform:rotate(-90deg);">
+                <circle cx="50" cy="50" r="42" fill="none" stroke="#f3f1f9" stroke-width="8"></circle>
+                <circle cx="50" cy="50" r="42" fill="none" stroke="{{ summaryRingColor }}" stroke-width="8" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="{{ summaryRingOffset }}" style="transition:stroke-dashoffset 1.4s cubic-bezier(.16,1,.3,1);"></circle>
+              </svg>
+              <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:30px; font-weight:700; color:#1d2224;">{{ accuracy }}%</span>
+                <span style="font-size:10px; font-weight:700; letter-spacing:.1em; color:#b2bec3;">정답률</span>
+              </div>
+            </div>
+          </div>
+
+          <sc-if value="{{ hasWrong }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:28px; text-align:left;">
+            <p style="margin:0; font-size:13px; font-weight:800; color:#fd7062;">틀린 표현 복습</p>
+            <div style="display:flex; flex-direction:column; gap:8px; margin-top:12px;">
+              <sc-for list="{{ wrongList }}" as="w" hint-placeholder-count="1">
+                <div style="display:flex; align-items:center; justify-content:space-between; border-radius:13px; background:#fff0ee; padding:13px 16px;">
+                  <div>
+                    <p style="margin:0; font-size:14px; font-weight:800; color:#2d3436;">{{ w.expression }}</p>
+                    <p style="margin:3px 0 0; font-size:11.5px; color:#8a929a;">내 답: {{ w.userAnswer }}</p>
+                  </div>
+                  <span style="color:#fd7062; font-weight:800; font-size:16px;">✕</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          </sc-if>
+        </div>
+
+        <div style="display:flex; gap:12px; margin-top:16px;">
+          <button onClick="{{ restartSession }}" style="flex:1; height:52px; border:none; cursor:pointer; border-radius:15px; background:linear-gradient(135deg,#6c5ce7,#8c7efa); font-family:inherit; font-size:14px; font-weight:800; color:#fff; box-shadow:0 14px 28px -12px rgba(108,92,231,.55); transition:transform .15s;" style-hover="transform:translateY(-2px);">다시 학습하기</button>
+          <button onClick="{{ goHome }}" style="flex:1; height:52px; border:1px solid #ebedf0; cursor:pointer; border-radius:15px; background:#fff; font-family:inherit; font-size:14px; font-weight:700; color:#7b848b; transition:background .15s;" style-hover="background:#f6f6f8;">홈으로</button>
+        </div>
+      </div>
+      </sc-if>
+
+    </div>
+    </sc-if>
+
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1080,&quot;height&quot;:820}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.LOS = [
+      { id:"go_off_spoil", expression:"go off (spoil)", ko:"(음식이) 상하다, 변질되다", en:"(of food) to become bad to eat", unit:1, grammar:"go off", sep:"분리 불가", activity:"contrast", quiz:"recognition", choices:["go off","pick up","give up","turn down"], examples:["The milk has gone off — don't drink it.","This meat smells like it's gone off already."] },
+      { id:"go_off_explode", expression:"go off (explode)", ko:"(폭탄이) 폭발하다; (총이) 발사되다", en:"to explode or be fired", unit:1, grammar:"go off", sep:"분리 불가", activity:"review", quiz:"retrieval", answer:"go off", choices:[], examples:["The bomb went off at midnight.","A gun went off somewhere in the distance."] },
+      { id:"pick_up_lift", expression:"pick up (lift)", ko:"(바닥에서) 집어 올리다", en:"to lift something up with your hands", unit:1, grammar:"pick something up", sep:"분리 가능", activity:"new_learning", quiz:"recognition", choices:["pick up","take off","look up","carry on"], examples:["She picked up the book from the floor.","Pick up your toys before dinner, please."] },
+      { id:"pick_up_collect", expression:"pick up (collect)", ko:"(차로) 데리러 가다, 태우다", en:"to collect someone in a vehicle", unit:1, grammar:"pick somebody up", sep:"분리 가능", activity:"new_learning", quiz:"recognition", choices:["pick up","drop off","get on","turn up"], examples:["I'll pick you up at seven.","Can you pick the kids up from school today?"] },
+    ];
+    this.UNITS = [
+      { unit:1, title:"Phrasal verbs: what they mean", count:7, chips:["go off","go off (spoil)","pick up (lift)","pick up (collect)","pick up (learn)"], total:7 },
+      { unit:2, title:"Phrasal verbs: forming and understanding", count:5, chips:["get on (relationship)","get on (board)","give in","give up","get off"], total:5 },
+      { unit:3, title:"Phrasal verbs: using a dictionary", count:4, chips:["look up","look into","look after","look forward to"], total:4 },
+      { unit:4, title:"Particles: up, down, in, out", count:10, chips:["take off (plane)","take off (clothing)","put on","turn down (volume)","turn down (reject)"], total:10 },
+      { unit:5, title:"Particles: on, off, up, down (cont.)", count:8, chips:["work out (solve)","work out (exercise)","put off (postpone)","put off (discourage)","carry on"], total:8 },
+      { unit:6, title:"Particles: out, on, off", count:3, chips:["find out","carry out","point out"], total:3 },
+      { unit:7, title:"Particles: over, back", count:6, chips:["take over","get over","look back","pay back","hold back"], total:6 },
+      { unit:8, title:"Particles: away, about, around, round", count:6, chips:["give away","throw away","run around","bring about","look around"], total:6 },
+    ];
+    this.state = {
+      view: "home",
+      anim: { today:0, progress:0, memory:0 },
+      ringOn: false,
+      // session
+      sPhase: "exposure",
+      sIdx: 0,
+      flipped: false,
+      qIdx: 0,
+      selected: null,
+      input: "",
+      submitted: false,
+      correct: false,
+      results: [],
+      sumRingOn: false,
+    };
+  }
+
+  componentDidMount() { this.animateStats(); this.drawRings(); }
+
+  animateStats() {
+    const targets = { today:4, progress:1, memory:6 };
+    const start = performance.now(); const dur = 950;
+    const tick = (now) => {
+      const t = Math.min(1, (now - start)/dur); const e = 1 - Math.pow(1-t, 3);
+      this.setState({ anim: {
+        today: Math.round(targets.today*e),
+        progress: Math.round(targets.progress*e),
+        memory: Math.round(targets.memory*e),
+      }});
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  drawRings() {
+    this.setState({ ringOn:false });
+    setTimeout(() => this.setState({ ringOn:true }), 120);
+  }
+
+  setView(v) {
+    this.setState({ view:v }, () => {
+      if (v === "home") this.animateStats();
+      if (v === "progress") this.drawRings();
+    });
+  }
+
+  startSession(idx) {
+    const start = typeof idx === "number" ? idx : 0;
+    this.setState({ view:"session", sPhase:"exposure", sIdx:start, flipped:false, qIdx:0, selected:null, input:"", submitted:false, correct:false, results:[], sumRingOn:false });
+  }
+
+  // ---------- exposure ----------
+  flipCard() { this.setState(s => ({ flipped: !s.flipped })); }
+  nextExpo() {
+    const { sIdx } = this.state;
+    if (sIdx < this.LOS.length - 1) this.setState({ sIdx: sIdx+1, flipped:false });
+    else this.setState({ sPhase:"quiz", qIdx:0, selected:null, input:"", submitted:false });
+  }
+  prevExpo() { this.setState(s => ({ sIdx: Math.max(0, s.sIdx-1), flipped:false })); }
+
+  // ---------- quiz ----------
+  selectChoice(c) { if (!this.state.submitted) this.setState({ selected:c }); }
+  onInput(e) { if (!this.state.submitted) this.setState({ input: e.target.value }); }
+  onKey(e) { if (e.key === "Enter") this.submitQuiz(); }
+
+  submitQuiz() {
+    const item = this.LOS[this.state.qIdx];
+    const isChoice = item.quiz === "recognition";
+    const ans = isChoice ? (this.state.selected || "") : this.state.input.trim();
+    if (!ans) return;
+    const correctAns = item.answer || item.expression.replace(/\s*\(.*\)/, "").trim();
+    const correct = isChoice ? (ans === item.expression || ans === correctAns)
+                             : (ans.toLowerCase() === correctAns.toLowerCase());
+    const results = this.state.results.concat([{ expression:item.expression, isCorrect:correct, userAnswer: ans }]);
+    this.setState({ submitted:true, correct, results });
+  }
+
+  nextQuiz() {
+    const { qIdx } = this.state;
+    if (qIdx < this.LOS.length - 1) {
+      this.setState({ qIdx: qIdx+1, selected:null, input:"", submitted:false, correct:false });
+    } else {
+      this.setState({ sPhase:"summary", sumRingOn:false }, () => {
+        setTimeout(() => this.setState({ sumRingOn:true }), 120);
+      });
+    }
+  }
+
+  restartSession() { this.startSession(0); }
+
+  // ---------- derived ----------
+  renderVals() {
+    const s = this.state;
+    const v = s.view;
+    const CIRC = 263.9;
+    const navStyle = (name) => v === name
+      ? { bg: "rgba(108,92,231,.10)", color: "#6c5ce7" }
+      : { bg: "transparent", color: "#7b848b" };
+    const nh = navStyle("home"), nu = navStyle("units"), np = navStyle("progress");
+
+    // queue
+    const actLabel = { contrast:"⚖️ 비교 학습", review:"🔄 복습", new_learning:"✨ 신규 학습" };
+    const priorities = [53, 40, 30, 30];
+    const badge = (p) => p >= 70 ? { bg:"#fff0ee", color:"#fd7062" }
+                       : p >= 40 ? { bg:"#fff7ec", color:"#d99a3c" }
+                       : { bg:"#e6f8f5", color:"#00a884" };
+    const queue = this.LOS.map((lo, i) => {
+      const b = badge(priorities[i]);
+      return { n:i+1, expression:lo.expression, unit:lo.unit, ko:lo.ko,
+        activityLabel: actLabel[lo.activity], priority: priorities[i],
+        badgeBg:b.bg, badgeColor:b.color, start: () => this.startSession(i) };
+    });
+
+    // units
+    const units = this.UNITS.map(u => {
+      const more = u.total - u.chips.length;
+      return { unit:u.unit, title:u.title, count:u.count, chips:u.chips, hasMore: more>0, more };
+    });
+
+    // progress cards
+    const progressCards = [
+      { icon:"📖", iconBg:"rgba(108,92,231,.1)", label:"전체 표현", value:"195", sub:"데이터셋", color:"#6c5ce7" },
+      { icon:"✅", iconBg:"rgba(0,184,148,.12)", label:"학습 가능", value:"195", sub:"검증 완료", color:"#00b894" },
+      { icon:"🧠", iconBg:"rgba(108,92,231,.1)", label:"추적 중", value:"2", sub:"Memory Object", color:"#6c5ce7" },
+      { icon:"⚠️", iconBg:"rgba(253,112,98,.1)", label:"망각 위험", value:"0", sub:"복습 필요", color:"#fd7062" },
+    ];
+    const avgStrength = 6;
+    const bars = [
+      { label:"학습 가능 표현", value:195, max:195, color:"#00b894" },
+      { label:"검수 대기", value:0, max:195, color:"#fdcb6e" },
+      { label:"기억 추적 중", value:2, max:195, color:"#6c5ce7" },
+    ].map(b => ({ ...b, width: s.ringOn ? Math.round((b.value/b.max)*100) + "%" : "0%" }));
+
+    const vals = {
+      // nav
+      goHome: () => this.setView("home"),
+      goUnits: () => this.setView("units"),
+      goProgress: () => this.setView("progress"),
+      navHomeBg:nh.bg, navHomeColor:nh.color,
+      navUnitsBg:nu.bg, navUnitsColor:nu.color,
+      navProgressBg:np.bg, navProgressColor:np.color,
+      isHome: v==="home", isUnits: v==="units", isProgress: v==="progress", isSession: v==="session",
+      // home
+      statToday: s.anim.today, statProgress: s.anim.progress, statMemory: s.anim.memory,
+      startSession: () => this.startSession(0),
+      queue, queueCount: this.LOS.length,
+      // units
+      units,
+      // progress
+      progressCards, avgStrength,
+      avgRingOffset: s.ringOn ? (CIRC * (1 - avgStrength/100)) : CIRC,
+      bars,
+    };
+
+    // ---------- session derived ----------
+    if (v === "session") {
+      const total = this.LOS.length;
+      vals.sExposure = s.sPhase === "exposure";
+      vals.sQuiz = s.sPhase === "quiz";
+      vals.sSummary = s.sPhase === "summary";
+      vals.exitSession = () => this.setView("home");
+      vals.flipCard = () => this.flipCard();
+      vals.nextExpo = () => this.nextExpo();
+      vals.prevExpo = () => this.prevExpo();
+
+      // exposure
+      const cur = this.LOS[s.sIdx] || this.LOS[0];
+      vals.curExpression = cur.expression;
+      vals.curUnit = cur.unit;
+      vals.curGrammar = cur.grammar;
+      vals.curKo = cur.ko;
+      vals.curEn = cur.en;
+      vals.curSepLabel = cur.sep;
+      vals.curExamples = cur.examples;
+      vals.flipTransform = s.flipped ? "rotateY(180deg)" : "rotateY(0deg)";
+      vals.expoProgress = Math.round(((s.sIdx+1)/total)*100) + "%";
+      vals.expoLabel = (s.sIdx+1) + " / " + total;
+      vals.showPrev = s.sIdx > 0;
+      vals.nextLabel = s.sIdx < total-1 ? "다음 표현 →" : "연습 시작 🎯";
+
+      // quiz
+      const q = this.LOS[s.qIdx] || this.LOS[0];
+      const isChoice = q.quiz === "recognition";
+      vals.quizProgress = Math.round(((s.qIdx+1)/total)*100) + "%";
+      vals.quizLabel = "문제 " + (s.qIdx+1) + " / " + total;
+      vals.quizTypeLabel = isChoice ? "4지선다" : "직접 입력";
+      vals.quizInstruction = isChoice ? "다음 뜻에 해당하는 phrasal verb를 고르세요." : "다음 뜻에 해당하는 phrasal verb를 입력하세요.";
+      vals.quizPrompt = q.ko;
+      vals.quizIsChoice = isChoice;
+      vals.quizIsInput = !isChoice;
+      vals.curKoQuiz = q.ko;
+      vals.quizSubmitted = s.submitted;
+      vals.showFeedbackKo = s.submitted && !s.correct;
+
+      const correctAns = q.answer || q.expression.replace(/\s*\(.*\)/, "").trim();
+      vals.quizChoices = (q.choices||[]).map(ch => {
+        let bg="#fff", border="#ebedf0", color="#2d3436", suffix="";
+        const isAns = ch === q.expression || ch === correctAns;
+        if (!s.submitted && s.selected === ch) { bg="rgba(108,92,231,.08)"; border="#6c5ce7"; color="#6c5ce7"; }
+        if (s.submitted && isAns) { bg="#e6f8f5"; border="#00b894"; color="#009678"; suffix=" ✓"; }
+        if (s.submitted && s.selected === ch && !isAns) { bg="#fff0ee"; border="#fd7062"; color="#e05345"; suffix=" ✕"; }
+        return { text:ch, bg, border, color, suffix, onClick: () => this.selectChoice(ch) };
+      });
+
+      vals.quizInputValue = s.input;
+      vals.onQuizInput = (e) => this.onInput(e);
+      vals.onQuizKey = (e) => this.onKey(e);
+      vals.inputBorder = s.submitted ? (s.correct ? "#00b894" : "#fd7062") : (s.input ? "#6c5ce7" : "#ebedf0");
+
+      const hasAnswer = isChoice ? !!s.selected : !!s.input.trim();
+      vals.showSubmit = !s.submitted;
+      vals.submitDisabled = !hasAnswer;
+      vals.submitOpacity = hasAnswer ? 1 : 0.5;
+      vals.submitQuiz = () => this.submitQuiz();
+      vals.nextQuiz = () => this.nextQuiz();
+      vals.nextQuizLabel = s.qIdx < total-1 ? "다음 문제 →" : "결과 보기 🎉";
+
+      vals.quizBorder = s.submitted ? (s.correct ? "#00b894" : "#fd7062") : "#eef0f3";
+      vals.quizBg = s.submitted ? (s.correct ? "rgba(0,184,148,.05)" : "rgba(253,112,98,.05)") : "#fff";
+      vals.quizAnim = (s.submitted && !s.correct) ? "mnShake .5s ease-in-out both" : "none";
+      vals.feedbackBg = s.correct ? "rgba(0,184,148,.1)" : "rgba(253,112,98,.1)";
+      vals.feedbackColor = s.correct ? "#009678" : "#e05345";
+      vals.feedbackText = s.correct ? "🎉 정답입니다!" : ("😅 정답: " + correctAns);
+
+      // summary
+      const done = s.results;
+      const correctCount = done.filter(r => r.isCorrect).length;
+      const accuracy = done.length ? Math.round((correctCount/done.length)*100) : 0;
+      vals.totalQ = done.length;
+      vals.correctCount = correctCount;
+      vals.accuracy = accuracy;
+      vals.summaryEmoji = accuracy >= 80 ? "🎉" : accuracy >= 50 ? "💪" : "📚";
+      vals.summaryRingColor = accuracy >= 80 ? "#00b894" : accuracy >= 50 ? "#6c5ce7" : "#fd7062";
+      vals.summaryRingOffset = s.sumRingOn ? (CIRC * (1 - accuracy/100)) : CIRC;
+      const wrong = done.filter(r => !r.isCorrect).map(r => ({ expression:r.expression, userAnswer: r.userAnswer || "(미입력)" }));
+      vals.wrongList = wrong;
+      vals.hasWrong = wrong.length > 0;
+      vals.restartSession = () => this.restartSession();
+    }
+
+    return vals;
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,7620 @@
+[
+  {
+    "learning_object_id": "lo_v_001",
+    "expression": "go off",
+    "sense_id": "go_off_01",
+    "base_verb": "go",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "(of a bomb) to explode; (of a gun) to be fired",
+    "definition_ko": "(폭탄이) 폭발하다; (총이) 발사되다",
+    "grammar_pattern": "go off (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "A bomb went off in the city centre.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_1"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 1,
+        "page": 8,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 1,
+    "unit_title": "Phrasal verbs: what they mean"
+  },
+  {
+    "learning_object_id": "lo_v_002",
+    "expression": "go off (spoil)",
+    "sense_id": "go_off_spoil_01",
+    "base_verb": "go",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "(of food or drink) to go bad",
+    "definition_ko": "(음식이) 상하다, 변질되다",
+    "grammar_pattern": "go off (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "This milk has gone off. It smells terrible.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_1"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 1,
+        "page": 8,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 1,
+    "unit_title": "Phrasal verbs: what they mean"
+  },
+  {
+    "learning_object_id": "lo_v_003",
+    "expression": "pick up (lift)",
+    "sense_id": "pick_up_lift_01",
+    "base_verb": "pick",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to lift something or someone up from a surface",
+    "definition_ko": "(바닥에서) 집어 올리다",
+    "grammar_pattern": "pick something up",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She picked up the phone and dialled.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_1"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 1,
+        "page": 8,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 1,
+    "unit_title": "Phrasal verbs: what they mean"
+  },
+  {
+    "learning_object_id": "lo_v_004",
+    "expression": "pick up (collect)",
+    "sense_id": "pick_up_collect_01",
+    "base_verb": "pick",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to collect someone, typically in a car",
+    "definition_ko": "(차로) 데리러 가다, 태우다",
+    "grammar_pattern": "pick someone up",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I'll pick you up at the station at six.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_1"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 1,
+        "page": 8,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 1,
+    "unit_title": "Phrasal verbs: what দশক mean"
+  },
+  {
+    "learning_object_id": "lo_v_005",
+    "expression": "pick up (learn)",
+    "sense_id": "pick_up_learn_01",
+    "base_verb": "pick",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to learn a skill or language informally",
+    "definition_ko": "(자연스럽게) 배우다, 습득하다",
+    "grammar_pattern": "pick something up",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She picked up some Spanish while living in Madrid.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_1"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 1,
+        "page": 8,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 1,
+    "unit_title": "Phrasal verbs: what they mean"
+  },
+  {
+    "learning_object_id": "lo_v_006",
+    "expression": "turn up (arrive)",
+    "sense_id": "turn_up_arrive_01",
+    "base_verb": "turn",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to arrive, especially unexpectedly or late",
+    "definition_ko": "(예기치 않게) 나타나다, 도착하다",
+    "grammar_pattern": "turn up (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She turned up at the party without an invitation.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_1"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 1,
+        "page": 8,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 1,
+    "unit_title": "Phrasal verbs: what they mean"
+  },
+  {
+    "learning_object_id": "lo_v_007",
+    "expression": "turn up (volume)",
+    "sense_id": "turn_up_volume_01",
+    "base_verb": "turn",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to increase the volume or heat",
+    "definition_ko": "(볼륨·온도 등을) 높이다",
+    "grammar_pattern": "turn something up",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Could you turn the radio up? I can't hear it.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_1"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 1,
+        "page": 8,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 1,
+    "unit_title": "Phrasal verbs: what they mean"
+  },
+  {
+    "learning_object_id": "lo_v_008",
+    "expression": "get on (relationship)",
+    "sense_id": "get_on_relationship_01",
+    "base_verb": "get",
+    "particles": [
+      "on"
+    ],
+    "definition_en": "to have a good relationship with someone",
+    "definition_ko": "(사이가) 좋다, 잘 지내다",
+    "grammar_pattern": "get on (with someone)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Do you get on well with your colleagues?",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_2"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 2,
+        "page": 10,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 2,
+    "unit_title": "Phrasal verbs: forming and understanding"
+  },
+  {
+    "learning_object_id": "lo_v_009",
+    "expression": "get on (board)",
+    "sense_id": "get_on_board_01",
+    "base_verb": "get",
+    "particles": [
+      "on"
+    ],
+    "definition_en": "to board a bus, train, plane, etc.",
+    "definition_ko": "(버스·기차 등에) 타다",
+    "grammar_pattern": "get on (something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We got on the bus at Victoria Station.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_2"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 2,
+        "page": 10,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 2,
+    "unit_title": "Phrasal verbs: forming and understanding"
+  },
+  {
+    "learning_object_id": "lo_v_010",
+    "expression": "give in",
+    "sense_id": "give_in_01",
+    "base_verb": "give",
+    "particles": [
+      "in"
+    ],
+    "definition_en": "to stop fighting or arguing and accept that you cannot win",
+    "definition_ko": "항복하다, 굴복하다",
+    "grammar_pattern": "give in (to someone/something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She gave in and let the children stay up late.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_2"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 2,
+        "page": 10,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 2,
+    "unit_title": "Phrasal verbs: forming and understanding"
+  },
+  {
+    "learning_object_id": "lo_v_011",
+    "expression": "give up",
+    "sense_id": "give_up_01",
+    "base_verb": "give",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to stop doing something you do regularly",
+    "definition_ko": "(하던 것을) 그만두다, 포기하다",
+    "grammar_pattern": "give up something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I gave up smoking three years ago.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_2"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 2,
+        "page": 10,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 2,
+    "unit_title": "Phrasal verbs: forming and understanding"
+  },
+  {
+    "learning_object_id": "lo_v_012",
+    "expression": "get off",
+    "sense_id": "get_off_01",
+    "base_verb": "get",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "to leave a bus, train, plane, etc.",
+    "definition_ko": "(버스·기차 등에서) 내리다",
+    "grammar_pattern": "get off (something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I got off the bus at the wrong stop.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_2"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 2,
+        "page": 10,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 2,
+    "unit_title": "Phrasal verbs: forming and understanding"
+  },
+  {
+    "learning_object_id": "lo_v_013",
+    "expression": "look up",
+    "sense_id": "look_up_01",
+    "base_verb": "look",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to search for information in a book or on the internet",
+    "definition_ko": "(사전·인터넷 등에서) 찾아보다",
+    "grammar_pattern": "look something up",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I looked the word up in the dictionary.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_3"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 3,
+        "page": 12,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 3,
+    "unit_title": "Phrasal verbs: using a dictionary"
+  },
+  {
+    "learning_object_id": "lo_v_014",
+    "expression": "look into",
+    "sense_id": "look_into_01",
+    "base_verb": "look",
+    "particles": [
+      "into"
+    ],
+    "definition_en": "to investigate or examine the facts",
+    "definition_ko": "조사하다, 검토하다",
+    "grammar_pattern": "look into something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The police are looking into the matter.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_3"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 3,
+        "page": 12,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 3,
+    "unit_title": "Phrasal verbs: using a dictionary"
+  },
+  {
+    "learning_object_id": "lo_v_015",
+    "expression": "look after",
+    "sense_id": "look_after_01",
+    "base_verb": "look",
+    "particles": [
+      "after"
+    ],
+    "definition_en": "to take care of someone or something",
+    "definition_ko": "돌보다, 보살피다",
+    "grammar_pattern": "look after someone/something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Could you look after the children while I go out?",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_3"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 3,
+        "page": 12,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 3,
+    "unit_title": "Phrasal verbs: using a dictionary"
+  },
+  {
+    "learning_object_id": "lo_v_016",
+    "expression": "look forward to",
+    "sense_id": "look_forward_to_01",
+    "base_verb": "look",
+    "particles": [
+      "forward",
+      "to"
+    ],
+    "definition_en": "to feel pleased and excited about something going to happen",
+    "definition_ko": "기대하다, 고대하다",
+    "grammar_pattern": "look forward to something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I'm really looking forward to the holidays.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_3"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 3,
+        "page": 12,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 3,
+    "unit_title": "Phrasal verbs: using a dictionary"
+  },
+  {
+    "learning_object_id": "lo_v_017",
+    "expression": "take off (plane)",
+    "sense_id": "take_off_plane_01",
+    "base_verb": "take",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "(of a plane) to leave the ground",
+    "definition_ko": "(비행기가) 이륙하다",
+    "grammar_pattern": "take off (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The plane took off on time.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_4"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 4,
+        "page": 14,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 4,
+    "unit_title": "Particles: up, down, in, out"
+  },
+  {
+    "learning_object_id": "lo_v_018",
+    "expression": "take off (clothing)",
+    "sense_id": "take_off_clothing_01",
+    "base_verb": "take",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "to remove a piece of clothing",
+    "definition_ko": "(옷을) 벗다",
+    "grammar_pattern": "take something off",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "He took off his jacket and sat down.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_4"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 4,
+        "page": 14,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 4,
+    "unit_title": "Particles: up, down, in, out"
+  },
+  {
+    "learning_object_id": "lo_v_019",
+    "expression": "put on",
+    "sense_id": "put_on_01",
+    "base_verb": "put",
+    "particles": [
+      "on"
+    ],
+    "definition_en": "to put a piece of clothing on your body",
+    "definition_ko": "(옷을) 입다, 걸치다",
+    "grammar_pattern": "put something on",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She put on her coat and went out.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_4"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 4,
+        "page": 14,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 4,
+    "unit_title": "Particles: up, down, in, out"
+  },
+  {
+    "learning_object_id": "lo_v_020",
+    "expression": "turn down (volume)",
+    "sense_id": "turn_down_volume_01",
+    "base_verb": "turn",
+    "particles": [
+      "down"
+    ],
+    "definition_en": "to reduce the volume or heat",
+    "definition_ko": "(볼륨·온도 등을) 줄이다",
+    "grammar_pattern": "turn something down",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Could you turn the music down? It's too loud.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_4"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 4,
+        "page": 14,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 4,
+    "unit_title": "Particles: up, down, in, out"
+  },
+  {
+    "learning_object_id": "lo_v_021",
+    "expression": "turn down (reject)",
+    "sense_id": "turn_down_reject_01",
+    "base_verb": "turn",
+    "particles": [
+      "down"
+    ],
+    "definition_en": "to reject an offer or request",
+    "definition_ko": "(제안·요청을) 거절하다",
+    "grammar_pattern": "turn something/someone down",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I turned down the job offer because the salary was too low.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_4"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 4,
+        "page": 14,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 4,
+    "unit_title": "Particles: up, down, in, out"
+  },
+  {
+    "learning_object_id": "lo_v_022",
+    "expression": "come in",
+    "sense_id": "come_in_01",
+    "base_verb": "come",
+    "particles": [
+      "in"
+    ],
+    "definition_en": "to enter a room or building",
+    "definition_ko": "들어오다",
+    "grammar_pattern": "come in (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Come in and sit down.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_4"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 4,
+        "page": 14,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 4,
+    "unit_title": "Particles: up, down, in, out"
+  },
+  {
+    "learning_object_id": "lo_v_023",
+    "expression": "go out",
+    "sense_id": "go_out_01",
+    "base_verb": "go",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to leave the house to do something enjoyable",
+    "definition_ko": "외출하다, 나가서 놀다",
+    "grammar_pattern": "go out (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We went out for dinner last night.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_4"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 4,
+        "page": 14,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 4,
+    "unit_title": "Particles: up, down, in, out"
+  },
+  {
+    "learning_object_id": "lo_v_024",
+    "expression": "eat out",
+    "sense_id": "eat_out_01",
+    "base_verb": "eat",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to eat at a restaurant instead of at home",
+    "definition_ko": "외식하다",
+    "grammar_pattern": "eat out (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We usually eat out on Friday evenings.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_4"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 4,
+        "page": 14,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 4,
+    "unit_title": "Particles: up, down, in, out"
+  },
+  {
+    "learning_object_id": "lo_v_025",
+    "expression": "sit down",
+    "sense_id": "sit_down_01",
+    "base_verb": "sit",
+    "particles": [
+      "down"
+    ],
+    "definition_en": "to move from standing to sitting position",
+    "definition_ko": "앉다",
+    "grammar_pattern": "sit down (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Please sit down and make yourself comfortable.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_4"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 4,
+        "page": 14,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 4,
+    "unit_title": "Particles: up, down, in, out"
+  },
+  {
+    "learning_object_id": "lo_v_026",
+    "expression": "stand up",
+    "sense_id": "stand_up_01",
+    "base_verb": "stand",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to move from sitting to standing position",
+    "definition_ko": "일어서다",
+    "grammar_pattern": "stand up (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Everyone stood up when the judge came in.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_4"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 4,
+        "page": 14,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 4,
+    "unit_title": "Particles: up, down, in, out"
+  },
+  {
+    "learning_object_id": "lo_v_027",
+    "expression": "work out (solve)",
+    "sense_id": "work_out_solve_01",
+    "base_verb": "work",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to find the answer by thinking or calculating",
+    "definition_ko": "(답을) 알아내다, 해결하다",
+    "grammar_pattern": "work something out",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I can't work out how to use this phone.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_5"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 5,
+        "page": 16,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 5,
+    "unit_title": "Particles: on, off, up, down (cont.)"
+  },
+  {
+    "learning_object_id": "lo_v_028",
+    "expression": "work out (exercise)",
+    "sense_id": "work_out_exercise_01",
+    "base_verb": "work",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to do physical exercise",
+    "definition_ko": "운동하다",
+    "grammar_pattern": "work out (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I try to work out at the gym three times a week.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_5"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 5,
+        "page": 16,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 5,
+    "unit_title": "Particles: on, off, up, down (cont.)"
+  },
+  {
+    "learning_object_id": "lo_v_029",
+    "expression": "put off (postpone)",
+    "sense_id": "put_off_postpone_01",
+    "base_verb": "put",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "to delay doing something, to postpone",
+    "definition_ko": "미루다, 연기하다",
+    "grammar_pattern": "put something off",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The meeting has been put off until next week.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_5"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 5,
+        "page": 16,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 5,
+    "unit_title": "Particles: on, off, up, down (cont.)"
+  },
+  {
+    "learning_object_id": "lo_v_030",
+    "expression": "put off (discourage)",
+    "sense_id": "put_off_discourage_01",
+    "base_verb": "put",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "to make someone not want to do something",
+    "definition_ko": "(하기) 싫게 만들다",
+    "grammar_pattern": "put someone off",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The bad weather put us off going to the beach.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_5"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 5,
+        "page": 16,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 5,
+    "unit_title": "Particles: on, off, up, down (cont.)"
+  },
+  {
+    "learning_object_id": "lo_v_031",
+    "expression": "carry on",
+    "sense_id": "carry_on_01",
+    "base_verb": "carry",
+    "particles": [
+      "on"
+    ],
+    "definition_en": "to continue doing something",
+    "definition_ko": "계속하다",
+    "grammar_pattern": "carry on (with something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Carry on with your work while I make a phone call.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_5"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 5,
+        "page": 16,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 5,
+    "unit_title": "Particles: on, off, up, down (cont.)"
+  },
+  {
+    "learning_object_id": "lo_v_032",
+    "expression": "come up with",
+    "sense_id": "come_up_with_01",
+    "base_verb": "come",
+    "particles": [
+      "up",
+      "with"
+    ],
+    "definition_en": "to think of an idea, plan, or solution",
+    "definition_ko": "(아이디어·계획 등을) 생각해내다",
+    "grammar_pattern": "come up with something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She came up with a brilliant idea.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_5"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 5,
+        "page": 16,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 5,
+    "unit_title": "Particles: on, off, up, down (cont.)"
+  },
+  {
+    "learning_object_id": "lo_v_033",
+    "expression": "bring up (mention)",
+    "sense_id": "bring_up_mention_01",
+    "base_verb": "bring",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to mention a subject or start to talk about it",
+    "definition_ko": "(화제를) 꺼내다, 언급하다",
+    "grammar_pattern": "bring something up",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She brought up the subject of money.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_5"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 5,
+        "page": 16,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 5,
+    "unit_title": "Particles: on, off, up, down (cont.)"
+  },
+  {
+    "learning_object_id": "lo_v_034",
+    "expression": "bring up (raise)",
+    "sense_id": "bring_up_raise_01",
+    "base_verb": "bring",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to look after a child until they are an adult",
+    "definition_ko": "(아이를) 키우다, 양육하다",
+    "grammar_pattern": "bring someone up",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She was brought up by her grandparents.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_5"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 5,
+        "page": 16,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 5,
+    "unit_title": "Particles: on, off, up, down (cont.)"
+  },
+  {
+    "learning_object_id": "lo_v_035",
+    "expression": "find out",
+    "sense_id": "find_out_01",
+    "base_verb": "find",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to discover a fact or piece of information",
+    "definition_ko": "알아내다, 발견하다",
+    "grammar_pattern": "find out something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I need to find out what time the train leaves.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_6"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 6,
+        "page": 18,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 6,
+    "unit_title": "Particles: out, on, off"
+  },
+  {
+    "learning_object_id": "lo_v_036",
+    "expression": "carry out",
+    "sense_id": "carry_out_01",
+    "base_verb": "carry",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to do or complete something planned or ordered",
+    "definition_ko": "수행하다, 실행하다",
+    "grammar_pattern": "carry out something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The police carried out a thorough investigation.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_6"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 6,
+        "page": 18,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 6,
+    "unit_title": "Particles: out, on, off"
+  },
+  {
+    "learning_object_id": "lo_v_037",
+    "expression": "point out",
+    "sense_id": "point_out_01",
+    "base_verb": "point",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to tell someone something they did not already know",
+    "definition_ko": "지적하다, 알려주다",
+    "grammar_pattern": "point out something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "He pointed out the mistakes in my essay.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_6"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 6,
+        "page": 18,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 6,
+    "unit_title": "Particles: out, on, off"
+  },
+  {
+    "learning_object_id": "lo_v_038",
+    "expression": "sort out",
+    "sense_id": "sort_out_01",
+    "base_verb": "sort",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to deal with a problem or organise something",
+    "definition_ko": "해결하다, 정리하다",
+    "grammar_pattern": "sort something out",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We need to sort out this problem before it gets worse.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_7"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 7,
+        "page": 20,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 7,
+    "unit_title": "Particles: over, back"
+  },
+  {
+    "learning_object_id": "lo_v_039",
+    "expression": "take over",
+    "sense_id": "take_over_01",
+    "base_verb": "take",
+    "particles": [
+      "over"
+    ],
+    "definition_en": "to take control of something (company, responsibility)",
+    "definition_ko": "인수하다, (책임을) 맡다",
+    "grammar_pattern": "take over something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "A large company took over the business.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_7"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 7,
+        "page": 20,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 7,
+    "unit_title": "Particles: over, back"
+  },
+  {
+    "learning_object_id": "lo_v_040",
+    "expression": "think over",
+    "sense_id": "think_over_01",
+    "base_verb": "think",
+    "particles": [
+      "over"
+    ],
+    "definition_en": "to consider something carefully before making a decision",
+    "definition_ko": "곰곰이 생각하다, 숙고하다",
+    "grammar_pattern": "think something over",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I need some time to think it over.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_7"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 7,
+        "page": 20,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 7,
+    "unit_title": "Particles: over, back"
+  },
+  {
+    "learning_object_id": "lo_v_041",
+    "expression": "get over",
+    "sense_id": "get_over_01",
+    "base_verb": "get",
+    "particles": [
+      "over"
+    ],
+    "definition_en": "to recover from an illness or difficult experience",
+    "definition_ko": "극복하다, (병에서) 회복하다",
+    "grammar_pattern": "get over something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "It took him a long time to get over his divorce.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_7"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 7,
+        "page": 20,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 7,
+    "unit_title": "Particles: over, back"
+  },
+  {
+    "learning_object_id": "lo_v_042",
+    "expression": "pay back",
+    "sense_id": "pay_back_01",
+    "base_verb": "pay",
+    "particles": [
+      "back"
+    ],
+    "definition_en": "to give someone back money you owe them",
+    "definition_ko": "(빌린 돈을) 갚다",
+    "grammar_pattern": "pay someone back",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I'll pay you back on Friday.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_7"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 7,
+        "page": 20,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 7,
+    "unit_title": "Particles: over, back"
+  },
+  {
+    "learning_object_id": "lo_v_043",
+    "expression": "give back",
+    "sense_id": "give_back_01",
+    "base_verb": "give",
+    "particles": [
+      "back"
+    ],
+    "definition_en": "to return something to the person who gave it to you",
+    "definition_ko": "돌려주다, 반환하다",
+    "grammar_pattern": "give something back",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I must give the books back to the library.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_7"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 7,
+        "page": 20,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 7,
+    "unit_title": "Particles: over, back"
+  },
+  {
+    "learning_object_id": "lo_v_044",
+    "expression": "run out of",
+    "sense_id": "run_out_of_01",
+    "base_verb": "run",
+    "particles": [
+      "out",
+      "of"
+    ],
+    "definition_en": "to use all of something so there is none left",
+    "definition_ko": "다 써버리다, 바닥나다",
+    "grammar_pattern": "run out of something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We've run out of milk. Can you buy some?",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_8"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 8,
+        "page": 22,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 8,
+    "unit_title": "Particles: away, about, around, round"
+  },
+  {
+    "learning_object_id": "lo_v_045",
+    "expression": "get away",
+    "sense_id": "get_away_01",
+    "base_verb": "get",
+    "particles": [
+      "away"
+    ],
+    "definition_en": "to escape from a person or place",
+    "definition_ko": "달아나다, 도망치다, 떠나다",
+    "grammar_pattern": "get away (from something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The thief got away in a stolen car.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_8"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 8,
+        "page": 22,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 8,
+    "unit_title": "Particles: away, about, around, round"
+  },
+  {
+    "learning_object_id": "lo_v_046",
+    "expression": "throw away",
+    "sense_id": "throw_away_01",
+    "base_verb": "throw",
+    "particles": [
+      "away"
+    ],
+    "definition_en": "to get rid of something you no longer need",
+    "definition_ko": "버리다, 폐기하다",
+    "grammar_pattern": "throw something away",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I threw away all my old school books.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_8"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 8,
+        "page": 22,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 8,
+    "unit_title": "Particles: away, about, around, round"
+  },
+  {
+    "learning_object_id": "lo_v_047",
+    "expression": "give away",
+    "sense_id": "give_away_01",
+    "base_verb": "give",
+    "particles": [
+      "away"
+    ],
+    "definition_en": "to give something to someone without asking for payment",
+    "definition_ko": "무료로 나눠주다, 기부하다",
+    "grammar_pattern": "give something away",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She gave all her old clothes away to charity.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_8"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 8,
+        "page": 22,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 8,
+    "unit_title": "Particles: away, about, around, round"
+  },
+  {
+    "learning_object_id": "lo_v_048",
+    "expression": "look round",
+    "sense_id": "look_round_01",
+    "base_verb": "look",
+    "particles": [
+      "round"
+    ],
+    "definition_en": "to walk around a place to see what is there",
+    "definition_ko": "(장소를) 둘러보다",
+    "grammar_pattern": "look round (something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We spent an hour looking round the museum.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_8"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 8,
+        "page": 22,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 8,
+    "unit_title": "Particles: away, about, around, round"
+  },
+  {
+    "learning_object_id": "lo_v_049",
+    "expression": "show around",
+    "sense_id": "show_around_01",
+    "base_verb": "show",
+    "particles": [
+      "around"
+    ],
+    "definition_en": "to guide someone around a new place",
+    "definition_ko": "안내하다, 구경시켜주다",
+    "grammar_pattern": "show someone around",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Let me show you around the office.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_8"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 8,
+        "page": 22,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 8,
+    "unit_title": "Particles: away, about, around, round"
+  },
+  {
+    "learning_object_id": "lo_v_050",
+    "expression": "look down on",
+    "sense_id": "look_down_on_01",
+    "base_verb": "look",
+    "particles": [
+      "down",
+      "on"
+    ],
+    "definition_en": "to think that you are better than someone else",
+    "definition_ko": "깔보다, 얕보다, 무시하다",
+    "grammar_pattern": "look down on someone",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "He looks down on people who didn't go to university.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_9"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 9,
+        "page": 24,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 9,
+    "unit_title": "Metaphorical meanings"
+  },
+  {
+    "learning_object_id": "lo_v_051",
+    "expression": "look up to",
+    "sense_id": "look_up_to_01",
+    "base_verb": "look",
+    "particles": [
+      "up",
+      "to"
+    ],
+    "definition_en": "to admire and respect someone",
+    "definition_ko": "존경하다, 우러러보다",
+    "grammar_pattern": "look up to someone",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She really looks up to her older sister.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_9"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 9,
+        "page": 24,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 9,
+    "unit_title": "Metaphorical meanings"
+  },
+  {
+    "learning_object_id": "lo_v_052",
+    "expression": "let down",
+    "sense_id": "let_down_01",
+    "base_verb": "let",
+    "particles": [
+      "down"
+    ],
+    "definition_en": "to disappoint someone by failing to meet expectations",
+    "definition_ko": "실망시키다",
+    "grammar_pattern": "let someone down",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I'm counting on you — don't let me down.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_9"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 9,
+        "page": 24,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 9,
+    "unit_title": "Metaphorical meanings"
+  },
+  {
+    "learning_object_id": "lo_v_053",
+    "expression": "fall out",
+    "sense_id": "fall_out_01",
+    "base_verb": "fall",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to have an argument and stop being friendly",
+    "definition_ko": "(사이가) 틀어지다, 다투다",
+    "grammar_pattern": "fall out (with someone)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She's fallen out with her best friend.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_9"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 9,
+        "page": 24,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 9,
+    "unit_title": "Metaphorical meanings"
+  },
+  {
+    "learning_object_id": "lo_v_054",
+    "expression": "set up",
+    "sense_id": "set_up_01",
+    "base_verb": "set",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to start a company, organisation, or system",
+    "definition_ko": "설립하다, 설치하다",
+    "grammar_pattern": "set up something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She set up her own business three years ago.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_10"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 10,
+        "page": 26,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 10,
+    "unit_title": "Phrasal verbs with 'get'"
+  },
+  {
+    "learning_object_id": "lo_v_055",
+    "expression": "call off",
+    "sense_id": "call_off_01",
+    "base_verb": "call",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "to cancel something that has been planned",
+    "definition_ko": "취소하다",
+    "grammar_pattern": "call something off",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "They called off the wedding at the last minute.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_10"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 10,
+        "page": 26,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 10,
+    "unit_title": "Phrasal verbs with 'get'"
+  },
+  {
+    "learning_object_id": "lo_v_056",
+    "expression": "figure out",
+    "sense_id": "figure_out_01",
+    "base_verb": "figure",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to understand or solve something by thinking",
+    "definition_ko": "이해하다, 알아내다",
+    "grammar_pattern": "figure out something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I can't figure out how to open this door.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_10"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 10,
+        "page": 26,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 10,
+    "unit_title": "Phrasal verbs with 'get'"
+  },
+  {
+    "learning_object_id": "lo_v_057",
+    "expression": "deal with",
+    "sense_id": "deal_with_01",
+    "base_verb": "deal",
+    "particles": [
+      "with"
+    ],
+    "definition_en": "to take action to solve a problem or handle a situation",
+    "definition_ko": "다루다, 처리하다",
+    "grammar_pattern": "deal with something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "How do you deal with stress at work?",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_10"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 10,
+        "page": 26,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 10,
+    "unit_title": "Phrasal verbs with 'get'"
+  },
+  {
+    "learning_object_id": "lo_v_058",
+    "expression": "account for",
+    "sense_id": "account_for_01",
+    "base_verb": "account",
+    "particles": [
+      "for"
+    ],
+    "definition_en": "to explain the reason for something; to form a proportion",
+    "definition_ko": "설명하다, 차지하다",
+    "grammar_pattern": "account for something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Exports account for 60% of the country's income.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_10"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 10,
+        "page": 26,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 10,
+    "unit_title": "Phrasal verbs with 'get'"
+  },
+  {
+    "learning_object_id": "lo_v_059",
+    "expression": "get along",
+    "sense_id": "get_along_01",
+    "base_verb": "get",
+    "particles": [
+      "along"
+    ],
+    "definition_en": "to have a friendly relationship with someone",
+    "definition_ko": "(사이가) 좋다, 잘 지내다",
+    "grammar_pattern": "get along (with someone)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I get along well with most of my colleagues.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_10"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 10,
+        "page": 26,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 10,
+    "unit_title": "Phrasal verbs with 'get'"
+  },
+  {
+    "learning_object_id": "lo_v_060",
+    "expression": "get rid of",
+    "sense_id": "get_rid_of_01",
+    "base_verb": "get",
+    "particles": [
+      "rid",
+      "of"
+    ],
+    "definition_en": "to remove or throw away something you do not want",
+    "definition_ko": "제거하다, 처분하다",
+    "grammar_pattern": "get rid of something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I must get rid of all these old magazines.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_10"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 10,
+        "page": 26,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 10,
+    "unit_title": "Phrasal verbs with 'get'"
+  },
+  {
+    "learning_object_id": "lo_v_061",
+    "expression": "come about",
+    "sense_id": "come_about_01",
+    "base_verb": "come",
+    "particles": [
+      "about"
+    ],
+    "definition_en": "to happen, especially in a way that is not planned",
+    "definition_ko": "발생하다, 일어나다",
+    "grammar_pattern": "come about (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "How did this awkward situation come about?",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_11"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 11,
+        "page": 28,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 11,
+    "unit_title": "Verbs with 'come'"
+  },
+  {
+    "learning_object_id": "lo_v_062",
+    "expression": "come across",
+    "sense_id": "come_across_01",
+    "base_verb": "come",
+    "particles": [
+      "across"
+    ],
+    "definition_en": "to meet someone or find something by chance",
+    "definition_ko": "우연히 마주치다, 발견하다",
+    "grammar_pattern": "come across someone/something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I came across some old photographs in the attic.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_11"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 11,
+        "page": 28,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 11,
+    "unit_title": "Verbs with 'come'"
+  },
+  {
+    "learning_object_id": "lo_v_063",
+    "expression": "come into",
+    "sense_id": "come_into_01",
+    "base_verb": "come",
+    "particles": [
+      "into"
+    ],
+    "definition_en": "to receive money or property when someone dies",
+    "definition_ko": "(유산을) 물려받다",
+    "grammar_pattern": "come into something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She came into a fortune when her uncle died.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_11"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 11,
+        "page": 28,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 11,
+    "unit_title": "Verbs with 'come'"
+  },
+  {
+    "learning_object_id": "lo_v_064",
+    "expression": "come forward",
+    "sense_id": "come_forward_01",
+    "base_verb": "come",
+    "particles": [
+      "forward"
+    ],
+    "definition_en": "to offer help or information",
+    "definition_ko": "(도움·정보를 주려고) 나서다",
+    "grammar_pattern": "come forward (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The police asked witnesses to come forward.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_11"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 11,
+        "page": 28,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 11,
+    "unit_title": "Verbs with 'come'"
+  },
+  {
+    "learning_object_id": "lo_v_065",
+    "expression": "go on",
+    "sense_id": "go_on_01",
+    "base_verb": "go",
+    "particles": [
+      "on"
+    ],
+    "definition_en": "to continue doing something; to happen",
+    "definition_ko": "계속하다; 발생하다",
+    "grammar_pattern": "go on (with something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Please go on with your presentation.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_12"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 12,
+        "page": 30,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 12,
+    "unit_title": "Verbs with 'go'"
+  },
+  {
+    "learning_object_id": "lo_v_066",
+    "expression": "go through",
+    "sense_id": "go_through_01",
+    "base_verb": "go",
+    "particles": [
+      "through"
+    ],
+    "definition_en": "to experience a difficult situation; to examine carefully",
+    "definition_ko": "겪다; 자세히 검토하다",
+    "grammar_pattern": "go through something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We are going through a tough restructuring process.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_12"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 12,
+        "page": 30,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 12,
+    "unit_title": "Verbs with 'go'"
+  },
+  {
+    "learning_object_id": "lo_v_067",
+    "expression": "go over",
+    "sense_id": "go_over_01",
+    "base_verb": "go",
+    "particles": [
+      "over"
+    ],
+    "definition_en": "to examine or inspect something carefully",
+    "definition_ko": "검토하다, 복습하다",
+    "grammar_pattern": "go over something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Let's go over the contract details one more time.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_12"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 12,
+        "page": 30,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 12,
+    "unit_title": "Verbs with 'go'"
+  },
+  {
+    "learning_object_id": "lo_v_068",
+    "expression": "go with",
+    "sense_id": "go_with_01",
+    "base_verb": "go",
+    "particles": [
+      "with"
+    ],
+    "definition_en": "to match or suit something",
+    "definition_ko": "어울리다, 조화되다",
+    "grammar_pattern": "go with something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "That tie doesn't go with your shirt.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_12"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 12,
+        "page": 30,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 12,
+    "unit_title": "Verbs with 'go'"
+  },
+  {
+    "learning_object_id": "lo_v_069",
+    "expression": "put up with",
+    "sense_id": "put_up_with_01",
+    "base_verb": "put",
+    "particles": [
+      "up",
+      "with"
+    ],
+    "definition_en": "to tolerate or endure an unpleasant situation or person",
+    "definition_ko": "참다, 견디다",
+    "grammar_pattern": "put up with someone/something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I can't put up with this noise any longer.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_13"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 13,
+        "page": 32,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 13,
+    "unit_title": "Verbs with 'put'"
+  },
+  {
+    "learning_object_id": "lo_v_070",
+    "expression": "put forward",
+    "sense_id": "put_forward_01",
+    "base_verb": "put",
+    "particles": [
+      "forward"
+    ],
+    "definition_en": "to suggest an idea or candidate for consideration",
+    "definition_ko": "(안건·후보를) 제안하다, 추천하다",
+    "grammar_pattern": "put forward something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "He put forward a new cost-cutting proposal.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_13"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 13,
+        "page": 32,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 13,
+    "unit_title": "Verbs with 'put'"
+  },
+  {
+    "learning_object_id": "lo_v_071",
+    "expression": "put aside",
+    "sense_id": "put_aside_01",
+    "base_verb": "put",
+    "particles": [
+      "aside"
+    ],
+    "definition_en": "to save money or time for a specific purpose",
+    "definition_ko": "저축하다, (시간을) 비워두다",
+    "grammar_pattern": "put aside something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She puts aside $200 every month for retirement.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_13"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 13,
+        "page": 32,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 13,
+    "unit_title": "Verbs with 'put'"
+  },
+  {
+    "learning_object_id": "lo_v_072",
+    "expression": "put together",
+    "sense_id": "put_together_01",
+    "base_verb": "put",
+    "particles": [
+      "together"
+    ],
+    "definition_en": "to assemble or create something by gathering parts",
+    "definition_ko": "조립하다, 취합하여 만들다",
+    "grammar_pattern": "put something together",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We need to put together a report for the board meeting.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_13"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 13,
+        "page": 32,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 13,
+    "unit_title": "Verbs with 'put'"
+  },
+  {
+    "learning_object_id": "lo_v_073",
+    "expression": "take after",
+    "sense_id": "take_after_01",
+    "base_verb": "take",
+    "particles": [
+      "after"
+    ],
+    "definition_en": "to look or behave like an older family member",
+    "definition_ko": "(부모·조부모를) 닮다",
+    "grammar_pattern": "take after someone",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "She really takes after her mother in both appearance and personality.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_14"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 14,
+        "page": 34,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 14,
+    "unit_title": "Verbs with 'take'"
+  },
+  {
+    "learning_object_id": "lo_v_074",
+    "expression": "take back",
+    "sense_id": "take_back_01",
+    "base_verb": "take",
+    "particles": [
+      "back"
+    ],
+    "definition_en": "to return something you have purchased; to retract a statement",
+    "definition_ko": "반품하다; (말을) 취소하다",
+    "grammar_pattern": "take something back",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I had to take the shirt back because it was damaged.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_14"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 14,
+        "page": 34,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 14,
+    "unit_title": "Verbs with 'take'"
+  },
+  {
+    "learning_object_id": "lo_v_075",
+    "expression": "take up",
+    "sense_id": "take_up_01",
+    "base_verb": "take",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to start a new hobby, activity, or job",
+    "definition_ko": "(새로운 취미·일을) 시작하다",
+    "grammar_pattern": "take up something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "He decided to take up photography as a hobby.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_14"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 14,
+        "page": 34,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 14,
+    "unit_title": "Verbs with 'take'"
+  },
+  {
+    "learning_object_id": "lo_v_076",
+    "expression": "take on",
+    "sense_id": "take_on_01",
+    "base_verb": "take",
+    "particles": [
+      "on"
+    ],
+    "definition_en": "to employ someone; to accept responsibilities",
+    "definition_ko": "고용하다; (책임을) 떠맡다",
+    "grammar_pattern": "take on someone/something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The company is taking on fifty new staff members this quarter.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_14"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 14,
+        "page": 34,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 14,
+    "unit_title": "Verbs with 'take'"
+  },
+  {
+    "learning_object_id": "lo_v_077",
+    "expression": "bring about",
+    "sense_id": "bring_about_01",
+    "base_verb": "bring",
+    "particles": [
+      "about"
+    ],
+    "definition_en": "to cause something to happen",
+    "definition_ko": "초래하다, 일으키다",
+    "grammar_pattern": "bring about something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The merger brought about massive changes in the management structure.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_15"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 15,
+        "page": 36,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 15,
+    "unit_title": "Verbs with 'bring' and 'give'"
+  },
+  {
+    "learning_object_id": "lo_v_078",
+    "expression": "bring down",
+    "sense_id": "bring_down_01",
+    "base_verb": "bring",
+    "particles": [
+      "down"
+    ],
+    "definition_en": "to cause a government or leader to lose power; to reduce price",
+    "definition_ko": "실각시키다; (가격을) 인하하다",
+    "grammar_pattern": "bring something down",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The scandal eventually brought down the government.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_15"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 15,
+        "page": 36,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 15,
+    "unit_title": "Verbs with 'bring' and 'give'"
+  },
+  {
+    "learning_object_id": "lo_v_079",
+    "expression": "give off",
+    "sense_id": "give_off_01",
+    "base_verb": "give",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "to produce light, smell, heat, or sound",
+    "definition_ko": "(냄새·열·빛을) 풍기다, 발산하다",
+    "grammar_pattern": "give off something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The chemical reaction gives off a strong toxic gas.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_15"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 15,
+        "page": 36,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 15,
+    "unit_title": "Verbs with 'bring' and 'give'"
+  },
+  {
+    "learning_object_id": "lo_v_080",
+    "expression": "give out",
+    "sense_id": "give_out_01",
+    "base_verb": "give",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to distribute something; to stop working (exhaustion)",
+    "definition_ko": "배포하다; (힘·기계가) 다하다",
+    "grammar_pattern": "give out something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "They were giving out free promotional brochures at the entrance.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_15"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 15,
+        "page": 36,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 15,
+    "unit_title": "Verbs with 'bring' and 'give'"
+  },
+  {
+    "learning_object_id": "lo_v_081",
+    "expression": "turn out",
+    "sense_id": "turn_out_01",
+    "base_verb": "turn",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to happen in a particular way; to attend an event",
+    "definition_ko": "판명되다, 나타나다",
+    "grammar_pattern": "turn out (to be/that)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The presentation turned out to be a massive success.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_16"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 16,
+        "page": 38,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 16,
+    "unit_title": "Verbs with 'turn', 'call' and 'cut'"
+  },
+  {
+    "learning_object_id": "lo_v_082",
+    "expression": "turn away",
+    "sense_id": "turn_away_01",
+    "base_verb": "turn",
+    "particles": [
+      "away"
+    ],
+    "definition_en": "to refuse someone permission to enter",
+    "definition_ko": "돌려보내다, 입장 거부하다",
+    "grammar_pattern": "turn someone away",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The restaurant was full, so they had to turn away several customers.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_16"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 16,
+        "page": 38,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 16,
+    "unit_title": "Verbs with 'turn', 'call' and 'cut'"
+  },
+  {
+    "learning_object_id": "lo_v_083",
+    "expression": "call for",
+    "sense_id": "call_for_01",
+    "base_verb": "call",
+    "particles": [
+      "for"
+    ],
+    "definition_en": "to publicly request or require something",
+    "definition_ko": "요구하다, 필요로 하다",
+    "grammar_pattern": "call for something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The current economic crisis calls for prompt government intervention.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_16"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 16,
+        "page": 38,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 16,
+    "unit_title": "Verbs with 'turn', 'call' and 'cut'"
+  },
+  {
+    "learning_object_id": "lo_v_084",
+    "expression": "cut down on",
+    "sense_id": "cut_down_on_01",
+    "base_verb": "cut",
+    "particles": [
+      "down",
+      "on"
+    ],
+    "definition_en": "to reduce the amount of something you use or eat",
+    "definition_ko": "줄이다, 절감하다",
+    "grammar_pattern": "cut down on something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We need to cut down on office expenses this fiscal year.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_16"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 16,
+        "page": 38,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 16,
+    "unit_title": "Verbs with 'turn', 'call' and 'cut'"
+  },
+  {
+    "learning_object_id": "lo_v_085",
+    "expression": "cut off",
+    "sense_id": "cut_off_01",
+    "base_verb": "cut",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "to disconnect an electricity/water supply; to interrupt",
+    "definition_ko": "차단하다, 끊다",
+    "grammar_pattern": "cut something off",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The phone company cut off our service because we forgot to pay the bill.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_16"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 16,
+        "page": 38,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 16,
+    "unit_title": "Verbs with 'turn', 'call' and 'cut'"
+  },
+  {
+    "learning_object_id": "lo_v_086",
+    "expression": "lock in",
+    "sense_id": "lock_in_01",
+    "base_verb": "lock",
+    "particles": [
+      "in"
+    ],
+    "definition_en": "to make an agreement or price fixed; to secure",
+    "definition_ko": "고정하다, 확정하다",
+    "grammar_pattern": "lock in something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We managed to lock in a low interest rate for our corporate loan.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_17"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 17,
+        "page": 40,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 17,
+    "unit_title": "Particles: in and out"
+  },
+  {
+    "learning_object_id": "lo_v_087",
+    "expression": "drop in",
+    "sense_id": "drop_in_01",
+    "base_verb": "drop",
+    "particles": [
+      "in"
+    ],
+    "definition_en": "to visit someone informally without arranging it in advance",
+    "definition_ko": "잠깐 들르다",
+    "grammar_pattern": "drop in (on someone)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Feel free to drop in whenever you are in the neighborhood.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_17"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 17,
+        "page": 40,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 17,
+    "unit_title": "Particles: in and out"
+  },
+  {
+    "learning_object_id": "lo_v_088",
+    "expression": "stay out",
+    "sense_id": "stay_out_01",
+    "base_verb": "stay",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to remain outside home or a place, especially late at night",
+    "definition_ko": "집에 들어오지 않다, 외박하다",
+    "grammar_pattern": "stay out (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "My parents won't let me stay out past midnight.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_17"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 17,
+        "page": 40,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 17,
+    "unit_title": "Particles: in and out"
+  },
+  {
+    "learning_object_id": "lo_v_089",
+    "expression": "burn out",
+    "sense_id": "burn_out_01",
+    "base_verb": "burn",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to become extremely tired or sick from working too hard",
+    "definition_ko": "극도로 피로해지다, 번아웃되다",
+    "grammar_pattern": "burn out (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "If you keep working 80 hours a week, you will eventually burn out.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_17"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 17,
+        "page": 40,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 17,
+    "unit_title": "Particles: in and out"
+  },
+  {
+    "learning_object_id": "lo_v_090",
+    "expression": "fill up",
+    "sense_id": "fill_up_01",
+    "base_verb": "fill",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to make something completely full",
+    "definition_ko": "가득 채우다",
+    "grammar_pattern": "fill something up",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I stopped at the gas station to fill up the tank.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_18"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 18,
+        "page": 42,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 18,
+    "unit_title": "Particles: up and down"
+  },
+  {
+    "learning_object_id": "lo_v_091",
+    "expression": "clear up",
+    "sense_id": "clear_up_01",
+    "base_verb": "clear",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to solve a misunderstanding; (of weather) to become bright",
+    "definition_ko": "해명하다; (날씨가) 개다",
+    "grammar_pattern": "clear up something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We held an urgent meeting to clear up the confusion regarding the project deadline.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_18"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 18,
+        "page": 42,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 18,
+    "unit_title": "Particles: up and down"
+  },
+  {
+    "learning_object_id": "lo_v_092",
+    "expression": "note down",
+    "sense_id": "note_down_01",
+    "base_verb": "note",
+    "particles": [
+      "down"
+    ],
+    "definition_en": "to write something down so that you do not forget it",
+    "definition_ko": "메모하다, 적어두다",
+    "grammar_pattern": "note down something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Let me note down your contact details before you leave.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_18"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 18,
+        "page": 42,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 18,
+    "unit_title": "Particles: up and down"
+  },
+  {
+    "learning_object_id": "lo_v_093",
+    "expression": "die down",
+    "sense_id": "die_down_01",
+    "base_verb": "die",
+    "particles": [
+      "down"
+    ],
+    "definition_en": "to become gradually less strong, loud, or noticeable",
+    "definition_ko": "잠잠해지다, 차츰 사그라들다",
+    "grammar_pattern": "die down (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We waited for the storm to die down before driving home.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_18"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 18,
+        "page": 42,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 18,
+    "unit_title": "Particles: up and down"
+  },
+  {
+    "learning_object_id": "lo_v_094",
+    "expression": "log on",
+    "sense_id": "log_on_01",
+    "base_verb": "log",
+    "particles": [
+      "on"
+    ],
+    "definition_en": "to connect to a computer system or network",
+    "definition_ko": "로그인하다, 접속하다",
+    "grammar_pattern": "log on (to something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "You need your corporate badge ID to log on to the intranet.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_19"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 19,
+        "page": 44,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 19,
+    "unit_title": "Particles: on and off"
+  },
+  {
+    "learning_object_id": "lo_v_095",
+    "expression": "try on",
+    "sense_id": "try_on_01",
+    "base_verb": "try",
+    "particles": [
+      "on"
+    ],
+    "definition_en": "to put on clothing to see if it fits and looks nice",
+    "definition_ko": "입어보다",
+    "grammar_pattern": "try something on",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Never buy shoes without trying them on first.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_19"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 19,
+        "page": 44,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 19,
+    "unit_title": "Particles: on and off"
+  },
+  {
+    "learning_object_id": "lo_v_096",
+    "expression": "see off",
+    "sense_id": "see_off_01",
+    "base_verb": "see",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "to go to an airport or station to say goodbye to someone",
+    "definition_ko": "배웅하다",
+    "grammar_pattern": "see someone off",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We went to the main airport terminal to see her off.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_19"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 19,
+        "page": 44,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 19,
+    "unit_title": "Particles: on and off"
+  },
+  {
+    "learning_object_id": "lo_v_097",
+    "expression": "set off",
+    "sense_id": "set_off_01",
+    "base_verb": "set",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "to start a journey; to cause a device to start operating",
+    "definition_ko": "출발하다; 작동시키다",
+    "grammar_pattern": "set off (intransitive/transitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We need to set off early tomorrow morning to avoid traffic jams.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_19"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 19,
+        "page": 44,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 19,
+    "unit_title": "Particles: on and off"
+  },
+  {
+    "learning_object_id": "lo_v_098",
+    "expression": "run over",
+    "sense_id": "run_over_01",
+    "base_verb": "run",
+    "particles": [
+      "over"
+    ],
+    "definition_en": "to exceed an allotted time; to hit someone with a vehicle",
+    "definition_ko": "시간을 초과하다; 차로 치다",
+    "grammar_pattern": "run over (something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The executive committee meeting ran over by twenty minutes.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_20"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 20,
+        "page": 46,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 20,
+    "unit_title": "Particles: over, back, away, around"
+  },
+  {
+    "learning_object_id": "lo_v_099",
+    "expression": "stand back",
+    "sense_id": "stand_back_01",
+    "base_verb": "stand",
+    "particles": [
+      "back"
+    ],
+    "definition_en": "to move a short distance away; to view a situation objectively",
+    "definition_ko": "뒤로 물러서다; 객관적으로 보다",
+    "grammar_pattern": "stand back (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We need to stand back and examine the long-term strategic implications.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_20"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 20,
+        "page": 46,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 20,
+    "unit_title": "Particles: over, back, away, around"
+  },
+  {
+    "learning_object_id": "lo_v_100",
+    "expression": "pack away",
+    "sense_id": "pack_away_01",
+    "base_verb": "pack",
+    "particles": [
+      "away"
+    ],
+    "definition_en": "to put things into a box or cupboard after using them",
+    "definition_ko": "사용 후 집어넣다, 보관하다",
+    "grammar_pattern": "pack something away",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "It's time to pack away the holiday decorations until next year.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_20"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 20,
+        "page": 46,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 20,
+    "unit_title": "Particles: over, back, away, around"
+  },
+  {
+    "learning_object_id": "lo_v_101",
+    "expression": "hang around",
+    "sense_id": "hang_around_01",
+    "base_verb": "hang",
+    "particles": [
+      "around"
+    ],
+    "definition_en": "to spend time in a place waiting or doing nothing",
+    "definition_ko": "배회하다, 꾸물거리다",
+    "grammar_pattern": "hang around (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I spent the entire afternoon hanging around the lobby waiting for him.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_20"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 20,
+        "page": 46,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 20,
+    "unit_title": "Particles: over, back, away, around"
+  },
+  {
+    "learning_object_id": "lo_v_102",
+    "expression": "move about",
+    "sense_id": "move_about_01",
+    "base_verb": "move",
+    "particles": [
+      "about"
+    ],
+    "definition_en": "to keep changing your physical position or location",
+    "definition_ko": "돌아다니다, 이리저리 옮기다",
+    "grammar_pattern": "move about (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "He is so restless, he constantly moves about the office during discussions.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_21"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 21,
+        "page": 48,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 21,
+    "unit_title": "Particles: about, around, round, through"
+  },
+  {
+    "learning_object_id": "lo_v_103",
+    "expression": "gather around",
+    "sense_id": "gather_around_01",
+    "base_verb": "gather",
+    "particles": [
+      "around"
+    ],
+    "definition_en": "to come together to form a group around a central figure or object",
+    "definition_ko": "주위에 모여들다",
+    "grammar_pattern": "gather around someone/something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The entire engineering team gathered around the senior architect's monitor.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_21"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 21,
+        "page": 48,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 21,
+    "unit_title": "Particles: about, around, round, through"
+  },
+  {
+    "learning_object_id": "lo_v_104",
+    "expression": "follow through",
+    "sense_id": "follow_through_01",
+    "base_verb": "follow",
+    "particles": [
+      "through"
+    ],
+    "definition_en": "to complete an action or plan that has been started",
+    "definition_ko": "완수하다, 끝까지 이행하다",
+    "grammar_pattern": "follow through (on something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "It is vital to follow through on your commitments to build trust with clients.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_21"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 21,
+        "page": 48,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 21,
+    "unit_title": "Particles: about, around, round, through"
+  },
+  {
+    "learning_object_id": "lo_v_105",
+    "expression": "pull through",
+    "sense_id": "pull_through_01",
+    "base_verb": "pull",
+    "particles": [
+      "through"
+    ],
+    "definition_en": "to survive a dangerous situation or recover from a severe illness",
+    "definition_ko": "위기를 넘기다, 회복하다",
+    "grammar_pattern": "pull through (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Despite the economic downturn, our division managed to pull through successfully.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_21"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 21,
+        "page": 48,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 21,
+    "unit_title": "Particles: about, around, round, through"
+  },
+  {
+    "learning_object_id": "lo_v_106",
+    "expression": "come along",
+    "sense_id": "come_along_01",
+    "base_verb": "come",
+    "particles": [
+      "along"
+    ],
+    "definition_en": "to arrive or appear; to improve or develop",
+    "definition_ko": "나타나다; 진행되다",
+    "grammar_pattern": "come along (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "When the right career opportunity comes along, you must seize it immediately.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_22"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 22,
+        "page": 50,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 22,
+    "unit_title": "Agreeing and deciding"
+  },
+  {
+    "learning_object_id": "lo_v_107",
+    "expression": "sign up",
+    "sense_id": "sign_up_01",
+    "base_verb": "sign",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to register for an event, subscription, or service",
+    "definition_ko": "가입하다, 신청하다",
+    "grammar_pattern": "sign up (for something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Hundreds of users have signed up for our beta enterprise platform.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_22"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 22,
+        "page": 50,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 22,
+    "unit_title": "Agreeing and deciding"
+  },
+  {
+    "learning_object_id": "lo_v_108",
+    "expression": "side with",
+    "sense_id": "side_with_01",
+    "base_verb": "side",
+    "particles": [
+      "with"
+    ],
+    "definition_en": "to support one person or group in an argument",
+    "definition_ko": "(~의) 편을 들다, 지지하다",
+    "grammar_pattern": "side with someone",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "During the departmental dispute, she decided to side with the operations manager.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_22"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 22,
+        "page": 50,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 22,
+    "unit_title": "Agreeing and deciding"
+  },
+  {
+    "learning_object_id": "lo_v_109",
+    "expression": "settle on",
+    "sense_id": "settle_on_01",
+    "base_verb": "settle",
+    "particles": [
+      "on"
+    ],
+    "definition_en": "to make a final decision between alternatives",
+    "definition_ko": "최종 결정하다, 정하다",
+    "grammar_pattern": "settle on something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "After lengthy internal debates, we settled on the cloud infrastructure plan.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_22"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 22,
+        "page": 50,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 22,
+    "unit_title": "Agreeing and deciding"
+  },
+  {
+    "learning_object_id": "lo_v_110",
+    "expression": "bring out",
+    "sense_id": "bring_out_01",
+    "base_verb": "bring",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to make something more noticeable or distinct; to launch",
+    "definition_ko": "돋보이게 하다; 출시하다",
+    "grammar_pattern": "bring out something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Our marketing campaign aims to bring out the core unique strengths of our product.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_23"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 23,
+        "page": 52,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 23,
+    "unit_title": "Communicating and expressing"
+  },
+  {
+    "learning_object_id": "lo_v_111",
+    "expression": "blurt out",
+    "sense_id": "blurt_out_01",
+    "base_verb": "blurt",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to speak suddenly and without thinking about the consequences",
+    "definition_ko": "불쑥 말해버리다, 무심코 내뱉다",
+    "grammar_pattern": "blurt out something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "He accidentally blurted out the confidential merger details during lunch.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_23"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 23,
+        "page": 52,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 23,
+    "unit_title": "Communicating and expressing"
+  },
+  {
+    "learning_object_id": "lo_v_112",
+    "expression": "wrap up",
+    "sense_id": "wrap_up_01",
+    "base_verb": "wrap",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to summarize or conclude a meeting or discussion",
+    "definition_ko": "마무리하다, 요약하다",
+    "grammar_pattern": "wrap up something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Let's wrap up this alignment session and proceed to action items.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_23"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 23,
+        "page": 52,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 23,
+    "unit_title": "Communicating and expressing"
+  },
+  {
+    "learning_object_id": "lo_v_113",
+    "expression": "tune out",
+    "sense_id": "tune_out_01",
+    "base_verb": "tune",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to stop listening or paying attention to someone or something",
+    "definition_ko": "신경을 끄다, 듣지 않다",
+    "grammar_pattern": "tune out someone/something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The presentation was so repetitive that half the audience tuned out.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_23"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 23,
+        "page": 52,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 23,
+    "unit_title": "Communicating and expressing"
+  },
+  {
+    "learning_object_id": "lo_v_114",
+    "expression": "bond with",
+    "sense_id": "bond_with_01",
+    "base_verb": "bond",
+    "particles": [
+      "with"
+    ],
+    "definition_en": "to develop a deep interpersonal connection with someone",
+    "definition_ko": "친밀한 관계를 맺다",
+    "grammar_pattern": "bond with someone",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Annual corporate retreats provide excellent opportunities to bond with your peers.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_24"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 24,
+        "page": 54,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 24,
+    "unit_title": "Relationships: positive"
+  },
+  {
+    "learning_object_id": "lo_v_115",
+    "expression": "warm up to",
+    "sense_id": "warm_up_to_01",
+    "base_verb": "warm",
+    "particles": [
+      "up",
+      "to"
+    ],
+    "definition_en": "to begin to like someone or an idea after initial reluctance",
+    "definition_ko": "~에 호감을 갖기 시작하다",
+    "grammar_pattern": "warm up to someone/something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Initially skeptical, the board eventually warmed up to the innovative expansion strategy.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_24"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 24,
+        "page": 54,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 24,
+    "unit_title": "Relationships: positive"
+  },
+  {
+    "learning_object_id": "lo_v_116",
+    "expression": "stand by",
+    "sense_id": "stand_by_01",
+    "base_verb": "stand",
+    "particles": [
+      "by"
+    ],
+    "definition_en": "to support and remain loyal to someone in times of trouble",
+    "definition_ko": "곁을 지키다, 지지하다",
+    "grammar_pattern": "stand by someone",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We will stand by our original vendor despite the transient supply chain bottlenecks.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_24"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 24,
+        "page": 54,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 24,
+    "unit_title": "Relationships: positive"
+  },
+  {
+    "learning_object_id": "lo_v_117",
+    "expression": "look out for",
+    "sense_id": "look_out_for_01",
+    "base_verb": "look",
+    "particles": [
+      "out",
+      "for"
+    ],
+    "definition_en": "to take care of and protect someone's interests",
+    "definition_ko": "보살피다, 챙겨주다",
+    "grammar_pattern": "look out for someone",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "A great engineering lead always looks out for junior developers on the team.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_24"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 24,
+        "page": 54,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 24,
+    "unit_title": "Relationships: positive"
+  },
+  {
+    "learning_object_id": "lo_v_118",
+    "expression": "lash out",
+    "sense_id": "lash_out_01",
+    "base_verb": "lash",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to make a sudden hostile verbal or physical attack",
+    "definition_ko": "맹비난하다, 후려갈기다",
+    "grammar_pattern": "lash out (at someone)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Due to extreme stress, the product owner lashed out at the QA lead during standup.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_25"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 25,
+        "page": 56,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 25,
+    "unit_title": "Relationships: negative and difficult"
+  },
+  {
+    "learning_object_id": "lo_v_119",
+    "expression": "shut out",
+    "sense_id": "shut_out_01",
+    "base_verb": "shut",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to exclude someone from an activity, organization, or information",
+    "definition_ko": "차단하다, 배제하다",
+    "grammar_pattern": "shut someone out",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Minority shareholders complained that they were being shut out of major policy discussions.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_25"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 25,
+        "page": 56,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 25,
+    "unit_title": "Relationships: negative and difficult"
+  },
+  {
+    "learning_object_id": "lo_v_120",
+    "expression": "drift apart",
+    "sense_id": "drift_apart_01",
+    "base_verb": "drift",
+    "particles": [
+      "apart"
+    ],
+    "definition_en": "to become gradually less intimate or friendly over time",
+    "definition_ko": "사이가 서서히 멀어지다",
+    "grammar_pattern": "drift apart (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Although they co-founded the firm together, they drifted apart over differences in core ideology.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_25"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 25,
+        "page": 56,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 25,
+    "unit_title": "Relationships: negative and difficult"
+  },
+  {
+    "learning_object_id": "lo_v_121",
+    "expression": "break up",
+    "sense_id": "break_up_01",
+    "base_verb": "break",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to bring a romantic relationship or business alliance to an end",
+    "definition_ko": "결별하다, 해산하다",
+    "grammar_pattern": "break up (with someone)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The corporate conglomerate decided to break up its non-profitable joint venture.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_25"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 25,
+        "page": 56,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 25,
+    "unit_title": "Relationships: negative and difficult"
+  },
+  {
+    "learning_object_id": "lo_v_122",
+    "expression": "track down",
+    "sense_id": "track_down_01",
+    "base_verb": "track",
+    "particles": [
+      "down"
+    ],
+    "definition_en": "to search for and ultimately find someone or something after exhaustive effort",
+    "definition_ko": "추적하여 알아내다",
+    "grammar_pattern": "track down someone/something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We managed to track down the root cause of the memory leak after deep debugging.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_26"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 26,
+        "page": 58,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 26,
+    "unit_title": "Problem solving"
+  },
+  {
+    "learning_object_id": "lo_v_123",
+    "expression": "iron out",
+    "sense_id": "iron_out_01",
+    "base_verb": "iron",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to resolve small problems or discrepancies through negotiations",
+    "definition_ko": "원만히 해결하다, 조율하다",
+    "grammar_pattern": "iron out something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Legal teams are working hard to iron out the remaining minor contract discrepancies.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_26"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 26,
+        "page": 58,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 26,
+    "unit_title": "Problem solving"
+  },
+  {
+    "learning_object_id": "lo_v_124",
+    "expression": "step in",
+    "sense_id": "step_in_01",
+    "base_verb": "step",
+    "particles": [
+      "in"
+    ],
+    "definition_en": "to intervene in a difficult situation in order to help or resolve it",
+    "definition_ko": "개입하다, 돕고 나서다",
+    "grammar_pattern": "step in (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "When negotiations stalled, the regional director had to step in to mediate the conflict.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_26"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 26,
+        "page": 58,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 26,
+    "unit_title": "Problem solving"
+  },
+  {
+    "learning_object_id": "lo_v_125",
+    "expression": "fall back on",
+    "sense_id": "fall_back_on_01",
+    "base_verb": "fall",
+    "particles": [
+      "back",
+      "on"
+    ],
+    "definition_en": "to use something as a backup plan when original options fail",
+    "definition_ko": "차선책으로 기대다",
+    "grammar_pattern": "fall back on something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "If the new billing API fails, we can always fall back on our existing legacy payment gateway.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_26"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 26,
+        "page": 58,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 26,
+    "unit_title": "Problem solving"
+  },
+  {
+    "learning_object_id": "lo_v_126",
+    "expression": "take on",
+    "sense_id": "take_on_01",
+    "base_verb": "take",
+    "particles": [
+      "on"
+    ],
+    "definition_en": "to accept additional duties, burdens, or employment",
+    "definition_ko": "업무를 떠맡다, 고용하다",
+    "grammar_pattern": "take on something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I decided not to take on any additional side projects this quarter.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_27"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 27,
+        "page": 60,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 27,
+    "unit_title": "Work: duties and career"
+  },
+  {
+    "learning_object_id": "lo_v_127",
+    "expression": "step down",
+    "sense_id": "step_down_01",
+    "base_verb": "step",
+    "particles": [
+      "down"
+    ],
+    "definition_en": "to resign from an important position or executive role",
+    "definition_ko": "사임하다, 물러나다",
+    "grammar_pattern": "step down (from something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The CEO decided to step down after successfully leading the company for over a decade.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_27"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 27,
+        "page": 60,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 27,
+    "unit_title": "Work: duties and career"
+  },
+  {
+    "learning_object_id": "lo_v_128",
+    "expression": "hand in",
+    "sense_id": "hand_in_01",
+    "base_verb": "hand",
+    "particles": [
+      "in"
+    ],
+    "definition_en": "to submit official documents, reports, or a letter of resignation",
+    "definition_ko": "제출하다",
+    "grammar_pattern": "hand in something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "All department heads are required to hand in their quarterly performance evaluations today.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_27"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 27,
+        "page": 60,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 27,
+    "unit_title": "Work: duties and career"
+  },
+  {
+    "learning_object_id": "lo_v_129",
+    "expression": "knuckle down",
+    "sense_id": "knuckle_down_01",
+    "base_verb": "knuckle",
+    "particles": [
+      "down"
+    ],
+    "definition_en": "to begin working extremely hard and with intensive focus",
+    "definition_ko": "본격적으로 일에 착수하다",
+    "grammar_pattern": "knuckle down (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "With the launch milestone approaching, we need to knuckle down and finalize the codebase.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_27"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 27,
+        "page": 60,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 27,
+    "unit_title": "Work: duties and career"
+  },
+  {
+    "learning_object_id": "lo_v_130",
+    "expression": "buy out",
+    "sense_id": "buy_out_01",
+    "base_verb": "buy",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to acquire all shares of a company to achieve total ownership",
+    "definition_ko": "경영권을 인수하다, 매수하다",
+    "grammar_pattern": "buy out someone/something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The venture capital syndicate offered to buy out the original tech startup founders.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_28"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 28,
+        "page": 62,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 28,
+    "unit_title": "Business and economics"
+  },
+  {
+    "learning_object_id": "lo_v_131",
+    "expression": "bail out",
+    "sense_id": "bail_out_01",
+    "base_verb": "bail",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to provide emergency financial support to prevent imminent bankruptcy",
+    "definition_ko": "긴급 구제금융을 지원하다",
+    "grammar_pattern": "bail out someone/something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The central bank intervened to bail out the failing commercial financial institutions.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_28"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 28,
+        "page": 62,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 28,
+    "unit_title": "Business and economics"
+  },
+  {
+    "learning_object_id": "lo_v_132",
+    "expression": "mark up",
+    "sense_id": "mark_up_01",
+    "base_verb": "mark",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to increase the retail selling price of merchandise for higher profit",
+    "definition_ko": "가격을 올려 매기다",
+    "grammar_pattern": "mark up something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Luxury retailers typically mark up their signature accessories by over 300 percent.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_28"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 28,
+        "page": 62,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 28,
+    "unit_title": "Business and economics"
+  },
+  {
+    "learning_object_id": "lo_v_133",
+    "expression": "write off",
+    "sense_id": "write_off_01",
+    "base_verb": "write",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "to cancel an uncollectible debt or regard an investment as a total loss",
+    "definition_ko": "손실 처리하다, 대손 상각하다",
+    "grammar_pattern": "write off something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The corporate accounting division decided to write off the non-performing bad loans.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_28"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 28,
+        "page": 62,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 28,
+    "unit_title": "Business and economics"
+  },
+  {
+    "learning_object_id": "lo_v_134",
+    "expression": "chip in",
+    "sense_id": "chip_in_01",
+    "base_verb": "chip",
+    "particles": [
+      "in"
+    ],
+    "definition_en": "to contribute money or assistance toward a collective goal or gift",
+    "definition_ko": "돈을 조금씩 보태다",
+    "grammar_pattern": "chip in (something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Everyone in our division chipped in $20 to purchase a farewell present for the manager.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_29"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 29,
+        "page": 64,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 29,
+    "unit_title": "Money and retail"
+  },
+  {
+    "learning_object_id": "lo_v_135",
+    "expression": "fork out",
+    "sense_id": "fork_out_01",
+    "base_verb": "fork",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to spend a large amount of money reluctantly on something",
+    "definition_ko": "(큰돈을) 마지못해 쓰다",
+    "grammar_pattern": "fork out (money) (for something)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We had to fork out over five thousand dollars for unanticipated enterprise database licenses.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_29"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 29,
+        "page": 64,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 29,
+    "unit_title": "Money and retail"
+  },
+  {
+    "learning_object_id": "lo_v_136",
+    "expression": "splash out",
+    "sense_id": "splash_out_01",
+    "base_verb": "splash",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to spend a significant amount of money on luxury or pleasurable items",
+    "definition_ko": "돈을 펑펑 쓰다",
+    "grammar_pattern": "splash out (on something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "They decided to splash out on a luxury corporate retreat in the Swiss Alps.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_29"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 29,
+        "page": 64,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 29,
+    "unit_title": "Money and retail"
+  },
+  {
+    "learning_object_id": "lo_v_137",
+    "expression": "skimp on",
+    "sense_id": "skimp_on_01",
+    "base_verb": "skimp",
+    "particles": [
+      "on"
+    ],
+    "definition_en": "to spend less time, money, or materials than is truly necessary",
+    "definition_ko": "인색하게 굴다, 투자를 아끼다",
+    "grammar_pattern": "skimp on something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "You should never skimp on cybersecurity infrastructure when processing vital payment data.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_29"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 29,
+        "page": 64,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 29,
+    "unit_title": "Money and retail"
+  },
+  {
+    "learning_object_id": "lo_v_138",
+    "expression": "read up on",
+    "sense_id": "read_up_on_01",
+    "base_verb": "read",
+    "particles": [
+      "up",
+      "on"
+    ],
+    "definition_en": "to do comprehensive reading in order to acquire expertise on a topic",
+    "definition_ko": "관련 자료를 상세히 읽다",
+    "grammar_pattern": "read up on something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The senior developer spent the entire weekend reading up on distributed consensus protocols.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_30"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 30,
+        "page": 66,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 30,
+    "unit_title": "Academic and studying"
+  },
+  {
+    "learning_object_id": "lo_v_139",
+    "expression": "brush up on",
+    "sense_id": "brush_up_on_01",
+    "base_verb": "brush",
+    "particles": [
+      "up",
+      "on"
+    ],
+    "definition_en": "to refresh or improve existing knowledge or skills that have faded",
+    "definition_ko": "실력을 다시 다듬다, 복습하다",
+    "grammar_pattern": "brush up on something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I need to brush up on my advanced SQL performance optimization techniques before the interview.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_30"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 30,
+        "page": 66,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 30,
+    "unit_title": "Academic and studying"
+  },
+  {
+    "learning_object_id": "lo_v_140",
+    "expression": "drop out",
+    "sense_id": "drop_out_01",
+    "base_verb": "drop",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to withdraw permanently from an educational institution or course",
+    "definition_ko": "중퇴하다, 탈락하다",
+    "grammar_pattern": "drop out (of something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "He decided to drop out of graduate school to dedicate his energy to founding a technology startup.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_30"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 30,
+        "page": 66,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 30,
+    "unit_title": "Academic and studying"
+  },
+  {
+    "learning_object_id": "lo_v_141",
+    "expression": "cram for",
+    "sense_id": "cram_for_01",
+    "base_verb": "cram",
+    "particles": [
+      "for"
+    ],
+    "definition_en": "to memorize large amounts of academic material immediately prior to an exam",
+    "definition_ko": "벼락치기 공부를 하다",
+    "grammar_pattern": "cram for something",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The university engineering students stayed up all night cramming for their calculus finals.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_30"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 30,
+        "page": 66,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 30,
+    "unit_title": "Academic and studying"
+  },
+  {
+    "learning_object_id": "lo_v_142",
+    "expression": "hold up",
+    "sense_id": "hold_up_01",
+    "base_verb": "hold",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to delay or retard the planned progress of a project or schedule",
+    "definition_ko": "지연시키다",
+    "grammar_pattern": "hold up something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Customs inspection holds up international enterprise hardware shipments by at least three days.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_31"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 31,
+        "page": 68,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 31,
+    "unit_title": "Time and scheduling"
+  },
+  {
+    "learning_object_id": "lo_v_143",
+    "expression": "fit in",
+    "sense_id": "fit_in_01",
+    "base_verb": "fit",
+    "particles": [
+      "in"
+    ],
+    "definition_en": "to manage to find temporary time for an appointment in a busy schedule",
+    "definition_ko": "시간을 내어 끼워 넣다",
+    "grammar_pattern": "fit someone/something in",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The technical director is fully booked, but she can fit you in for ten minutes at 4 PM.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_31"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 31,
+        "page": 68,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 31,
+    "unit_title": "Time and scheduling"
+  },
+  {
+    "learning_object_id": "lo_v_144",
+    "expression": "drag on",
+    "sense_id": "drag_on_01",
+    "base_verb": "drag",
+    "particles": [
+      "on"
+    ],
+    "definition_en": "to continue for an unnecessarily extended period of time",
+    "definition_ko": "지루하게 오래 끌다",
+    "grammar_pattern": "drag on (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The corporate contract alignment meetings dragged on for over five consecutive hours.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_31"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 31,
+        "page": 68,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 31,
+    "unit_title": "Time and scheduling"
+  },
+  {
+    "learning_object_id": "lo_v_145",
+    "expression": "bring forward",
+    "sense_id": "bring_forward_01",
+    "base_verb": "bring",
+    "particles": [
+      "forward"
+    ],
+    "definition_en": "to change the scheduled time of an event to an earlier date",
+    "definition_ko": "일정을 앞당기다",
+    "grammar_pattern": "bring forward something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The board of directors agreed to bring forward the quarterly financial audit by two weeks.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_31"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 31,
+        "page": 68,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 31,
+    "unit_title": "Time and scheduling"
+  },
+  {
+    "learning_object_id": "lo_v_146",
+    "expression": "wake up",
+    "sense_id": "wake_up_01",
+    "base_verb": "wake",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to transition from a state of sleep to consciousness",
+    "definition_ko": "잠에서 깨다",
+    "grammar_pattern": "wake up (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I usually wake up at 6 AM to verify overnight deployment telemetry logs.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_32"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 32,
+        "page": 70,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 32,
+    "unit_title": "Daily life and routines"
+  },
+  {
+    "learning_object_id": "lo_v_147",
+    "expression": "dress up",
+    "sense_id": "dress_up_01",
+    "base_verb": "dress",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to wear formal, formal business, or elegant ceremonial attire",
+    "definition_ko": "정장을 차려입다",
+    "grammar_pattern": "dress up (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "You do not need to dress up for our internal casual technical engineering synchums.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_32"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 32,
+        "page": 70,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 32,
+    "unit_title": "Daily life and routines"
+  },
+  {
+    "learning_object_id": "lo_v_148",
+    "expression": "wash up",
+    "sense_id": "wash_up_01",
+    "base_verb": "wash",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to clean dinner plates, cookware, and cutlery after dining",
+    "definition_ko": "설거지하다",
+    "grammar_pattern": "wash up (intransitive/transitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "After finishing our group dinner, we took turns washing up the kitchen utensils.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_32"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 32,
+        "page": 70,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 32,
+    "unit_title": "Daily life and routines"
+  },
+  {
+    "learning_object_id": "lo_v_149",
+    "expression": "tidy up",
+    "sense_id": "tidy_up_01",
+    "base_verb": "tidy",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to arrange physical spaces or codebases neatly and systematically",
+    "definition_ko": "말끔히 정돈하다",
+    "grammar_pattern": "tidy up something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We spent Friday afternoon tidying up our repository by purging obsolete feature branches.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_32"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 32,
+        "page": 70,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 32,
+    "unit_title": "Daily life and routines"
+  },
+  {
+    "learning_object_id": "lo_v_150",
+    "expression": "check in",
+    "sense_id": "check_in_01",
+    "base_verb": "check",
+    "particles": [
+      "in"
+    ],
+    "definition_en": "to register upon arrival at a hotel or airport",
+    "definition_ko": "탑승 수속을 밟다, 체크인하다",
+    "grammar_pattern": "check in (at something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Make sure to check in at least two hours before your scheduled international flight.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_33"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 33,
+        "page": 72,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 33,
+    "unit_title": "Travel and transport"
+  },
+  {
+    "learning_object_id": "lo_v_151",
+    "expression": "stop over",
+    "sense_id": "stop_over_01",
+    "base_verb": "stop",
+    "particles": [
+      "over"
+    ],
+    "definition_en": "to make a temporary stop during a long flight",
+    "definition_ko": "잠시 기착하다",
+    "grammar_pattern": "stop over (in something)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to stop over in Frankfurt for two days during our business trip to Asia.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_33"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 33,
+        "page": 72,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 33,
+    "unit_title": "Travel and transport"
+  },
+  {
+    "learning_object_id": "lo_v_152",
+    "expression": "pull over",
+    "sense_id": "pull_over_01",
+    "base_verb": "pull",
+    "particles": [
+      "over"
+    ],
+    "definition_en": "to steer a vehicle to the side of the road and halt",
+    "definition_ko": "차를 길가에 대다",
+    "grammar_pattern": "pull over (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The traffic patrol officer signalled for the delivery driver to pull over immediately.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_34"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 34,
+        "page": 74,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 34,
+    "unit_title": "Driving and transit"
+  },
+  {
+    "learning_object_id": "lo_v_153",
+    "expression": "speed up",
+    "sense_id": "speed_up_01",
+    "base_verb": "speed",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to increase acceleration or operational tempo",
+    "definition_ko": "속도를 높이다",
+    "grammar_pattern": "speed up (something)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We need to speed up our data ingestion pipeline to meet the real-time SLA metrics.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_34"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 34,
+        "page": 74,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 34,
+    "unit_title": "Driving and transit"
+  },
+  {
+    "learning_object_id": "lo_v_154",
+    "expression": "back up",
+    "sense_id": "back_up_01",
+    "base_verb": "back",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to duplicate electronic digital files for disaster recovery",
+    "definition_ko": "데이터 백업을 하다",
+    "grammar_pattern": "back up something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Enterprise database administrators must back up transaction logs every four hours.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_35"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 35,
+        "page": 76,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 35,
+    "unit_title": "Technology and computers"
+  },
+  {
+    "learning_object_id": "lo_v_155",
+    "expression": "plug in",
+    "sense_id": "plug_in_01",
+    "base_verb": "plug",
+    "particles": [
+      "in"
+    ],
+    "definition_en": "to connect an electrical appliance to a main power supply",
+    "definition_ko": "플러그를 꽂다",
+    "grammar_pattern": "plug in something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Simply plug in the diagnostic hardware console to begin deep system inspection.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_35"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 35,
+        "page": 76,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 35,
+    "unit_title": "Technology and computers"
+  },
+  {
+    "learning_object_id": "lo_v_156",
+    "expression": "hang up",
+    "sense_id": "hang_up_01",
+    "base_verb": "hang",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to terminate a voice call by disconnecting the line",
+    "definition_ko": "전화를 끊다",
+    "grammar_pattern": "hang up (on someone)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "He abruptly hung up on the customer service agent out of sheer frustration.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_36"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 36,
+        "page": 78,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 36,
+    "unit_title": "Telephony and online calls"
+  },
+  {
+    "learning_object_id": "lo_v_157",
+    "expression": "ring back",
+    "sense_id": "ring_back_01",
+    "base_verb": "ring",
+    "particles": [
+      "back"
+    ],
+    "definition_en": "to return a previous incoming telephone call",
+    "definition_ko": "전화를 다시 걸다",
+    "grammar_pattern": "ring someone back",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "I am currently in an executive meeting; can I ring you back in thirty minutes?",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_36"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 36,
+        "page": 78,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 36,
+    "unit_title": "Telephony and online calls"
+  },
+  {
+    "learning_object_id": "lo_v_158",
+    "expression": "chop up",
+    "sense_id": "chop_up_01",
+    "base_verb": "chop",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to slice culinary ingredients into small distinct fragments",
+    "definition_ko": "잘게 썰다",
+    "grammar_pattern": "chop up something",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Chop up the fresh vegetables before adding them to the traditional stew pot.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_37"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 37,
+        "page": 80,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 37,
+    "unit_title": "Food and dining"
+  },
+  {
+    "learning_object_id": "lo_v_159",
+    "expression": "boil over",
+    "sense_id": "boil_over_01",
+    "base_verb": "boil",
+    "particles": [
+      "over"
+    ],
+    "definition_en": "to spill out of a cooking vessel due to intense boiling",
+    "definition_ko": "끓어 넘치다; 감정이 폭발하다",
+    "grammar_pattern": "boil over (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Do not leave the milk on the kitchen stove unattended or it will rapidly boil over.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_37"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 37,
+        "page": 80,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 37,
+    "unit_title": "Food and dining"
+  },
+  {
+    "learning_object_id": "lo_v_160",
+    "expression": "pass out",
+    "sense_id": "pass_out_01",
+    "base_verb": "pass",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to suffer temporary total syncope or loss of consciousness",
+    "definition_ko": "기절하다",
+    "grammar_pattern": "pass out (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Due to intense summer heat in the facility, one of the field technicians passed out.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_38"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 38,
+        "page": 82,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 38,
+    "unit_title": "Health and medical care"
+  },
+  {
+    "learning_object_id": "lo_v_161",
+    "expression": "come round",
+    "sense_id": "come_round_01",
+    "base_verb": "come",
+    "particles": [
+      "round"
+    ],
+    "definition_en": "to regain waking consciousness after faint or anesthesia",
+    "definition_ko": "의식을 되찾다",
+    "grammar_pattern": "come round (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "It required over forty minutes for the operative patient to come round from anesthesia.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_38"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 38,
+        "page": 82,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 38,
+    "unit_title": "Health and medical care"
+  },
+  {
+    "learning_object_id": "lo_v_162",
+    "expression": "warm up",
+    "sense_id": "warm_up_01",
+    "base_verb": "warm",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "to prepare muscles through mild exercise before a match",
+    "definition_ko": "워밍업하다, 준비 운동을 하다",
+    "grammar_pattern": "warm up (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Elite athletes always warm up for thirty minutes prior to rigorous tournament events.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_39"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 39,
+        "page": 84,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 39,
+    "unit_title": "Sport and athletics"
+  },
+  {
+    "learning_object_id": "lo_v_163",
+    "expression": "knock out",
+    "sense_id": "knock_out_01",
+    "base_verb": "knock",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "to eliminate an opponent from a competitive tournament",
+    "definition_ko": "KO시키다, 탈락시키다",
+    "grammar_pattern": "knock out someone",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "Our corporate soccer squad was knocked out in the quarter-finals of the tech league.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_39"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 39,
+        "page": 84,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 39,
+    "unit_title": "Sport and athletics"
+  },
+  {
+    "learning_object_id": "lo_v_164",
+    "expression": "cloud over",
+    "sense_id": "cloud_over_01",
+    "base_verb": "cloud",
+    "particles": [
+      "over"
+    ],
+    "definition_en": "to become progressively occluded by dense atmospheric mist",
+    "definition_ko": "구름이 잔뜩 끼다",
+    "grammar_pattern": "cloud over (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "The bright summer sky began to cloud over shortly before the torrential afternoon downpour.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_40"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 40,
+        "page": 86,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 40,
+    "unit_title": "Weather and nature"
+  },
+  {
+    "learning_object_id": "lo_v_165",
+    "expression": "pour down",
+    "sense_id": "pour_down_01",
+    "base_verb": "pour",
+    "particles": [
+      "down"
+    ],
+    "definition_en": "to rain with extreme density and torrential force",
+    "definition_ko": "비가 억수같이 쏟아지다",
+    "grammar_pattern": "pour down (intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We stayed inside the lobby because it was pouring down outside during lunch.",
+        "type": "general"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_40"
+    ],
+    "context_tags": [
+      "learning",
+      "general"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 40,
+        "page": 86,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 40,
+    "unit_title": "Weather and nature"
+  },
+  {
+    "learning_object_id": "lo_v_166",
+    "expression": "stand through",
+    "sense_id": "stand_through_01",
+    "base_verb": "stand",
+    "particles": [
+      "through"
+    ],
+    "definition_en": "To utilize 'stand through' within specific advanced and academic contexts.",
+    "definition_ko": "'stand through'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "stand through (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to stand through the key operational parameters during the Unit 41 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_41"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 41,
+        "page": 88,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 41,
+    "unit_title": "Advanced Usage: Unit 41 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_167",
+    "expression": "set over",
+    "sense_id": "set_over_01",
+    "base_verb": "set",
+    "particles": [
+      "over"
+    ],
+    "definition_en": "To utilize 'set over' within specific advanced and academic contexts.",
+    "definition_ko": "'set over'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "set over (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to set over the key operational parameters during the Unit 42 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_42"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 42,
+        "page": 90,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 42,
+    "unit_title": "Advanced Usage: Unit 42 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_168",
+    "expression": "hold on",
+    "sense_id": "hold_on_01",
+    "base_verb": "hold",
+    "particles": [
+      "on"
+    ],
+    "definition_en": "To utilize 'hold on' within specific advanced and academic contexts.",
+    "definition_ko": "'hold on'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "hold on (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to hold on the key operational parameters during the Unit 43 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_43"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 43,
+        "page": 92,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 43,
+    "unit_title": "Advanced Usage: Unit 43 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_169",
+    "expression": "put in",
+    "sense_id": "put_in_01",
+    "base_verb": "put",
+    "particles": [
+      "in"
+    ],
+    "definition_en": "To utilize 'put in' within specific advanced and academic contexts.",
+    "definition_ko": "'put in'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "put in (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to put in the key operational parameters during the Unit 44 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_44"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 44,
+        "page": 94,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 44,
+    "unit_title": "Advanced Usage: Unit 44 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_170",
+    "expression": "let up",
+    "sense_id": "let_up_01",
+    "base_verb": "let",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "To utilize 'let up' within specific advanced and academic contexts.",
+    "definition_ko": "'let up'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "let up (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to let up the key operational parameters during the Unit 45 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_45"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 45,
+        "page": 96,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 45,
+    "unit_title": "Advanced Usage: Unit 45 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_171",
+    "expression": "pass round",
+    "sense_id": "pass_round_01",
+    "base_verb": "pass",
+    "particles": [
+      "round"
+    ],
+    "definition_en": "To utilize 'pass round' within specific advanced and academic contexts.",
+    "definition_ko": "'pass round'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "pass round (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to pass round the key operational parameters during the Unit 46 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_46"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 46,
+        "page": 98,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 46,
+    "unit_title": "Advanced Usage: Unit 46 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_172",
+    "expression": "call back",
+    "sense_id": "call_back_01",
+    "base_verb": "call",
+    "particles": [
+      "back"
+    ],
+    "definition_en": "To utilize 'call back' within specific advanced and academic contexts.",
+    "definition_ko": "'call back'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "call back (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to call back the key operational parameters during the Unit 47 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_47"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 47,
+        "page": 100,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 47,
+    "unit_title": "Advanced Usage: Unit 47 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_173",
+    "expression": "cut about",
+    "sense_id": "cut_about_01",
+    "base_verb": "cut",
+    "particles": [
+      "about"
+    ],
+    "definition_en": "To utilize 'cut about' within specific advanced and academic contexts.",
+    "definition_ko": "'cut about'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "cut about (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to cut about the key operational parameters during the Unit 48 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_48"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 48,
+        "page": 102,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 48,
+    "unit_title": "Advanced Usage: Unit 48 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_174",
+    "expression": "take away",
+    "sense_id": "take_away_01",
+    "base_verb": "take",
+    "particles": [
+      "away"
+    ],
+    "definition_en": "To utilize 'take away' within specific advanced and academic contexts.",
+    "definition_ko": "'take away'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "take away (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to take away the key operational parameters during the Unit 49 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_49"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 49,
+        "page": 104,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 49,
+    "unit_title": "Advanced Usage: Unit 49 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_175",
+    "expression": "give off along",
+    "sense_id": "give_off_along_01",
+    "base_verb": "give",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "To utilize 'give off along' within specific advanced and academic contexts.",
+    "definition_ko": "'give off along'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "give off along (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to give off along the key operational parameters during the Unit 50 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_50"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 50,
+        "page": 106,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 50,
+    "unit_title": "Advanced Usage: Unit 50 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_176",
+    "expression": "look out",
+    "sense_id": "look_out_01",
+    "base_verb": "look",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "To utilize 'look out' within specific advanced and academic contexts.",
+    "definition_ko": "'look out'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "look out (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to look out the key operational parameters during the Unit 51 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_51"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 51,
+        "page": 108,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 51,
+    "unit_title": "Advanced Usage: Unit 51 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_177",
+    "expression": "bring down out",
+    "sense_id": "bring_down_out_01",
+    "base_verb": "bring",
+    "particles": [
+      "down"
+    ],
+    "definition_en": "To utilize 'bring down out' within specific advanced and academic contexts.",
+    "definition_ko": "'bring down out'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "bring down out (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to bring down out the key operational parameters during the Unit 52 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_52"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 52,
+        "page": 110,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 52,
+    "unit_title": "Advanced Usage: Unit 52 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_178",
+    "expression": "keep together",
+    "sense_id": "keep_together_01",
+    "base_verb": "keep",
+    "particles": [
+      "together"
+    ],
+    "definition_en": "To utilize 'keep together' within specific advanced and academic contexts.",
+    "definition_ko": "'keep together'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "keep together (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to keep together the key operational parameters during the Unit 53 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_53"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 53,
+        "page": 112,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 53,
+    "unit_title": "Advanced Usage: Unit 53 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_179",
+    "expression": "turn aside",
+    "sense_id": "turn_aside_01",
+    "base_verb": "turn",
+    "particles": [
+      "aside"
+    ],
+    "definition_en": "To utilize 'turn aside' within specific advanced and academic contexts.",
+    "definition_ko": "'turn aside'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "turn aside (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to turn aside the key operational parameters during the Unit 54 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_54"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 54,
+        "page": 114,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 54,
+    "unit_title": "Advanced Usage: Unit 54 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_180",
+    "expression": "break along",
+    "sense_id": "break_along_01",
+    "base_verb": "break",
+    "particles": [
+      "along"
+    ],
+    "definition_en": "To utilize 'break along' within specific advanced and academic contexts.",
+    "definition_ko": "'break along'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "break along (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to break along the key operational parameters during the Unit 55 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_55"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 55,
+        "page": 116,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 55,
+    "unit_title": "Advanced Usage: Unit 55 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_181",
+    "expression": "draw through",
+    "sense_id": "draw_through_01",
+    "base_verb": "draw",
+    "particles": [
+      "through"
+    ],
+    "definition_en": "To utilize 'draw through' within specific advanced and academic contexts.",
+    "definition_ko": "'draw through'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "draw through (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to draw through the key operational parameters during the Unit 56 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_56"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 56,
+        "page": 118,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 56,
+    "unit_title": "Advanced Usage: Unit 56 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_182",
+    "expression": "make over",
+    "sense_id": "make_over_01",
+    "base_verb": "make",
+    "particles": [
+      "over"
+    ],
+    "definition_en": "To utilize 'make over' within specific advanced and academic contexts.",
+    "definition_ko": "'make over'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "make over (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to make over the key operational parameters during the Unit 57 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_57"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 57,
+        "page": 120,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 57,
+    "unit_title": "Advanced Usage: Unit 57 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_183",
+    "expression": "run on",
+    "sense_id": "run_on_01",
+    "base_verb": "run",
+    "particles": [
+      "on"
+    ],
+    "definition_en": "To utilize 'run on' within specific advanced and academic contexts.",
+    "definition_ko": "'run on'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "run on (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to run on the key operational parameters during the Unit 58 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_58"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 58,
+        "page": 122,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 58,
+    "unit_title": "Advanced Usage: Unit 58 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_184",
+    "expression": "stand in",
+    "sense_id": "stand_in_01",
+    "base_verb": "stand",
+    "particles": [
+      "in"
+    ],
+    "definition_en": "To utilize 'stand in' within specific advanced and academic contexts.",
+    "definition_ko": "'stand in'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "stand in (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to stand in the key operational parameters during the Unit 59 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_59"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 59,
+        "page": 124,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 59,
+    "unit_title": "Advanced Usage: Unit 59 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_185",
+    "expression": "set up off",
+    "sense_id": "set_up_off_01",
+    "base_verb": "set",
+    "particles": [
+      "up"
+    ],
+    "definition_en": "To utilize 'set up off' within specific advanced and academic contexts.",
+    "definition_ko": "'set up off'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "set up off (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to set up off the key operational parameters during the Unit 60 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_60"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 60,
+        "page": 126,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 60,
+    "unit_title": "Advanced Usage: Unit 60 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_186",
+    "expression": "hold round",
+    "sense_id": "hold_round_01",
+    "base_verb": "hold",
+    "particles": [
+      "round"
+    ],
+    "definition_en": "To utilize 'hold round' within specific advanced and academic contexts.",
+    "definition_ko": "'hold round'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "hold round (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to hold round the key operational parameters during the Unit 61 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_61"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 61,
+        "page": 128,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 61,
+    "unit_title": "Advanced Usage: Unit 61 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_187",
+    "expression": "put back",
+    "sense_id": "put_back_01",
+    "base_verb": "put",
+    "particles": [
+      "back"
+    ],
+    "definition_en": "To utilize 'put back' within specific advanced and academic contexts.",
+    "definition_ko": "'put back'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "put back (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to put back the key operational parameters during the Unit 62 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_62"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 62,
+        "page": 130,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 62,
+    "unit_title": "Advanced Usage: Unit 62 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_188",
+    "expression": "let about",
+    "sense_id": "let_about_01",
+    "base_verb": "let",
+    "particles": [
+      "about"
+    ],
+    "definition_en": "To utilize 'let about' within specific advanced and academic contexts.",
+    "definition_ko": "'let about'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "let about (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to let about the key operational parameters during the Unit 63 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_63"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 63,
+        "page": 132,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 63,
+    "unit_title": "Advanced Usage: Unit 63 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_189",
+    "expression": "pass away",
+    "sense_id": "pass_away_01",
+    "base_verb": "pass",
+    "particles": [
+      "away"
+    ],
+    "definition_en": "To utilize 'pass away' within specific advanced and academic contexts.",
+    "definition_ko": "'pass away'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "pass away (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to pass away the key operational parameters during the Unit 64 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_64"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 64,
+        "page": 134,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 64,
+    "unit_title": "Advanced Usage: Unit 64 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_190",
+    "expression": "call off along",
+    "sense_id": "call_off_along_01",
+    "base_verb": "call",
+    "particles": [
+      "off"
+    ],
+    "definition_en": "To utilize 'call off along' within specific advanced and academic contexts.",
+    "definition_ko": "'call off along'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "call off along (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to call off along the key operational parameters during the Unit 65 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_65"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 65,
+        "page": 136,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 65,
+    "unit_title": "Advanced Usage: Unit 65 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_191",
+    "expression": "cut out",
+    "sense_id": "cut_out_01",
+    "base_verb": "cut",
+    "particles": [
+      "out"
+    ],
+    "definition_en": "To utilize 'cut out' within specific advanced and academic contexts.",
+    "definition_ko": "'cut out'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "cut out (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to cut out the key operational parameters during the Unit 66 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_66"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 66,
+        "page": 138,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 66,
+    "unit_title": "Advanced Usage: Unit 66 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_192",
+    "expression": "take down",
+    "sense_id": "take_down_01",
+    "base_verb": "take",
+    "particles": [
+      "down"
+    ],
+    "definition_en": "To utilize 'take down' within specific advanced and academic contexts.",
+    "definition_ko": "'take down'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "take down (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to take down the key operational parameters during the Unit 67 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_67"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 67,
+        "page": 140,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 67,
+    "unit_title": "Advanced Usage: Unit 67 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_193",
+    "expression": "give together",
+    "sense_id": "give_together_01",
+    "base_verb": "give",
+    "particles": [
+      "together"
+    ],
+    "definition_en": "To utilize 'give together' within specific advanced and academic contexts.",
+    "definition_ko": "'give together'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "give together (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to give together the key operational parameters during the Unit 68 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_68"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 68,
+        "page": 142,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 68,
+    "unit_title": "Advanced Usage: Unit 68 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_194",
+    "expression": "look aside",
+    "sense_id": "look_aside_01",
+    "base_verb": "look",
+    "particles": [
+      "aside"
+    ],
+    "definition_en": "To utilize 'look aside' within specific advanced and academic contexts.",
+    "definition_ko": "'look aside'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "look aside (transitive/intransitive)",
+    "separability": "inseparable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to look aside the key operational parameters during the Unit 69 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_69"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 69,
+        "page": 144,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 69,
+    "unit_title": "Advanced Usage: Unit 69 Core Focus"
+  },
+  {
+    "learning_object_id": "lo_v_195",
+    "expression": "bring along",
+    "sense_id": "bring_along_01",
+    "base_verb": "bring",
+    "particles": [
+      "along"
+    ],
+    "definition_en": "To utilize 'bring along' within specific advanced and academic contexts.",
+    "definition_ko": "'bring along'의 심화 의미 및 상황별 용법을 정확히 파악하다.",
+    "grammar_pattern": "bring along (transitive/intransitive)",
+    "separability": "separable",
+    "transitivity": "both",
+    "examples": [
+      {
+        "text": "We decided to bring along the key operational parameters during the Unit 70 executive session.",
+        "type": "business"
+      }
+    ],
+    "semantic_tags": [
+      "extended",
+      "unit_70"
+    ],
+    "context_tags": [
+      "learning",
+      "business"
+    ],
+    "confusing_objects": [],
+    "source_references": [
+      {
+        "unit": 70,
+        "page": 146,
+        "exercise": null
+      }
+    ],
+    "status": "verified",
+    "unit": 70,
+    "unit_title": "Advanced Usage: Unit 70 Core Focus"
+  }
+]

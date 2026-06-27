@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import type { LearningObject } from "../../domain/models";
 
-const DATASET_PATH = path.join(process.cwd(), "dataset", "static", "learning_objects.content_v3.json");
+const DATASET_PATH = path.join(process.cwd(), "dataset", "static", "learning_objects_verified.json");
 
 export interface LearningObjectValidationSummary {
   total_count: number;
@@ -92,7 +92,9 @@ function normalizeLearningObject(value: unknown): LearningObject {
     content_completeness: isRecord(value.content_completeness)
       ? value.content_completeness as unknown as LearningObject["content_completeness"]
       : undefined,
-  };
+    unit: typeof value.unit === "number" ? value.unit : undefined,
+    unit_title: readOptionalString(value, "unit_title"),
+  } as LearningObject & { unit?: number; unit_title?: string };
 }
 
 // MVP에서는 정의가 있는 객체만 문제 생성 후보로 삼아 OCR 노이즈를 학습 루프에 밀어 넣지 않는다.

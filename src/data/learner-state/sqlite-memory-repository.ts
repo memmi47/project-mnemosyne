@@ -22,79 +22,93 @@ export async function findMemoryObject(
   userId: string,
   learningObjectId: string
 ): Promise<MemoryObject | null> {
-  const row = getDatabase()
-    .prepare(`
-      SELECT *
-      FROM memory_objects
-      WHERE user_id = ? AND learning_object_id = ?
-      LIMIT 1
-    `)
-    .get(userId, learningObjectId) as MemoryObjectRow | undefined;
+  try {
+    const row = getDatabase()
+      .prepare(`
+        SELECT *
+        FROM memory_objects
+        WHERE user_id = ? AND learning_object_id = ?
+        LIMIT 1
+      `)
+      .get(userId, learningObjectId) as MemoryObjectRow | undefined;
 
-  return row ? mapMemoryObject(row) : null;
+    return row ? mapMemoryObject(row) : null;
+  } catch (err) {
+    console.error("SQLite findMemoryObject error (fallback to null):", err);
+    return null;
+  }
 }
 
 export async function findMemoryObjectsByUser(userId: string): Promise<MemoryObject[]> {
-  const rows = getDatabase()
-    .prepare(`
-      SELECT *
-      FROM memory_objects
-      WHERE user_id = ?
-      ORDER BY next_review_at ASC
-    `)
-    .all(userId) as MemoryObjectRow[];
+  try {
+    const rows = getDatabase()
+      .prepare(`
+        SELECT *
+        FROM memory_objects
+        WHERE user_id = ?
+        ORDER BY next_review_at ASC
+      `)
+      .all(userId) as MemoryObjectRow[];
 
-  return rows.map(mapMemoryObject);
+    return rows.map(mapMemoryObject);
+  } catch (err) {
+    console.error("SQLite findMemoryObjectsByUser error (fallback to empty array):", err);
+    return [];
+  }
 }
 
 export async function saveMemoryObject(memoryObject: MemoryObject): Promise<void> {
-  getDatabase()
-    .prepare(`
-      INSERT INTO memory_objects (
-        memory_object_id,
-        user_id,
-        learning_object_id,
-        mastery_score,
-        memory_strength,
-        forgetting_risk,
-        learning_stage,
-        last_reviewed_at,
-        next_review_at,
-        correct_count,
-        incorrect_count,
-        avg_response_latency_ms,
-        confusion_targets_json,
-        updated_at
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-      ON CONFLICT(memory_object_id) DO UPDATE SET
-        mastery_score = excluded.mastery_score,
-        memory_strength = excluded.memory_strength,
-        forgetting_risk = excluded.forgetting_risk,
-        learning_stage = excluded.learning_stage,
-        last_reviewed_at = excluded.last_reviewed_at,
-        next_review_at = excluded.next_review_at,
-        correct_count = excluded.correct_count,
-        incorrect_count = excluded.incorrect_count,
-        avg_response_latency_ms = excluded.avg_response_latency_ms,
-        confusion_targets_json = excluded.confusion_targets_json,
-        updated_at = excluded.updated_at
-    `)
-    .run(
-      memoryObject.memory_object_id,
-      memoryObject.user_id,
-      memoryObject.learning_object_id,
-      memoryObject.mastery_score,
-      memoryObject.memory_strength,
-      memoryObject.forgetting_risk,
-      memoryObject.learning_stage,
-      memoryObject.last_reviewed_at,
-      memoryObject.next_review_at,
-      memoryObject.correct_count,
-      memoryObject.incorrect_count,
-      memoryObject.avg_response_latency_ms,
-      JSON.stringify(memoryObject.confusion_targets),
-      memoryObject.updated_at ?? new Date().toISOString()
-    );
+  try {
+    getDatabase()
+      .prepare(`
+        INSERT INTO memory_objects (
+          memory_object_id,
+          user_id,
+          learning_object_id,
+          mastery_score,
+          memory_strength,
+          forgetting_risk,
+          learning_stage,
+          last_reviewed_at,
+          next_review_at,
+          correct_count,
+          incorrect_count,
+          avg_response_latency_ms,
+          confusion_targets_json,
+          updated_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(memory_object_id) DO UPDATE SET
+          mastery_score = excluded.mastery_score,
+          memory_strength = excluded.memory_strength,
+          forgetting_risk = excluded.forgetting_risk,
+          learning_stage = excluded.learning_stage,
+          last_reviewed_at = excluded.last_reviewed_at,
+          next_review_at = excluded.next_review_at,
+          correct_count = excluded.correct_count,
+          incorrect_count = excluded.incorrect_count,
+          avg_response_latency_ms = excluded.avg_response_latency_ms,
+          confusion_targets_json = excluded.confusion_targets_json,
+          updated_at = excluded.updated_at
+      `)
+      .run(
+        memoryObject.memory_object_id,
+        memoryObject.user_id,
+        memoryObject.learning_object_id,
+        memoryObject.mastery_score,
+        memoryObject.memory_strength,
+        memoryObject.forgetting_risk,
+        memoryObject.learning_stage,
+        memoryObject.last_reviewed_at,
+        memoryObject.next_review_at,
+        memoryObject.correct_count,
+        memoryObject.incorrect_count,
+        memoryObject.avg_response_latency_ms,
+        JSON.stringify(memoryObject.confusion_targets),
+        memoryObject.updated_at ?? new Date().toISOString()
+      );
+  } catch (err) {
+    console.error("SQLite saveMemoryObject error (ignored):", err);
+  }
 }
 
 function mapMemoryObject(row: MemoryObjectRow): MemoryObject {

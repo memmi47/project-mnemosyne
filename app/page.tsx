@@ -100,7 +100,7 @@ export default async function HomePage() {
                 AI 맞춤 학습 큐 <span className="text-faint font-bold text-sm sm:text-base ml-1">Today&apos;s Queue</span>
               </h2>
               <p className="text-xs sm:text-sm text-muted mt-1">
-                내 장기 기억 전환을 위해 오늘 우선적으로 학습하고 복습해야 할 추천 표현 목록입니다.
+                내 장기 기억 전환을 위해 오늘 우선적으로 학습하고 복습해야 할 추천 표현 목록입니다. 탭하여 상세 내용을 확인하세요.
               </p>
             </div>
             <span className="rounded-full bg-primary-soft px-3.5 py-1 sm:px-4 sm:py-1.5 text-xs font-bold text-primary self-start sm:self-auto shadow-sm">
@@ -116,9 +116,10 @@ export default async function HomePage() {
               const unitNum = lo ? (lo as unknown as { unit?: number }).unit : null;
 
               return (
-                <div
+                <Link
                   key={rec.recommendation_id}
-                  className="card-enter flex items-center gap-3 sm:gap-4 rounded-[20px] sm:rounded-card border border-border bg-white p-4 sm:p-5 shadow-card transition-all duration-200 hover:shadow-card-hover hover:border-primary/40 hover:-translate-y-1"
+                  href={`/learning-objects/${rec.learning_object_id}`}
+                  className="card-enter flex items-center gap-3 sm:gap-4 rounded-[20px] sm:rounded-card border border-border bg-white p-4 sm:p-5 shadow-card transition-all duration-200 hover:shadow-card-hover hover:border-primary/40 hover:-translate-y-1 active:scale-[0.98]"
                   style={{ animationDelay: `${index * 60}ms` }}
                 >
                   <div className="flex h-10 w-10 sm:h-11 sm:w-11 flex-shrink-0 items-center justify-center rounded-btn bg-gradient-to-br from-primary-soft to-primary-light/20 text-sm sm:text-base font-extrabold text-primary shadow-sm">
@@ -147,7 +148,7 @@ export default async function HomePage() {
                     </div>
                   </div>
                   <PriorityBadge score={rec.priority_score} />
-                </div>
+                </Link>
               );
             })}
           </div>

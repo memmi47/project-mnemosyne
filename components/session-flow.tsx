@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState, useEffect, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import type { QuizTemplate, Recommendation, Example } from "@/src/domain/models";
 
@@ -34,6 +34,64 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [cardFlipped, setCardFlipped] = useState(false);
   const [isPending, startTransition] = useTransition();
+
+  // TTS State for Premium Natural Voice
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+  const [speechVoices, setSpeechVoices] = useState<SpeechSynthesisVoice[]>([]);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+
+    const updateVoices = () => {
+      setSpeechVoices(window.speechSynthesis.getVoices());
+    };
+
+    updateVoices();
+    if (window.speechSynthesis.onvoiceschanged !== undefined) {
+      window.speechSynthesis.onvoiceschanged = updateVoices;
+    }
+  }, []);
+
+  // 귀신 목소리 원천 차단: 고음질 원어민 음성 정밀 매칭 함수
+  const speakExample = (text: string, index: number) => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+      alert("현재 브라우저는 음성 합성(TTS)을 지원하지 않습니다.");
+      return;
+    }
+
+    window.speechSynthesis.cancel(); // 기존 음성 재생 초기화
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "en-US";
+    utterance.rate = 0.95; // 너무 빠르거나 기계음 같지 않도록 최적의 속도 조정
+    utterance.pitch = 1.0; // 자연스러운 피치
+
+    if (speechVoices.length > 0) {
+      // 1순위: Mac/iOS 및 Chrome의 대표적인 고음질 원어민 자연음성 리스트 우선 필터링
+      const premiumVoices = ["Samantha", "Alex", "Victoria", "Google US English", "Daniel", "Karen", "Oliver", "Moira"];
+      let selectedVoice = null;
+
+      for (const name of premiumVoices) {
+        selectedVoice = speechVoices.find((v) => v.name.includes(name) && v.lang.includes("en"));
+        if (selectedVoice) break;
+      }
+
+      // 2순위: 위 리스트가 없을 경우 영어(en-US, en-GB) 기반의 자연스러운 여성/남성 음성 탐색
+      if (!selectedVoice) {
+        selectedVoice = speechVoices.find((v) => v.lang === "en-US" || v.lang === "en-GB");
+      }
+
+      if (selectedVoice) {
+        utterance.voice = selectedVoice;
+      }
+    }
+
+    utterance.onstart = () => setPlayingIndex(index);
+    utterance.onend = () => setPlayingIndex(null);
+    utterance.onerror = () => setPlayingIndex(null);
+
+    window.speechSynthesis.speak(utterance);
+  };
 
   const totalQuestions = items.length;
   const currentStep = currentIndex + 1;
@@ -152,6 +210,9 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
   const handleNextExposure = () => {
     setPhase("quiz");
     setCardFlipped(false);
+    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+    }
   };
 
   const handleQuizSubmit = async () => {
@@ -279,7 +340,7 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
                 </div>
               </div>
 
-              {/* Back side */}
+              {/* Back side with Premium Natural TTS & StopPropagation */}
               <div className="absolute inset-0 flex flex-col rounded-card border border-primary/30 bg-gradient-to-br from-white to-primary-soft p-8 shadow-card [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-y-auto">
                 <div className="flex items-baseline justify-between">
                   <h2 className="text-2xl font-extrabold text-ink">{expression}</h2>
@@ -295,14 +356,35 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
                   예문 · Examples
                 </p>
                 <div className="mt-3 flex flex-col gap-2.5">
-                  {examples.slice(0, 2).map((ex, idx) => (
-                    <div
-                      key={idx}
-                      className="border-l-3 border-primary-light bg-white px-4 py-3 text-sm font-medium text-ink shadow-xs rounded-r-btn"
-                    >
-                      {ex}
-                    </div>
-                  ))}
+                  {examples.slice(0, 2).map((ex, idx) => {
+                    const isPlaying = playingIndex === idx;
+
+                    return (
+                      <div
+                        key={idx}
+                        className="border-l-3 border-primary-light bg-white px-4 py-3 shadow-xs rounded-r-btn flex items-center justify-between gap-3 transition hover:bg-surface/50"
+                      >
+                        <p className="text-sm font-medium text-ink flex-1 leading-relaxed">
+                          {ex}
+                        </p>
+                        <button
+                          type="button"
+                          title="원어민 음성 듣기"
+                          onClick={(e) => {
+                            e.stopPropagation(); // 스피커 클릭 시 카드 뒤집기 버블링 방지
+                            speakExample(ex, idx);
+                          }}
+                          className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-btn border transition active:scale-95 ${
+                            isPlaying
+                              ? "bg-primary text-white border-primary animate-pulse shadow-sm"
+                              : "bg-white text-primary border-border hover:bg-primary hover:text-white hover:border-primary shadow-xs"
+                          }`}
+                        >
+                          <span className="text-sm">{isPlaying ? "🔊" : "🔈"}</span>
+                        </button>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

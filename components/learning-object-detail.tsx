@@ -136,10 +136,10 @@ export function LearningObjectDetail({ learningObject }: LearningObjectDetailPro
               return (
                 <div
                   key={index}
-                  className="card-enter rounded-[20px] bg-surface p-4 sm:p-5 border border-border/60 shadow-xs transition hover:bg-primary-soft/30 hover:border-primary/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+                  className="card-enter rounded-[20px] bg-surface p-4 sm:p-5 border border-border/60 shadow-xs transition hover:bg-primary-soft/30 hover:border-primary/30 flex flex-row items-center justify-between gap-3"
                   style={{ animationDelay: `${index * 60}ms` }}
                 >
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-0 pr-2">
                     <p className="text-sm sm:text-base font-bold text-ink leading-relaxed">
                       {enText}
                     </p>
@@ -154,7 +154,7 @@ export function LearningObjectDetail({ learningObject }: LearningObjectDetailPro
                     onClick={() => speakExample(enText, index)}
                     type="button"
                     title="원어민 음성 듣기"
-                    className={`flex h-10 w-10 sm:h-11 sm:w-11 flex-shrink-0 items-center justify-center rounded-btn border transition-all duration-200 active:scale-95 self-end sm:self-auto ${
+                    className={`flex h-10 w-10 sm:h-11 sm:w-11 flex-shrink-0 items-center justify-center rounded-btn border transition-all duration-200 active:scale-95 ${
                       isPlaying
                         ? "bg-primary text-white border-primary animate-pulse shadow-btn"
                         : "bg-white text-primary border-border hover:bg-primary hover:text-white hover:border-primary shadow-xs"

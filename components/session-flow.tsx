@@ -362,9 +362,9 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
                     return (
                       <div
                         key={idx}
-                        className="border-l-3 border-primary-light bg-white px-4 py-3 shadow-xs rounded-r-btn flex items-center justify-between gap-3 transition hover:bg-surface/50"
+                        className="border-l-3 border-primary-light bg-white px-4 py-3 shadow-xs rounded-r-btn flex flex-row items-center justify-between gap-3 transition hover:bg-surface/50"
                       >
-                        <p className="text-sm font-medium text-ink flex-1 leading-relaxed">
+                        <p className="text-sm font-medium text-ink flex-1 min-w-0 pr-2 leading-relaxed">
                           {ex}
                         </p>
                         <button

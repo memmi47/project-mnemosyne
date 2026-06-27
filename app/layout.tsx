@@ -21,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <body>
-        <div className="flex min-h-screen flex-col">
+    <html lang="ko" className="overflow-x-hidden">
+      <body className="overflow-x-hidden w-full">
+        <div className="flex min-h-screen flex-col w-full max-w-full overflow-x-hidden">
           {/* Top navigation */}
           <header className="sticky top-0 z-40 border-b border-border bg-white/80 backdrop-blur-md">
             <nav className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-5">
@@ -59,7 +59,7 @@ export default function RootLayout({
           </header>
 
           {/* Main content */}
-          <main className="flex-1">
+          <main className="flex-1 w-full overflow-x-hidden">
             {children}
           </main>
         </div>

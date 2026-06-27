@@ -16,7 +16,7 @@ export default async function HomePage() {
   const todayTotal = mission.review_count + mission.contrast_count + mission.new_learning_count;
 
   return (
-    <div className="relative mx-auto max-w-5xl px-4 py-8 sm:px-5 sm:py-10">
+    <div className="relative mx-auto max-w-5xl px-4 py-8 sm:px-5 sm:py-10 w-full overflow-x-hidden">
       {/* Background floating decor */}
       <div className="pointer-events-none absolute -left-20 -top-20 z-0 h-80 w-80 rounded-full bg-radial from-primary-light/20 to-transparent blur-xl animate-mn-float" />
       <div className="pointer-events-none absolute -right-16 bottom-0 z-0 h-96 w-96 rounded-full bg-radial from-accent/15 to-transparent blur-xl animate-mn-float2" />

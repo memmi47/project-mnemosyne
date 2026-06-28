@@ -3,6 +3,7 @@
 import { useState, useEffect, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import type { QuizTemplate, Recommendation, Example } from "@/src/domain/models";
+import { saveQuizResult, getTrackedRecords } from "@/src/services/local-memory-service";
 
 interface LearningObjectData {
   learning_object_id: string;
@@ -25,6 +26,8 @@ interface SessionItem {
 
 export function SessionFlow({ items }: { items: SessionItem[] }) {
   const router = useRouter();
+  // 서버리스 환경 한계 극복: 초기값은 items 중 3개로 설정하되, 클라이언트 마운트 시 localStorage 학습 기록 기반 복습 우선 큐 생성
+  const [activeItems, setActiveItems] = useState<SessionItem[]>(() => items.slice(0, 3));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [phase, setPhase] = useState<"exposure" | "quiz" | "summary">("exposure");
   const [selectedAnswer, setSelectedAnswer] = useState<string>("");
@@ -39,18 +42,41 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const [speechVoices, setSpeechVoices] = useState<SpeechSynthesisVoice[]>([]);
 
+  // 하이브리드 큐 및 TTS 초기화
   useEffect(() => {
-    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+    if (typeof window === "undefined") return;
 
+    // 1. 복습 대상 우선 배치 엔진 (LocalStorage 기반)
+    const records = getTrackedRecords();
+    const trackedMap = new Map(records.map(r => [r.learning_object_id, r]));
+
+    // 복습 권장(이미 학습했고 망각 위험도가 높거나 기억 강도가 낮은) 아이템 우선 정렬
+    const reviewCandidates = items.filter(item => trackedMap.has(item.learningObject.learning_object_id));
+    reviewCandidates.sort((a, b) => {
+      const rA = trackedMap.get(a.learningObject.learning_object_id)!;
+      const rB = trackedMap.get(b.learningObject.learning_object_id)!;
+      return rB.forgetting_risk - rA.forgetting_risk; // 망각 위험 높은 순
+    });
+
+    // 미학습 아이템 무작위 셔플
+    const newCandidates = items.filter(item => !trackedMap.has(item.learningObject.learning_object_id)).sort(() => Math.random() - 0.5);
+
+    // 복습 대상이 있으면 복습 대상을 우선으로 섞어서 3개 구성
+    const combined = [...reviewCandidates, ...newCandidates].slice(0, 3);
+    if (combined.length > 0) {
+      setActiveItems(combined);
+    }
+
+    // 2. TTS 음성 초기화
+    if (!("speechSynthesis" in window)) return;
     const updateVoices = () => {
       setSpeechVoices(window.speechSynthesis.getVoices());
     };
-
     updateVoices();
     if (window.speechSynthesis.onvoiceschanged !== undefined) {
       window.speechSynthesis.onvoiceschanged = updateVoices;
     }
-  }, []);
+  }, [items]);
 
   // 귀신 목소리 원천 차단: 고음질 원어민 음성 정밀 매칭 함수
   const speakExample = (text: string, index: number) => {
@@ -93,9 +119,9 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
     window.speechSynthesis.speak(utterance);
   };
 
-  const totalQuestions = items.length;
+  const totalQuestions = activeItems.length;
   const currentStep = currentIndex + 1;
-  const currentItem = items[currentIndex];
+  const currentItem = activeItems[currentIndex];
   const progressPercent = totalQuestions > 0 ? Math.round((currentIndex / totalQuestions) * 100) : 0;
 
   if (phase === "summary" || currentIndex >= totalQuestions) {
@@ -295,6 +321,7 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
         message: isCorrect ? "🎉 정답입니다! 완벽해요." : `💡 아쉽습니다. 정답은 '${displayAnswer}' 입니다.`,
       });
       setResults((prev) => [...prev, { id: loData.learning_object_id, expression: loData.expression, isCorrect, userAnswer: answer }]);
+      saveQuizResult(loData.learning_object_id, loData.expression, isCorrect);
     } catch {
       // Fallback 클라이언트 채점 (particles 기반)
       const clean = answer.trim().toLowerCase();
@@ -305,16 +332,9 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
         message: isCorrect ? "🎉 정답입니다! 완벽해요." : `💡 아쉽습니다. 정답은 '${displayAnswer}' 입니다.`,
       });
       setResults((prev) => [...prev, { id: loData.learning_object_id, expression: loData.expression, isCorrect, userAnswer: answer }]);
+      saveQuizResult(loData.learning_object_id, loData.expression, isCorrect);
     } finally {
       setIsSubmitting(false);
-      // Vercel 서버리스 환경을 극복하기 위한 클라이언트 로컬 기억 영속화 (LocalStorage Sync)
-      if (typeof window !== "undefined") {
-        const tracked = JSON.parse(localStorage.getItem("mnemosyne_tracked_ids") || "[]");
-        if (!tracked.includes(loData.learning_object_id)) {
-          tracked.push(loData.learning_object_id);
-          localStorage.setItem("mnemosyne_tracked_ids", JSON.stringify(tracked));
-        }
-      }
     }
   };
 

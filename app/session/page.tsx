@@ -19,10 +19,10 @@ export default async function SessionPage() {
   const allTemplates = await loadQuizTemplates();
   const dataset = await loadLearningObjects();
 
-  // Build session items (up to 8 items)
+  // Build session items pool (up to 50 items for client-side dynamic prioritization)
   const sessionItems: SessionItem[] = [];
 
-  for (const rec of mission.recommendations.slice(0, 8)) {
+  for (const rec of mission.recommendations.slice(0, 50)) {
     const lo = dataset.learning_objects.find(
       (obj) => obj.learning_object_id === rec.learning_object_id
     );

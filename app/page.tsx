@@ -16,7 +16,7 @@ export default async function HomePage() {
   const todayTotal = mission.review_count + mission.contrast_count + mission.new_learning_count;
 
   return (
-    <div className="relative mx-auto max-w-5xl px-4 py-8 sm:px-5 sm:py-10 w-full overflow-x-hidden">
+    <div className="relative mx-auto max-w-5xl px-4 py-8 sm:px-5 sm:py-10 w-full overflow-x-hidden box-border">
       {/* Background floating decor */}
       <div className="pointer-events-none absolute -left-20 -top-20 z-0 h-80 w-80 rounded-full bg-radial from-primary-light/20 to-transparent blur-xl animate-mn-float" />
       <div className="pointer-events-none absolute -right-16 bottom-0 z-0 h-96 w-96 rounded-full bg-radial from-accent/15 to-transparent blur-xl animate-mn-float2" />
@@ -35,8 +35,8 @@ export default async function HomePage() {
         </p>
       </div>
 
-      {/* Stats cards - 반응형 레이아웃 개선 (모바일에서는 세로 배치, 태블릿/PC에서는 3열 배치) */}
-      <div className="relative z-10 mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+      {/* Stats cards - 사용자 요청 완벽 원복 및 넘침 버그 완전 해결 (무조건 한 줄에 3개 표시 + min-w-0 적용) */}
+      <div className="relative z-10 mt-6 sm:mt-8 grid grid-cols-3 gap-2 sm:gap-4 w-full box-border">
         <StatCard
           label="오늘 학습"
           value={`${todayTotal}개`}
@@ -47,14 +47,14 @@ export default async function HomePage() {
         <StatCard
           label="진행률"
           value={`${completionPercent}%`}
-          sublabel={`${totalLearned} / ${totalAvailable} 추적 중`}
+          sublabel={`${totalLearned} / ${totalAvailable} 추적`}
           color="success"
           delay={1}
         />
         <StatCard
           label="기억 강도"
           value={`${Math.round(progress.memory_summary.average_memory_strength)}%`}
-          sublabel={`망각 위험 ${progress.memory_summary.high_forgetting_risk_objects}개`}
+          sublabel={`위험 ${progress.memory_summary.high_forgetting_risk_objects}개`}
           color="accent"
           delay={2}
         />
@@ -62,7 +62,7 @@ export default async function HomePage() {
 
       {/* Hero CTA */}
       {todayTotal > 0 ? (
-        <div className="relative z-10 mt-8 sm:mt-10 animate-slide-up">
+        <div className="relative z-10 mt-8 sm:mt-10 animate-slide-up w-full box-border">
           <div className="relative overflow-hidden rounded-[20px] sm:rounded-[24px] bg-gradient-to-r from-primary-dark via-primary to-primary-light p-6 sm:p-10 shadow-hero transition-all duration-300 hover:shadow-hero-hover hover:-translate-y-1">
             <div className="relative z-10 max-w-lg">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-[11px] sm:text-xs font-bold tracking-wider text-white backdrop-blur-md">
@@ -93,7 +93,7 @@ export default async function HomePage() {
 
       {/* Mission queue */}
       {mission.recommendations.length > 0 ? (
-        <div className="relative z-10 mt-10 sm:mt-12">
+        <div className="relative z-10 mt-10 sm:mt-12 w-full box-border">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-border pb-4 sm:pb-5">
             <div>
               <h2 className="text-lg sm:text-xl font-extrabold tracking-tight text-ink">
@@ -108,7 +108,7 @@ export default async function HomePage() {
             </span>
           </div>
 
-          <div className="mt-5 sm:mt-6 grid gap-3 sm:gap-4 sm:grid-cols-2">
+          <div className="mt-5 sm:mt-6 grid gap-3 sm:gap-4 sm:grid-cols-2 w-full box-border">
             {mission.recommendations.slice(0, 8).map((rec, index) => {
               const lo = loMap.get(rec.learning_object_id) ?? dataset.learning_objects[index % dataset.learning_objects.length];
               const expression = lo ? lo.expression : rec.learning_object_id;
@@ -119,7 +119,7 @@ export default async function HomePage() {
                 <Link
                   key={rec.recommendation_id}
                   href={`/learning-objects/${rec.learning_object_id}`}
-                  className="card-enter flex items-center gap-3 sm:gap-4 rounded-[20px] sm:rounded-card border border-border bg-white p-4 sm:p-5 shadow-card transition-all duration-200 hover:shadow-card-hover hover:border-primary/40 hover:-translate-y-1 active:scale-[0.98]"
+                  className="card-enter flex items-center gap-3 sm:gap-4 rounded-[20px] sm:rounded-card border border-border bg-white p-4 sm:p-5 shadow-card transition-all duration-200 hover:shadow-card-hover hover:border-primary/40 hover:-translate-y-1 active:scale-[0.98] min-w-0 w-full box-border"
                   style={{ animationDelay: `${index * 60}ms` }}
                 >
                   <div className="flex h-10 w-10 sm:h-11 sm:w-11 flex-shrink-0 items-center justify-center rounded-btn bg-gradient-to-br from-primary-soft to-primary-light/20 text-sm sm:text-base font-extrabold text-primary shadow-sm">
@@ -141,7 +141,7 @@ export default async function HomePage() {
                         {meaning}
                       </p>
                     ) : null}
-                    <div className="mt-1.5 sm:mt-2 flex items-center gap-2 text-[11px] sm:text-xs font-semibold text-faint">
+                    <div className="mt-1.5 sm:mt-2 flex items-center gap-2 text-[11px] sm:text-xs font-semibold text-faint truncate">
                       <span className="text-primary">{getActivityLabel(rec.activity_type)}</span>
                       <span>·</span>
                       <span>우선도 {Math.round(rec.priority_score)}</span>
@@ -184,18 +184,18 @@ function StatCard({
 
   return (
     <div
-      className="card-enter relative overflow-hidden rounded-[20px] sm:rounded-card border border-border bg-white p-3.5 sm:p-6 shadow-card transition-all duration-200 hover:shadow-card-hover hover:-translate-y-1"
+      className="card-enter relative overflow-hidden rounded-[20px] sm:rounded-card border border-border bg-white p-2.5 sm:p-6 shadow-card transition-all duration-200 hover:shadow-card-hover hover:-translate-y-1 min-w-0 w-full box-border"
       style={{ animationDelay: `${delay * 80}ms` }}
     >
-      <div className="flex items-center gap-1.5 sm:gap-3">
-        <div className={`h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full ${bgMap[color]}`}>
-          <div className={`h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full ${textMap[color]} bg-current animate-pulse-soft`} />
+      <div className="flex items-center gap-1 sm:gap-3 min-w-0">
+        <div className={`h-1.5 w-1.5 sm:h-2.5 sm:w-2.5 rounded-full flex-shrink-0 ${bgMap[color]}`}>
+          <div className={`h-1.5 w-1.5 sm:h-2.5 sm:w-2.5 rounded-full ${textMap[color]} bg-current animate-pulse-soft`} />
         </div>
-        <p className="text-[11px] sm:text-xs font-bold text-muted truncate">{label}</p>
+        <p className="text-[10px] sm:text-xs font-bold text-muted truncate min-w-0">{label}</p>
       </div>
-      <p className={`mt-2 sm:mt-4 text-lg sm:text-3xl font-extrabold tracking-tight ${textMap[color]}`}>{value}</p>
-      <p className="mt-1 sm:mt-2 text-[10px] sm:text-xs font-medium text-muted line-clamp-2 sm:line-clamp-1">{sublabel}</p>
-      <div className={`absolute -right-6 -top-6 h-20 w-20 sm:h-24 sm:w-24 rounded-full ${bgMap[color]} opacity-50 pointer-events-none`} />
+      <p className={`mt-1.5 sm:mt-4 text-sm sm:text-3xl font-extrabold tracking-tight ${textMap[color]} truncate`}>{value}</p>
+      <p className="mt-1 sm:mt-2 text-[9px] sm:text-xs font-medium text-muted truncate">{sublabel}</p>
+      <div className={`absolute -right-6 -top-6 h-16 w-16 sm:h-24 sm:w-24 rounded-full ${bgMap[color]} opacity-50 pointer-events-none`} />
     </div>
   );
 }
@@ -209,7 +209,7 @@ function PriorityBadge({ score }: { score: number }) {
   };
 
   return (
-    <span className={`rounded-badge px-2.5 py-1 sm:px-3 sm:py-1.5 text-[11px] sm:text-xs font-extrabold shadow-sm ${styles[level]}`}>
+    <span className={`rounded-badge px-2 py-1 sm:px-3 sm:py-1.5 text-[10px] sm:text-xs font-extrabold shadow-sm flex-shrink-0 ${styles[level]}`}>
       {Math.round(score)}
     </span>
   );

@@ -150,7 +150,20 @@ export function evaluateAnswer(answer: string, correctAnswer: string | string[],
     return normalizedCorrectAnswers.some((candidate) => normalizedAnswer.includes(candidate));
   }
 
-  return normalizedCorrectAnswers.some((candidate) => normalizedAnswer === candidate);
+  // 문맥 빈칸 채우기(fill_blank) 등 구동사 퀴즈에서, 'go off' 중 'off'만 입력해도 정답으로 인정
+  return normalizedCorrectAnswers.some((candidate) => {
+    if (normalizedAnswer === candidate) return true;
+    
+    // candidate가 2단어 이상인 경우(예: 'go off', 'pick up'), 동사(첫 단어)를 제외한 particle 부분 추출
+    const parts = candidate.split(" ");
+    if (parts.length > 1) {
+      const particleOnly = parts.slice(1).join(" ");
+      if (normalizedAnswer === particleOnly) return true;
+      // 3단어 구동사(예: 'come up with')의 경우, 마지막 단어('with')나 뒤의 두 단어('up with') 매칭 확인
+      if (parts.length === 3 && normalizedAnswer === parts[2]) return true;
+    }
+    return false;
+  });
 }
 
 function inferErrorType(answer: string, correctAnswer: string): ErrorType {

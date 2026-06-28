@@ -28,8 +28,10 @@ export async function getTodayMission(userId = DEFAULT_USER_ID): Promise<TodayMi
     });
 
     const trackedIds = new Set(validTrackedMemoryObjects.map((memory) => memory.learning_object_id));
-    const newLearningCandidates = dataset.usable_learning_objects
-      .filter((object) => !trackedIds.has(object.learning_object_id))
+    // Vercel 서버리스 환경에서 매번 'go off'만 고정 출제되지 않도록 무작위 셔플(Random Shuffle) 전면 적용
+    const untrackedObjects = dataset.usable_learning_objects.filter((object) => !trackedIds.has(object.learning_object_id));
+    const shuffledCandidates = [...untrackedObjects].sort(() => Math.random() - 0.5);
+    const newLearningCandidates = shuffledCandidates
       .slice(0, validTrackedMemoryObjects.length > 0 ? 2 : 3)
       .map((object) => createInitialMemoryObject(userId, object.learning_object_id, now));
       

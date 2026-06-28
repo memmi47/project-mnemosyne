@@ -306,6 +306,14 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
       setResults((prev) => [...prev, { id: loData.learning_object_id, expression: loData.expression, isCorrect, userAnswer: answer }]);
     } finally {
       setIsSubmitting(false);
+      // Vercel 서버리스 환경을 극복하기 위한 클라이언트 로컬 기억 영속화 (LocalStorage Sync)
+      if (typeof window !== "undefined") {
+        const tracked = JSON.parse(localStorage.getItem("mnemosyne_tracked_ids") || "[]");
+        if (!tracked.includes(loData.learning_object_id)) {
+          tracked.push(loData.learning_object_id);
+          localStorage.setItem("mnemosyne_tracked_ids", JSON.stringify(tracked));
+        }
+      }
     }
   };
 

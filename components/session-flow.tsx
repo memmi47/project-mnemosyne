@@ -257,15 +257,16 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
       let isCorrect = false;
       let correctAnswer = loData.expression;
 
-      // 유연한 정답 판단 헬퍼 함수 (전체 일치 또는 Particle 일치)
+      // 유연한 정답 판단 헬퍼 함수 (괄호 완벽 제거 후 전체 일치 또는 Particle 일치)
       const checkCorrect = (userAns: string, fullExpr: string) => {
-        const cleanAns = userAns.trim().toLowerCase();
-        const cleanExpr = fullExpr.trim().toLowerCase();
+        const cleanAns = userAns.replace(/\(.*\)/g, "").trim().toLowerCase();
+        const cleanExpr = fullExpr.replace(/\(.*\)/g, "").trim().toLowerCase();
         if (cleanAns === cleanExpr) return true;
         const parts = cleanExpr.split(" ");
         if (parts.length > 1) {
           const particleOnly = parts.slice(1).join(" ");
           if (cleanAns === particleOnly) return true;
+          if (parts.length === 3 && cleanAns === parts[2]) return true;
         }
         return false;
       };
@@ -274,7 +275,7 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
         const data = await res.json();
         isCorrect = data.is_correct;
         if (data.correct_answer) correctAnswer = data.correct_answer;
-        // 클라이언트 차원에서 한번 더 Particle 매칭 보정
+        // 클라이언트 차원에서 한번 더 괄호 및 Particle 매칭 보정
         if (!isCorrect && checkCorrect(answer, loData.expression)) {
           isCorrect = true;
         }
@@ -290,12 +291,13 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
       setResults((prev) => [...prev, { id: loData.learning_object_id, expression: loData.expression, isCorrect, userAnswer: answer }]);
     } catch {
       // Fallback 클라이언트 채점
-      const cleanAns = answer.trim().toLowerCase();
-      const cleanExpr = loData.expression.trim().toLowerCase();
+      const cleanAns = answer.replace(/\(.*\)/g, "").trim().toLowerCase();
+      const cleanExpr = loData.expression.replace(/\(.*\)/g, "").trim().toLowerCase();
       let isCorrect = cleanAns === cleanExpr;
       const parts = cleanExpr.split(" ");
       if (!isCorrect && parts.length > 1) {
         isCorrect = cleanAns === parts.slice(1).join(" ");
+        if (!isCorrect && parts.length === 3) isCorrect = cleanAns === parts[2];
       }
       setFeedback({
         isCorrect,

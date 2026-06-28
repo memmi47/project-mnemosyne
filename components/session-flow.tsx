@@ -257,16 +257,20 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
       let isCorrect = false;
       let correctAnswer = loData.expression;
 
-      // 유연한 정답 판단 헬퍼 함수 (괄호 완벽 제거 후 전체 일치 또는 Particle 일치)
+      // 궁극의 정답 판단 헬퍼 함수 (모든 시제/수 변화 및 Particle 단독 입력 완벽 포용)
       const checkCorrect = (userAns: string, fullExpr: string) => {
         const cleanAns = userAns.replace(/\(.*\)/g, "").trim().toLowerCase();
         const cleanExpr = fullExpr.replace(/\(.*\)/g, "").trim().toLowerCase();
+        if (!cleanAns) return false;
         if (cleanAns === cleanExpr) return true;
         const parts = cleanExpr.split(" ");
         if (parts.length > 1) {
           const particleOnly = parts.slice(1).join(" ");
           if (cleanAns === particleOnly) return true;
-          if (parts.length === 3 && cleanAns === parts[2]) return true;
+          for (let i = 1; i < parts.length; i++) {
+            if (cleanAns === parts[i]) return true;
+          }
+          if (parts.length === 3 && cleanAns === `${parts[1]} ${parts[2]}`) return true;
         }
         return false;
       };
@@ -291,14 +295,7 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
       setResults((prev) => [...prev, { id: loData.learning_object_id, expression: loData.expression, isCorrect, userAnswer: answer }]);
     } catch {
       // Fallback 클라이언트 채점
-      const cleanAns = answer.replace(/\(.*\)/g, "").trim().toLowerCase();
-      const cleanExpr = loData.expression.replace(/\(.*\)/g, "").trim().toLowerCase();
-      let isCorrect = cleanAns === cleanExpr;
-      const parts = cleanExpr.split(" ");
-      if (!isCorrect && parts.length > 1) {
-        isCorrect = cleanAns === parts.slice(1).join(" ");
-        if (!isCorrect && parts.length === 3) isCorrect = cleanAns === parts[2];
-      }
+      const isCorrect = checkCorrect(answer, loData.expression);
       setFeedback({
         isCorrect,
         message: isCorrect ? "🎉 정답입니다! 완벽해요." : `💡 아쉽습니다. 정답은 '${loData.expression}' 입니다.`,

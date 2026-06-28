@@ -150,21 +150,23 @@ export function evaluateAnswer(answer: string, correctAnswer: string | string[],
     return normalizedCorrectAnswers.some((candidate) => normalizedAnswer.includes(candidate));
   }
 
-  // 문맥 빈칸 채우기(fill_blank) 등 구동사 퀴즈에서, 'go off (spoil)' 중 괄호 제거 후 'off'만 입력해도 정답으로 인정
+  // 문맥 빈칸 채우기(fill_blank) 등 구동사 퀴즈에서 모든 시제/수 변화 및 Particle 단독 입력 완벽 포용
   return normalizedCorrectAnswers.some((candidate) => {
-    // 괄호 및 괄호 내부 텍스트 완벽 제거 (예: 'go off (spoil)' -> 'go off')
     const cleanCandidate = candidate.replace(/\(.*\)/g, "").trim();
     const cleanAnswer = normalizedAnswer.replace(/\(.*\)/g, "").trim();
-    
+    if (!cleanAnswer) return false;
     if (cleanAnswer === cleanCandidate) return true;
     
-    // cleanCandidate가 2단어 이상인 경우(예: 'go off', 'pick up'), 동사(첫 단어)를 제외한 particle 부분 추출
     const parts = cleanCandidate.split(" ");
     if (parts.length > 1) {
       const particleOnly = parts.slice(1).join(" ");
       if (cleanAnswer === particleOnly) return true;
-      // 3단어 구동사(예: 'come up with')의 경우, 마지막 단어('with')나 뒤의 두 단어('up with') 매칭 확인
-      if (parts.length === 3 && cleanAnswer === parts[2]) return true;
+      // 동사(parts[0])를 제외한 나머지 모든 단어들과 단독 일치 여부 확인 ('down', 'on', 'forward', 'to', 'off' 등)
+      for (let i = 1; i < parts.length; i++) {
+        if (cleanAnswer === parts[i]) return true;
+      }
+      // 3단어 구동사에서 'down on', 'forward to' 등 조합 일치 확인
+      if (parts.length === 3 && cleanAnswer === `${parts[1]} ${parts[2]}`) return true;
     }
     return false;
   });

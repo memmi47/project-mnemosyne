@@ -202,10 +202,25 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
   }).filter(Boolean);
 
   // Get quiz template safely matching QuizTemplate domain model
-  const quizTemplate = currentItem.quizTemplates?.[0];
-  const isChoiceQuiz = quizTemplate ? quizTemplate.activity_type === "recognition" : true;
+  // 1순위: fill_blank (빈칸 채우기), 2순위: retrieval, 3순위: 기본 템플릿
+  const quizTemplate = currentItem.quizTemplates?.find((t) => t.activity_type === "fill_blank") ??
+    currentItem.quizTemplates?.find((t) => t.activity_type === "retrieval") ??
+    currentItem.quizTemplates?.[0];
+    
+  const isChoiceQuiz = quizTemplate ? quizTemplate.activity_type === "recognition" : false;
   const choices: string[] = quizTemplate?.choices && quizTemplate.choices.length > 0 ? quizTemplate.choices : [loData.expression, "pick up", "go off", "turn down"].sort(() => Math.random() - 0.5);
   const unitNum = loData.unit;
+
+  // 퀴즈 프롬프트 결정 (fill_blank 템플릿의 prompt 우선, 없을 경우 첫 예문의 표현을 빈칸으로 치환)
+  let quizPrompt = quizTemplate?.prompt ?? "";
+  if (!quizPrompt || quizPrompt === meaningKo || quizPrompt.includes("사용하여 영어 문장을")) {
+    if (examples.length > 0 && examples[0]) {
+      const regex = new RegExp(loData.expression, "gi");
+      quizPrompt = examples[0].replace(regex, "__________");
+    } else {
+      quizPrompt = `다음 의미를 가진 표현은 무엇일까요?`;
+    }
+  }
 
   const handleNextExposure = () => {
     setPhase("quiz");
@@ -224,14 +239,18 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
     setIsSubmitting(true);
 
     try {
-      // API 채점 시도
+      // API 채점 시도 - 백엔드 스펙에 완벽하게 부합하도록 파라미터 구성
       const res = await fetch("/api/answer/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          session_id: "test_session",
+          session_id: `session_${Date.now()}`,
           learning_object_id: loData.learning_object_id,
-          user_answer: answer,
+          activity_type: quizTemplate?.activity_type ?? (isChoiceQuiz ? "recognition" : "retrieval"),
+          answer: answer,
+          response_latency_ms: 3000,
+          hint_used: false,
+          attempt_count: 1,
         }),
       });
 
@@ -401,15 +420,24 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
         <div className={`mt-6 rounded-card border-2 p-8 shadow-card transition-all duration-300 ${
           feedback ? feedback.isCorrect ? "bg-success-soft border-success/30" : "bg-accent-soft border-accent/30 animate-shake" : "bg-white border-border"
         }`}>
-          <span className="rounded-full bg-accent-soft px-3 py-1 text-xs font-bold text-accent shadow-xs">
-            {isChoiceQuiz ? "객관식 퀴즈" : "단답형 퀴즈"}
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="rounded-full bg-accent-soft px-3 py-1 text-xs font-bold text-accent shadow-xs">
+              {isChoiceQuiz ? "객관식 퀴즈" : "문맥 빈칸 채우기"}
+            </span>
+            <span className="rounded-full bg-primary-soft px-3 py-1 text-xs font-bold text-primary shadow-xs">
+              Recall Training
+            </span>
+          </div>
           <p className="mt-4 text-xs font-bold text-muted">
-            다음 의미에 알맞은 표현을 선택하거나 입력하세요:
+            다음 문장의 빈칸에 들어갈 알맞은 표현을 선택하거나 입력하세요:
           </p>
-          <h2 className="mt-2 text-xl font-extrabold tracking-tight text-ink sm:text-2xl">
-            {meaningKo}
+          <h2 className="mt-2 text-xl font-extrabold tracking-tight text-ink sm:text-2xl leading-relaxed">
+            {quizPrompt}
           </h2>
+          <div className="mt-4 inline-flex items-center gap-2 rounded-btn bg-surface px-4 py-2.5 text-xs font-bold text-muted border border-border/60 shadow-xs">
+            <span className="text-base">💡</span>
+            <span>힌트: {meaningKo}</span>
+          </div>
 
           {isChoiceQuiz ? (
             <div className="mt-6 grid gap-3 sm:grid-cols-2">

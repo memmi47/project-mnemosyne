@@ -35,8 +35,8 @@ export default async function HomePage() {
         </p>
       </div>
 
-      {/* Stats cards - Optimized for Mobile (3 items in one row) */}
-      <div className="relative z-10 mt-6 sm:mt-8 grid grid-cols-3 gap-2.5 sm:gap-4">
+      {/* Stats cards - 반응형 레이아웃 개선 (모바일에서는 세로 배치, 태블릿/PC에서는 3열 배치) */}
+      <div className="relative z-10 mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
         <StatCard
           label="오늘 학습"
           value={`${todayTotal}개`}

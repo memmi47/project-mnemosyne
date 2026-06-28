@@ -88,7 +88,7 @@ export function ProgressClientView({ initialTotal, initialUsable, initialReviewR
         <div>
           <p className="text-xs sm:text-sm font-semibold text-primary">로컬 영속화 학습 현황</p>
           <h1 className="mt-1 sm:mt-2 text-2xl font-extrabold text-ink sm:text-3xl">
-            Progress & Backup 📊
+            Progress 📊
           </h1>
           <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-muted">
             브라우저 내 학습 기록을 확인하고, 언제든 기기 간 데이터 다운로드/복원을 진행하세요.

@@ -211,11 +211,21 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
   const choices: string[] = quizTemplate?.choices && quizTemplate.choices.length > 0 ? quizTemplate.choices : [loData.expression, "pick up", "go off", "turn down"].sort(() => Math.random() - 0.5);
   const unitNum = loData.unit;
 
-  // 퀴즈 프롬프트 결정 (fill_blank 템플릿의 prompt 우선, 없을 경우 첫 예문의 표현을 빈칸으로 치환)
+  // 퀴즈 정답 확정: particles 필드가 빈칸의 정답 그 자체
+  const particles: string[] = loData.particles || [];
+  const particleAnswer = particles.join(" "); // e.g. "off", "down on", "forward to"
+
+  // 퀴즈 프롬프트 결정: particles 기반으로 예문 내 빈칸을 정확히 생성
   let quizPrompt = quizTemplate?.prompt ?? "";
   if (!quizPrompt || quizPrompt === meaningKo || quizPrompt.includes("사용하여 영어 문장을")) {
-    if (examples.length > 0 && examples[0]) {
-      const regex = new RegExp(loData.expression, "gi");
+    if (examples.length > 0 && examples[0] && particleAnswer) {
+      // particles로 빈칸 생성 (동사 시제/수 변화와 무관하게 정확히 매칭)
+      const particlePattern = particles.map(p => p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join("\\s+");
+      const regex = new RegExp(particlePattern, "gi");
+      quizPrompt = examples[0].replace(regex, "__________");
+    } else if (examples.length > 0 && examples[0]) {
+      // particles가 없는 경우 expression 폴백
+      const regex = new RegExp(loData.expression.replace(/\(.*\)/g, "").trim(), "gi");
       quizPrompt = examples[0].replace(regex, "__________");
     } else {
       quizPrompt = `다음 의미를 가진 표현은 무엇일까요?`;
@@ -255,50 +265,44 @@ export function SessionFlow({ items }: { items: SessionItem[] }) {
       });
 
       let isCorrect = false;
-      let correctAnswer = loData.expression;
 
-      // 궁극의 정답 판단 헬퍼 함수 (모든 시제/수 변화 및 Particle 단독 입력 완벽 포용)
-      const checkCorrect = (userAns: string, fullExpr: string) => {
-        const cleanAns = userAns.replace(/\(.*\)/g, "").trim().toLowerCase();
-        const cleanExpr = fullExpr.replace(/\(.*\)/g, "").trim().toLowerCase();
-        if (!cleanAns) return false;
-        if (cleanAns === cleanExpr) return true;
-        const parts = cleanExpr.split(" ");
-        if (parts.length > 1) {
-          const particleOnly = parts.slice(1).join(" ");
-          if (cleanAns === particleOnly) return true;
-          for (let i = 1; i < parts.length; i++) {
-            if (cleanAns === parts[i]) return true;
-          }
-          if (parts.length === 3 && cleanAns === `${parts[1]} ${parts[2]}`) return true;
-        }
+      // particles 기반 정답 판단: 동사 시제/수 변화, 괄호 등 모든 예외에서 자유로움
+      const checkCorrect = (userAns: string) => {
+        const clean = userAns.trim().toLowerCase();
+        if (!clean) return false;
+        if (clean === particleAnswer) return true;                    // "down on" 전체 입력
+        if (particles.some(p => clean === p.toLowerCase())) return true; // "down" 또는 "on" 개별 입력
+        // expression 전체 일치도 허용 (e.g. "look down on")
+        const cleanExpr = loData.expression.replace(/\(.*\)/g, "").trim().toLowerCase();
+        if (clean === cleanExpr) return true;
         return false;
       };
 
       if (res.ok) {
         const data = await res.json();
         isCorrect = data.is_correct;
-        if (data.correct_answer) correctAnswer = data.correct_answer;
-        // 클라이언트 차원에서 한번 더 괄호 및 Particle 매칭 보정
-        if (!isCorrect && checkCorrect(answer, loData.expression)) {
+        // 서버 채점이 오답이더라도 클라이언트 particles 매칭으로 보정
+        if (!isCorrect && checkCorrect(answer)) {
           isCorrect = true;
         }
       } else {
-        // Fallback 클라이언트 채점
-        isCorrect = checkCorrect(answer, loData.expression);
+        isCorrect = checkCorrect(answer);
       }
 
+      const displayAnswer = particleAnswer || loData.expression;
       setFeedback({
         isCorrect,
-        message: isCorrect ? "🎉 정답입니다! 완벽해요." : `💡 아쉽습니다. 정답은 '${correctAnswer}' 입니다.`,
+        message: isCorrect ? "🎉 정답입니다! 완벽해요." : `💡 아쉽습니다. 정답은 '${displayAnswer}' 입니다.`,
       });
       setResults((prev) => [...prev, { id: loData.learning_object_id, expression: loData.expression, isCorrect, userAnswer: answer }]);
     } catch {
-      // Fallback 클라이언트 채점
-      const isCorrect = checkCorrect(answer, loData.expression);
+      // Fallback 클라이언트 채점 (particles 기반)
+      const clean = answer.trim().toLowerCase();
+      const isCorrect = clean === particleAnswer || particles.some(p => clean === p.toLowerCase());
+      const displayAnswer = particleAnswer || loData.expression;
       setFeedback({
         isCorrect,
-        message: isCorrect ? "🎉 정답입니다! 완벽해요." : `💡 아쉽습니다. 정답은 '${loData.expression}' 입니다.`,
+        message: isCorrect ? "🎉 정답입니다! 완벽해요." : `💡 아쉽습니다. 정답은 '${displayAnswer}' 입니다.`,
       });
       setResults((prev) => [...prev, { id: loData.learning_object_id, expression: loData.expression, isCorrect, userAnswer: answer }]);
     } finally {

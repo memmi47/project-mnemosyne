@@ -71,8 +71,15 @@ export async function submitAnswer(
   const acceptedAnswers = answerEntry?.accepted_answers.length
     ? answerEntry.accepted_answers
     : [answerEntry?.answer ?? learningObject.expression];
-  const primaryAnswer = answerEntry?.answer || learningObject.expression;
-  const isCorrect = evaluateAnswer(request.answer, acceptedAnswers, request.activity_type);
+  // particles 기반 정답도 accepted에 추가 (동사 시제/수 변화 문제 원천 해결)
+  const particlesCombined = (learningObject.particles || []).join(" ");
+  const allAccepted = [...new Set([
+    ...acceptedAnswers,
+    ...(learningObject.particles || []),
+    ...(particlesCombined ? [particlesCombined] : []),
+  ])];
+  const primaryAnswer = particlesCombined || answerEntry?.answer || learningObject.expression;
+  const isCorrect = evaluateAnswer(request.answer, allAccepted, request.activity_type);
   const errorType = isCorrect ? null : inferErrorType(request.answer, primaryAnswer);
   const evaluatedEvent = buildEvent({
     request,

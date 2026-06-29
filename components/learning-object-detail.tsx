@@ -2,6 +2,7 @@
 
 import type { LearningObject } from "@/src/domain/models";
 import { useState, useEffect } from "react";
+import { getKnownAndStarredIds, toggleKnown, toggleStarred } from "@/src/services/local-memory-service";
 
 interface LearningObjectDetailProps {
   learningObject: LearningObject;
@@ -15,10 +16,20 @@ export function LearningObjectDetail({ learningObject }: LearningObjectDetailPro
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const [speechVoices, setSpeechVoices] = useState<SpeechSynthesisVoice[]>([]);
 
-  // 비동기로 로드되는 브라우저 고음질 음성 목록 확보
-  useEffect(() => {
-    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+  // Known & Starred State
+  const [isKnown, setIsKnown] = useState(false);
+  const [isStarred, setIsStarred] = useState(false);
+  const [toastMsg, setToastMsg] = useState<string | null>(null);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    // Known / Starred 상태 로드
+    const { knownIds, starredIds } = getKnownAndStarredIds();
+    setIsKnown(knownIds.includes(learningObject.learning_object_id));
+    setIsStarred(starredIds.includes(learningObject.learning_object_id));
+
+    if (!("speechSynthesis" in window)) return;
     const updateVoices = () => {
       setSpeechVoices(window.speechSynthesis.getVoices());
     };
@@ -27,7 +38,32 @@ export function LearningObjectDetail({ learningObject }: LearningObjectDetailPro
     if (window.speechSynthesis.onvoiceschanged !== undefined) {
       window.speechSynthesis.onvoiceschanged = updateVoices;
     }
-  }, []);
+  }, [learningObject.learning_object_id]);
+
+  const triggerToast = (msg: string) => {
+    setToastMsg(msg);
+    setTimeout(() => setToastMsg(null), 2500);
+  };
+
+  const handleKnownToggle = () => {
+    const newState = toggleKnown(learningObject.learning_object_id, learningObject.expression);
+    setIsKnown(newState);
+    if (newState) {
+      triggerToast("👏 졸업 완료! 다음부터 퀴즈 및 복습에 나오지 않습니다.");
+    } else {
+      triggerToast("🔄 졸업 해제. 다시 복습 큐에 포함됩니다.");
+    }
+  };
+
+  const handleStarredToggle = () => {
+    const newState = toggleStarred(learningObject.learning_object_id, learningObject.expression);
+    setIsStarred(newState);
+    if (newState) {
+      triggerToast("⭐ 별표 단어장에 추가되었습니다.");
+    } else {
+      triggerToast("⭐ 별표 단어장에서 제거되었습니다.");
+    }
+  };
 
   // 귀신 목소리 원천 차단: 고음질 원어민 음성 정밀 매칭 함수
   const speakExample = (text: string, index: number) => {
@@ -71,19 +107,56 @@ export function LearningObjectDetail({ learningObject }: LearningObjectDetailPro
   };
 
   return (
-    <article className="flex flex-col gap-6">
+    <article className="flex flex-col gap-6 relative">
+      {/* Toast Notification */}
+      {toastMsg && (
+        <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-ink text-white px-5 py-3 rounded-full text-xs font-extrabold shadow-toast animate-mn-pop whitespace-nowrap">
+          {toastMsg}
+        </div>
+      )}
+
       {/* Premium Hero Banner for the Expression (TTS Not included here as requested) */}
       <div className="relative overflow-hidden rounded-[24px] bg-gradient-to-r from-primary-dark via-primary to-primary-light p-6 sm:p-10 shadow-hero text-white">
         <div className="relative z-10">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-full bg-white/20 px-3.5 py-1 text-xs font-bold tracking-wider backdrop-blur-md shadow-xs">
-              {unitNum ? `Unit ${unitNum}` : "AI Focus Expression"}
-            </span>
-            {unitTitle ? (
-              <span className="text-xs font-semibold text-white/90 truncate">
-                {unitTitle}
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="rounded-full bg-white/20 px-3.5 py-1 text-xs font-bold tracking-wider backdrop-blur-md shadow-xs">
+                {unitNum ? `Unit ${unitNum}` : "AI Focus Expression"}
               </span>
-            ) : null}
+              {unitTitle ? (
+                <span className="text-xs font-semibold text-white/90 truncate">
+                  {unitTitle}
+                </span>
+              ) : null}
+            </div>
+
+            {/* 작고 잘 보이는 이모티콘 전용 토글 버튼 (말 없음) */}
+            <div className="flex items-center gap-1.5 z-20">
+              <button
+                type="button"
+                onClick={handleKnownToggle}
+                title={isKnown ? "아는 단어 졸업됨" : "아는 단어 표시"}
+                className={`flex h-9 w-9 items-center justify-center rounded-btn bg-white/10 backdrop-blur-md border border-white/30 transition-all duration-200 active:scale-90 ${
+                  isKnown ? "bg-success/90 border-success shadow-sm" : "hover:bg-white/20"
+                }`}
+              >
+                <span className={`text-base transition-all duration-300 ${isKnown ? "opacity-100 scale-125 drop-shadow-[0_2px_8px_rgba(0,184,148,0.9)] animate-mn-pop" : "opacity-40 grayscale hover:opacity-80"}`}>
+                  💡
+                </span>
+              </button>
+              <button
+                type="button"
+                onClick={handleStarredToggle}
+                title={isStarred ? "별표됨" : "별표 치기"}
+                className={`flex h-9 w-9 items-center justify-center rounded-btn bg-white/10 backdrop-blur-md border border-white/30 transition-all duration-200 active:scale-90 ${
+                  isStarred ? "bg-accent/90 border-accent shadow-sm" : "hover:bg-white/20"
+                }`}
+              >
+                <span className={`text-lg transition-all duration-300 ${isStarred ? "opacity-100 scale-130 drop-shadow-[0_2px_10px_rgba(255,215,0,0.9)] animate-mn-pop" : "opacity-40 grayscale hover:opacity-80"}`}>
+                  {isStarred ? "🌟" : "⭐"}
+                </span>
+              </button>
+            </div>
           </div>
 
           <h1 className="mt-4 text-3xl sm:text-5xl font-extrabold tracking-tight text-white drop-shadow-sm">

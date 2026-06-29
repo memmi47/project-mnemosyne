@@ -419,31 +419,7 @@ export function SessionFlow({ items, mode = "general" }: { items: SessionItem[];
         </span>
       </div>
 
-      {/* Known & Starred Action Bar */}
-      <div className="mt-4 flex items-center justify-between bg-surface px-4 py-3 rounded-btn border border-border/60 shadow-xs animate-fade-in">
-        <button
-          type="button"
-          onClick={handleKnownToggle}
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-badge text-xs font-extrabold transition ${
-            isCurrentKnown ? "bg-success text-white shadow-sm" : "bg-white text-muted border border-border hover:bg-success-soft hover:text-success"
-          }`}
-        >
-          <span className="text-sm">💡</span>
-          <span>{isCurrentKnown ? "이미 아는 단어 (졸업)" : "아는 단어 표시"}</span>
-        </button>
-
-        <button
-          type="button"
-          onClick={handleStarredToggle}
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-badge text-xs font-extrabold transition ${
-            isCurrentStarred ? "bg-accent-soft text-accent border border-accent/30 shadow-sm" : "bg-white text-muted border border-border hover:bg-accent-soft hover:text-accent"
-          }`}
-        >
-          <span className="text-sm">{isCurrentStarred ? "⭐" : "☆"}</span>
-          <span>{isCurrentStarred ? "별표 됨" : "별표 치기"}</span>
-        </button>
-      </div>
-
+      {/* Known & Starred 버튼을 카드 내부에 이모티콘으로만 깔끔하게 삽입 */}
       {phase === "exposure" ? (
         <div className="mt-4 animate-fade-in">
           {/* Flip card container */}
@@ -456,15 +432,45 @@ export function SessionFlow({ items, mode = "general" }: { items: SessionItem[];
             >
               {/* Front side */}
               <div className="absolute inset-0 flex flex-col justify-between rounded-card border border-border bg-gradient-to-br from-white to-primary-soft/50 p-8 shadow-card [backface-visibility:hidden]">
-                <div className="flex items-center gap-2">
-                  <span className="rounded-full bg-primary-soft px-3 py-1 text-xs font-bold text-primary shadow-xs">
-                    {mode === "starred" ? "⭐ 별표 학습 카드" : "학습 카드"}
-                  </span>
-                  {unitNum ? (
-                    <span className="rounded-full bg-surface px-3 py-1 text-xs font-bold text-muted shadow-xs">
-                      Unit {unitNum}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="rounded-full bg-primary-soft px-3 py-1 text-xs font-bold text-primary shadow-xs">
+                      {mode === "starred" ? "⭐ 별표 학습 카드" : "학습 카드"}
                     </span>
-                  ) : null}
+                    {unitNum ? (
+                      <span className="rounded-full bg-surface px-3 py-1 text-xs font-bold text-muted shadow-xs">
+                        Unit {unitNum}
+                      </span>
+                    ) : null}
+                  </div>
+
+                  {/* 작고 잘 보이는 이모티콘 전용 토글 버튼 (말 없음) */}
+                  <div className="flex items-center gap-1.5 z-20" onClick={(e) => e.stopPropagation()}>
+                    <button
+                      type="button"
+                      onClick={handleKnownToggle}
+                      title={isCurrentKnown ? "아는 단어 졸업됨" : "아는 단어 표시"}
+                      className={`flex h-9 w-9 items-center justify-center rounded-btn bg-surface border border-border/60 transition-all duration-200 active:scale-90 ${
+                        isCurrentKnown ? "border-success bg-success-soft shadow-sm" : "hover:bg-success-soft/50"
+                      }`}
+                    >
+                      <span className={`text-base transition-all duration-300 ${isCurrentKnown ? "opacity-100 scale-125 drop-shadow-[0_2px_8px_rgba(0,184,148,0.8)] animate-mn-pop" : "opacity-40 grayscale hover:opacity-80"}`}>
+                        💡
+                      </span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleStarredToggle}
+                      title={isCurrentStarred ? "별표됨" : "별표 치기"}
+                      className={`flex h-9 w-9 items-center justify-center rounded-btn bg-surface border border-border/60 transition-all duration-200 active:scale-90 ${
+                        isCurrentStarred ? "border-accent bg-accent-soft shadow-sm" : "hover:bg-accent-soft/50"
+                      }`}
+                    >
+                      <span className={`text-lg transition-all duration-300 ${isCurrentStarred ? "opacity-100 scale-130 drop-shadow-[0_2px_10px_rgba(255,190,0,0.9)] animate-mn-pop" : "opacity-40 grayscale hover:opacity-80"}`}>
+                        {isCurrentStarred ? "🌟" : "⭐"}
+                      </span>
+                    </button>
+                  </div>
                 </div>
                 <div className="flex flex-col items-center justify-center py-10 text-center">
                   <h1 className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
@@ -482,11 +488,41 @@ export function SessionFlow({ items, mode = "general" }: { items: SessionItem[];
 
               {/* Back side with Premium Natural TTS */}
               <div className="absolute inset-0 flex flex-col rounded-card border border-primary/30 bg-gradient-to-br from-white to-primary-soft p-8 shadow-card [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-y-auto">
-                <div className="flex items-baseline justify-between">
-                  <h2 className="text-2xl font-extrabold text-ink">{expression}</h2>
-                  <span className="rounded-badge bg-surface px-2.5 py-1 text-[11px] font-bold text-muted">
-                    {loData.separability === "inseparable" ? "분리 불가" : "분리 가능"}
-                  </span>
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-baseline gap-2">
+                    <h2 className="text-2xl font-extrabold text-ink">{expression}</h2>
+                    <span className="rounded-badge bg-surface px-2.5 py-1 text-[11px] font-bold text-muted">
+                      {loData.separability === "inseparable" ? "분리 불가" : "분리 가능"}
+                    </span>
+                  </div>
+
+                  {/* 뒷면에도 동일한 이모티콘 전용 토글 버튼 배치 */}
+                  <div className="flex items-center gap-1.5 z-20" onClick={(e) => e.stopPropagation()}>
+                    <button
+                      type="button"
+                      onClick={handleKnownToggle}
+                      title={isCurrentKnown ? "아는 단어 졸업됨" : "아는 단어 표시"}
+                      className={`flex h-9 w-9 items-center justify-center rounded-btn bg-surface border border-border/60 transition-all duration-200 active:scale-90 ${
+                        isCurrentKnown ? "border-success bg-success-soft shadow-sm" : "hover:bg-success-soft/50"
+                      }`}
+                    >
+                      <span className={`text-base transition-all duration-300 ${isCurrentKnown ? "opacity-100 scale-125 drop-shadow-[0_2px_8px_rgba(0,184,148,0.8)] animate-mn-pop" : "opacity-40 grayscale hover:opacity-80"}`}>
+                        💡
+                      </span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleStarredToggle}
+                      title={isCurrentStarred ? "별표됨" : "별표 치기"}
+                      className={`flex h-9 w-9 items-center justify-center rounded-btn bg-surface border border-border/60 transition-all duration-200 active:scale-90 ${
+                        isCurrentStarred ? "border-accent bg-accent-soft shadow-sm" : "hover:bg-accent-soft/50"
+                      }`}
+                    >
+                      <span className={`text-lg transition-all duration-300 ${isCurrentStarred ? "opacity-100 scale-130 drop-shadow-[0_2px_10px_rgba(255,190,0,0.9)] animate-mn-pop" : "opacity-40 grayscale hover:opacity-80"}`}>
+                        {isCurrentStarred ? "🌟" : "⭐"}
+                      </span>
+                    </button>
+                  </div>
                 </div>
                 <div className="mt-4 rounded-btn bg-primary-soft/80 p-4 shadow-xs">
                   <p className="text-base font-extrabold text-primary">{meaningKo}</p>

@@ -135,12 +135,11 @@ export function ProgressClientView({ initialTotal, initialUsable, initialReviewR
         </div>
       </div>
 
-      {/* Overview cards - Optimized for Mobile (2 items in a row) */}
-      <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-3 sm:grid-cols-2 lg:grid-cols-4 sm:gap-4">
-        <ProgressCard icon="📖" label="전체 표현" value={initialTotal} sublabel="데이터셋" color="primary" delay={0} />
-        <ProgressCard icon="✅" label="학습 가능" value={isClient ? usableCount : initialUsable} sublabel={isClient && knownCount > 0 ? `졸업 ${knownCount}개 제외` : "검증 완료"} color="success" delay={1} />
-        <ProgressCard icon="🧠" label="추적 중" value={isClient ? tracked : 0} sublabel="저장된 표현" color="primary" delay={2} />
-        <ProgressCard icon="⚠️" label="망각 위험" value={isClient ? highRisk : 0} sublabel="복습 필요" color="accent" delay={3} />
+      {/* Overview cards - 홈 화면과 100% 동일하게 한 줄에 3개 카드로 간결하게 통합 배치 */}
+      <div className="mt-6 sm:mt-8 grid grid-cols-3 gap-2 sm:gap-4 w-full box-border">
+        <ProgressCard icon="✅" label="학습 가능" value={isClient ? usableCount : initialUsable} sublabel={isClient && knownCount > 0 ? `졸업 ${knownCount}개 제외` : `전체 ${initialTotal}개`} color="success" delay={0} />
+        <ProgressCard icon="🧠" label="추적 중" value={isClient ? tracked : 0} sublabel="저장된 표현" color="primary" delay={1} />
+        <ProgressCard icon="⚠️" label="망각 위험" value={isClient ? highRisk : 0} sublabel="복습 필요" color="accent" delay={2} />
       </div>
 
       {/* Memory Strength */}
@@ -231,14 +230,15 @@ function ProgressCard({ icon, label, value, sublabel, color, delay }: { icon: st
   };
 
   return (
-    <div className="card-enter rounded-[20px] sm:rounded-card border border-border bg-white p-4 sm:p-5 shadow-card" style={{ animationDelay: `${delay * 80}ms` }}>
-      <div className="text-xl sm:text-2xl">{icon}</div>
-      <p className="mt-2 sm:mt-3 text-[11px] sm:text-xs font-semibold text-muted truncate">{label}</p>
-      <p className={`mt-1 text-lg sm:text-2xl font-extrabold ${textMap[color]}`}>{value}</p>
-      <p className="mt-0.5 text-[10px] sm:text-xs text-faint truncate">{sublabel}</p>
+    <div className="card-enter rounded-[20px] sm:rounded-card border border-border bg-white p-3 sm:p-5 shadow-card min-w-0 w-full box-border" style={{ animationDelay: `${delay * 80}ms` }}>
+      <div className="text-lg sm:text-2xl">{icon}</div>
+      <p className="mt-1.5 sm:mt-3 text-[10px] sm:text-xs font-semibold text-muted truncate min-w-0">{label}</p>
+      <p className={`mt-1 text-base sm:text-2xl font-extrabold ${textMap[color]} truncate`}>{value}</p>
+      <p className="mt-0.5 text-[9px] sm:text-xs text-faint truncate min-w-0">{sublabel}</p>
     </div>
   );
 }
+
 
 function StatBar({ label, value, max, color }: { label: string; value: number; max: number; color: string; }) {
   const percent = max > 0 ? Math.round((value / max) * 100) : 0;

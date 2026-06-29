@@ -107,7 +107,7 @@ export function HomeClientView({
         <StatCard
           label="오늘 학습"
           value={`${isClient ? todayLearningCount : initialTodayTotal}개`}
-          sublabel={initialMissionSummary}
+          sublabel="일일 권장량"
           color="primary"
           delay={0}
         />
@@ -126,6 +126,7 @@ export function HomeClientView({
           delay={2}
         />
       </div>
+
 
       {/* Hero CTA */}
       {todayLearningCount > 0 ? (

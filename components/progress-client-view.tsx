@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useTransition } from "react";
 import { PwaNavLink } from "./pwa-nav-link";
-import { getLocalProgressSummary, exportLearningData, importLearningData, clearLearningData, type LocalMemoryRecord } from "@/src/services/local-memory-service";
+import { getLocalProgressSummary, exportLearningData, importLearningData, clearLearningData, getKnownAndStarredIds, type LocalMemoryRecord } from "@/src/services/local-memory-service";
 
 interface ProgressProps {
   initialTotal: number;
@@ -20,12 +20,21 @@ export function ProgressClientView({ initialTotal, initialUsable, initialReviewR
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [isPending, startTransition] = useTransition();
 
+  // 학습 가능 표현 및 졸업 단어 상태 신설
+  const [usableCount, setUsableCount] = useState(initialUsable);
+  const [knownCount, setKnownCount] = useState(0);
+
   const refreshLocalData = () => {
     const summary = getLocalProgressSummary();
     setTracked(summary.tracked_objects);
     setAvgStrength(summary.average_memory_strength);
     setHighRisk(summary.high_forgetting_risk_objects);
     setRecords(summary.records);
+
+    // 아는 단어 졸업 개수를 실시간으로 로드하여 학습 가능 표현 수 차감 계산
+    const { knownIds } = getKnownAndStarredIds();
+    setKnownCount(knownIds.length);
+    setUsableCount(Math.max(0, initialUsable - knownIds.length));
   };
 
   useEffect(() => {
@@ -129,7 +138,7 @@ export function ProgressClientView({ initialTotal, initialUsable, initialReviewR
       {/* Overview cards - Optimized for Mobile (2 items in a row) */}
       <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-3 sm:grid-cols-2 lg:grid-cols-4 sm:gap-4">
         <ProgressCard icon="📖" label="전체 표현" value={initialTotal} sublabel="데이터셋" color="primary" delay={0} />
-        <ProgressCard icon="✅" label="학습 가능" value={initialUsable} sublabel="검증 완료" color="success" delay={1} />
+        <ProgressCard icon="✅" label="학습 가능" value={isClient ? usableCount : initialUsable} sublabel={isClient && knownCount > 0 ? `졸업 ${knownCount}개 제외` : "검증 완료"} color="success" delay={1} />
         <ProgressCard icon="🧠" label="추적 중" value={isClient ? tracked : 0} sublabel="저장된 표현" color="primary" delay={2} />
         <ProgressCard icon="⚠️" label="망각 위험" value={isClient ? highRisk : 0} sublabel="복습 필요" color="accent" delay={3} />
       </div>
@@ -178,11 +187,13 @@ export function ProgressClientView({ initialTotal, initialUsable, initialReviewR
       <div className="mt-5 sm:mt-6 rounded-[20px] sm:rounded-card border border-border bg-white p-5 sm:p-6 shadow-card">
         <h2 className="text-base sm:text-lg font-bold text-ink">데이터셋 및 로컬 현황</h2>
         <div className="mt-4 space-y-3">
-          <StatBar label="학습 가능 표현" value={initialUsable} max={initialTotal} color="bg-success" />
+          <StatBar label="잔여 학습 가능 표현" value={isClient ? usableCount : initialUsable} max={initialTotal} color="bg-success" />
+          <StatBar label="💡 아는 단어 (졸업 완료)" value={isClient ? knownCount : 0} max={initialTotal} color="bg-primary" />
           <StatBar label="검수 대기" value={initialReviewRequired} max={initialTotal} color="bg-warning" />
-          <StatBar label="기억 추적 중 (로컬 저장소)" value={isClient ? tracked : 0} max={initialUsable || 1} color="bg-primary" />
+          <StatBar label="기억 추적 중 (로컬 저장소)" value={isClient ? tracked : 0} max={isClient ? usableCount || 1 : initialUsable || 1} color="bg-accent" />
         </div>
       </div>
+
 
       {/* 학습 세부 히스토리 리스트 (프리미엄 디테일 뷰) */}
       {isClient && records.length > 0 && (

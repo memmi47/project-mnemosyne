@@ -475,7 +475,7 @@ export function SessionFlow({ items, mode = "general" }: { items: SessionItem[];
                   )}
                 </div>
                 <div className="flex flex-col items-center justify-center py-10 text-center w-full box-border">
-                  <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-ink w-full px-2 break-words">
+                  <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-ink w-full px-2 break-words">
                     {expression}
                   </h1>
                   <p className="mt-3 text-xs sm:text-sm text-faint">
@@ -492,7 +492,7 @@ export function SessionFlow({ items, mode = "general" }: { items: SessionItem[];
               <div className="absolute inset-0 flex flex-col rounded-card border border-primary/30 bg-gradient-to-br from-white to-primary-soft p-6 sm:p-8 shadow-card [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)] overflow-y-auto">
                 <div className="flex items-center justify-between gap-2 w-full box-border">
                   <div className="flex items-baseline gap-2 min-w-0 flex-1">
-                    <h2 className="text-xl sm:text-2xl font-extrabold text-ink truncate">{expression}</h2>
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-ink truncate">{expression}</h2>
                     <span className="rounded-badge bg-surface px-2 py-1 text-[10px] sm:text-[11px] font-bold text-muted flex-shrink-0">
                       {loData.separability === "inseparable" ? "분리 불가" : "분리 가능"}
                     </span>

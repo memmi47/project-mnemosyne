@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useTransition } from "react";
-import Link from "next/link";
+import { PwaNavLink } from "./pwa-nav-link";
 import { getLocalProgressSummary, exportLearningData, importLearningData, clearLearningData, type LocalMemoryRecord } from "@/src/services/local-memory-service";
 
 interface ProgressProps {
@@ -163,12 +163,12 @@ export function ProgressClientView({ initialTotal, initialUsable, initialReviewR
                 : "기억 강도가 낮습니다. 지금 바로 학습/복습을 시작하세요!"}
             </p>
             <div className="mt-4 flex flex-wrap gap-3 justify-center sm:justify-start">
-              <Link
+              <PwaNavLink
                 href="/session"
                 className="inline-flex h-11 items-center rounded-btn bg-primary px-6 text-xs sm:text-sm font-bold text-white shadow-btn transition hover:shadow-btn-hover hover:-translate-y-0.5"
               >
                 🚀 즉시 복습 / 학습 시작
-              </Link>
+              </PwaNavLink>
             </div>
           </div>
         </div>

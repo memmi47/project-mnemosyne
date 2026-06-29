@@ -1,6 +1,6 @@
 import { LearningObjectDetail } from "@/components/learning-object-detail";
 import { loadLearningObjects } from "@/src/data/static-loader/learning-object-loader";
-import Link from "next/link";
+import { PwaNavLink } from "@/components/pwa-nav-link";
 import { notFound } from "next/navigation";
 
 interface LearningObjectPageProps {
@@ -30,18 +30,18 @@ export default async function LearningObjectPage({ params }: LearningObjectPageP
         {/* Top bar navigation */}
         <div className="flex items-center justify-between gap-3 border-b border-border pb-4">
           <div className="flex items-center gap-2 sm:gap-3">
-            <Link
+            <PwaNavLink
               href="/"
               className="inline-flex h-9 items-center rounded-btn bg-surface px-3.5 text-xs sm:text-sm font-bold text-muted transition hover:bg-primary-soft hover:text-primary shadow-xs"
             >
               ← 맞춤 학습 큐
-            </Link>
-            <Link
+            </PwaNavLink>
+            <PwaNavLink
               href="/units"
               className="inline-flex h-9 items-center rounded-btn bg-surface px-3.5 text-xs sm:text-sm font-bold text-muted transition hover:bg-primary-soft hover:text-primary shadow-xs"
             >
               📖 유닛 교재 탐색
-            </Link>
+            </PwaNavLink>
           </div>
           <span className="text-xs font-bold text-faint hidden sm:inline">
             학습 표현 상세
@@ -54,7 +54,7 @@ export default async function LearningObjectPage({ params }: LearningObjectPageP
         {/* Next & Previous Navigation Buttons (Seamless Unit Crawling) */}
         <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-border pt-6">
           {prevObject ? (
-            <Link
+            <PwaNavLink
               href={`/learning-objects/${prevObject.learning_object_id}`}
               className="flex w-full sm:w-auto items-center justify-center gap-2 rounded-[20px] border border-border bg-white px-6 py-4 shadow-card transition hover:shadow-card-hover hover:border-primary/40 active:scale-[0.98]"
             >
@@ -62,13 +62,13 @@ export default async function LearningObjectPage({ params }: LearningObjectPageP
               <span className="text-sm sm:text-base font-extrabold text-ink truncate">
                 {prevObject.expression}
               </span>
-            </Link>
+            </PwaNavLink>
           ) : (
             <div className="hidden sm:block" />
           )}
 
           {nextObject ? (
-            <Link
+            <PwaNavLink
               href={`/learning-objects/${nextObject.learning_object_id}`}
               className="flex w-full sm:w-auto items-center justify-center gap-2 rounded-[20px] bg-gradient-to-r from-primary to-accent px-8 py-4 shadow-btn transition hover:shadow-btn-hover active:scale-[0.98] text-white"
             >
@@ -76,7 +76,7 @@ export default async function LearningObjectPage({ params }: LearningObjectPageP
                 {nextObject.expression}
               </span>
               <span className="text-xs font-bold text-white/90">다음 표현 →</span>
-            </Link>
+            </PwaNavLink>
           ) : (
             <div className="flex w-full sm:w-auto items-center justify-center rounded-[20px] bg-success px-8 py-4 text-sm font-extrabold text-white shadow-btn">
               유닛 마지막 표현입니다 🎉

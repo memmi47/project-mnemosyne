@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { PwaNavLink } from "./pwa-nav-link";
 import { getLocalProgressSummary, getTrackedRecords, getKnownAndStarredIds } from "@/src/services/local-memory-service";
 
 interface RecommendationData {
@@ -142,19 +142,19 @@ export function HomeClientView({
                 새로운 표현을 배우고, 기억 속 표현을 실시간으로 복습하세요.
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-3">
-                <Link
+                <PwaNavLink
                   href="/session"
                   className="inline-flex h-11 sm:h-12 items-center gap-2 rounded-btn bg-white px-6 sm:px-8 text-sm sm:text-base font-extrabold text-primary shadow-btn transition hover:shadow-btn-hover hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                   학습 시작하기
-                </Link>
-                <Link
+                </PwaNavLink>
+                <PwaNavLink
                   href="/bookmarks"
                   className="inline-flex h-11 sm:h-12 items-center gap-2 rounded-btn bg-white/10 border border-white/30 px-5 sm:px-6 text-sm sm:text-base font-extrabold text-white backdrop-blur-md shadow-xs transition hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   ⭐ 내 별표 단어장 ({isClient ? starredCount : 0})
-                </Link>
+                </PwaNavLink>
               </div>
             </div>
 
@@ -191,7 +191,7 @@ export function HomeClientView({
               const unitNum = lo ? lo.unit : null;
 
               return (
-                <Link
+                <PwaNavLink
                   key={`${rec.recommendation_id}_${index}`}
                   href={`/learning-objects/${rec.learning_object_id}`}
                   className="card-enter flex items-center gap-3 sm:gap-4 rounded-[20px] sm:rounded-card border border-border bg-white p-4 sm:p-5 shadow-card transition-all duration-200 hover:shadow-card-hover hover:border-primary/40 hover:-translate-y-1 active:scale-[0.98] min-w-0 w-full box-border"
@@ -223,7 +223,7 @@ export function HomeClientView({
                     </div>
                   </div>
                   <PriorityBadge score={rec.priority_score} />
-                </Link>
+                </PwaNavLink>
               );
             })}
           </div>

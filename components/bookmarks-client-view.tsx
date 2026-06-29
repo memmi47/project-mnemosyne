@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { PwaNavLink } from "./pwa-nav-link";
 import { getStarredRecords, toggleStarred, type LocalMemoryRecord } from "@/src/services/local-memory-service";
 
 export function BookmarksClientView({ loMapJson }: { loMapJson: Record<string, { definition_ko: string; unit?: number }> }) {
@@ -42,7 +42,7 @@ export function BookmarksClientView({ loMapJson }: { loMapJson: Record<string, {
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-border pb-6">
         <div>
           <div className="flex items-center gap-2">
-            <Link href="/" className="text-xs font-bold text-faint hover:text-primary transition">← 홈으로</Link>
+            <PwaNavLink href="/" className="text-xs font-bold text-faint hover:text-primary transition">← 홈으로</PwaNavLink>
             <span className="text-faint">·</span>
             <span className="rounded-full bg-accent-soft px-3 py-1 text-xs font-bold text-accent shadow-xs">
               ⭐ 즐겨찾기 단어장
@@ -57,13 +57,13 @@ export function BookmarksClientView({ loMapJson }: { loMapJson: Record<string, {
         </div>
 
         {bookmarks.length > 0 && (
-          <Link
+          <PwaNavLink
             href="/session?mode=starred"
             className="inline-flex h-11 sm:h-12 items-center justify-center gap-2 rounded-btn bg-gradient-to-r from-accent to-warning px-6 text-sm sm:text-base font-extrabold text-white shadow-btn transition hover:shadow-btn-hover hover:scale-[1.02] active:scale-[0.98]"
           >
             <span className="text-lg">🚀</span>
             <span>별표 단어 전용 퀴즈 시작</span>
-          </Link>
+          </PwaNavLink>
         )}
       </div>
 
@@ -75,12 +75,12 @@ export function BookmarksClientView({ loMapJson }: { loMapJson: Record<string, {
           <p className="mt-2 text-sm text-muted max-w-md mx-auto">
             학습 세션이나 단어 카드 화면에서 별표(⭐) 버튼을 눌러 나만의 집중 학습 단어장을 만들어 보세요.
           </p>
-          <Link
+          <PwaNavLink
             href="/session"
             className="mt-6 inline-flex h-12 items-center rounded-btn bg-primary px-6 text-sm font-bold text-white shadow-btn transition hover:shadow-btn-hover"
           >
             학습 시작하러 가기
-          </Link>
+          </PwaNavLink>
         </div>
       ) : (
         <div className="mt-6 grid gap-4 sm:grid-cols-2 w-full box-border">

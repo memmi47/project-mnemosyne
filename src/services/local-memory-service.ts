@@ -16,6 +16,8 @@ export interface LocalMemoryRecord {
   last_reviewed_at: string | null;
   next_review_at: string | null;
   updated_at: string;
+  is_known?: boolean;
+  is_starred?: boolean;
 }
 
 function readRecords(): LocalMemoryRecord[] {
@@ -164,4 +166,86 @@ export function clearLearningData(): void {
   if (typeof window === "undefined") return;
   localStorage.removeItem(STORAGE_KEY);
   localStorage.removeItem(TRACKED_IDS_KEY);
+}
+
+/** 이미 아는 단어(졸업) 토글 */
+export function toggleKnown(learningObjectId: string, expression: string): boolean {
+  if (typeof window === "undefined") return false;
+  const records = readRecords();
+  let existing = records.find(r => r.learning_object_id === learningObjectId);
+  let newState = false;
+
+  if (existing) {
+    existing.is_known = !existing.is_known;
+    existing.updated_at = new Date().toISOString();
+    newState = !!existing.is_known;
+  } else {
+    newState = true;
+    records.push({
+      learning_object_id: learningObjectId,
+      expression,
+      mastery_score: 100,
+      memory_strength: 100,
+      forgetting_risk: 0,
+      correct_count: 0,
+      incorrect_count: 0,
+      last_reviewed_at: new Date().toISOString(),
+      next_review_at: null,
+      updated_at: new Date().toISOString(),
+      is_known: true,
+      is_starred: false,
+    });
+  }
+
+  writeRecords(records);
+  return newState;
+}
+
+/** 별표/관심 단어 토글 */
+export function toggleStarred(learningObjectId: string, expression: string): boolean {
+  if (typeof window === "undefined") return false;
+  const records = readRecords();
+  let existing = records.find(r => r.learning_object_id === learningObjectId);
+  let newState = false;
+
+  if (existing) {
+    existing.is_starred = !existing.is_starred;
+    existing.updated_at = new Date().toISOString();
+    newState = !!existing.is_starred;
+  } else {
+    newState = true;
+    records.push({
+      learning_object_id: learningObjectId,
+      expression,
+      mastery_score: 50,
+      memory_strength: 50,
+      forgetting_risk: 50,
+      correct_count: 0,
+      incorrect_count: 0,
+      last_reviewed_at: new Date().toISOString(),
+      next_review_at: null,
+      updated_at: new Date().toISOString(),
+      is_known: false,
+      is_starred: true,
+    });
+  }
+
+  writeRecords(records);
+  return newState;
+}
+
+/** 졸업(Known) 및 별표(Starred) ID 목록 조회 */
+export function getKnownAndStarredIds(): { knownIds: string[]; starredIds: string[] } {
+  if (typeof window === "undefined") return { knownIds: [], starredIds: [] };
+  const records = readRecords();
+  const knownIds = records.filter(r => r.is_known).map(r => r.learning_object_id);
+  const starredIds = records.filter(r => r.is_starred).map(r => r.learning_object_id);
+  return { knownIds, starredIds };
+}
+
+/** 별표 쳐둔 단어 상세 기록 목록 조회 */
+export function getStarredRecords(): LocalMemoryRecord[] {
+  if (typeof window === "undefined") return [];
+  const records = readRecords();
+  return records.filter(r => r.is_starred);
 }

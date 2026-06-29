@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { getLocalProgressSummary, getTrackedRecords } from "@/src/services/local-memory-service";
+import { getLocalProgressSummary, getTrackedRecords, getKnownAndStarredIds } from "@/src/services/local-memory-service";
 
 interface RecommendationData {
   recommendation_id: string;
@@ -32,47 +32,49 @@ export function HomeClientView({
   const [highRiskCount, setHighRiskCount] = useState(0);
   const [activeQueue, setActiveQueue] = useState<RecommendationData[]>(() => recommendationsPool.slice(0, 8));
   const [todayLearningCount, setTodayLearningCount] = useState(initialTodayTotal);
+  const [starredCount, setStarredCount] = useState(0);
 
   useEffect(() => {
     setIsClient(true);
-    // 1. LocalStorage 실시간 통계 연동
     const summary = getLocalProgressSummary();
     const records = summary.records;
     const tracked = summary.tracked_objects;
+    const { knownIds, starredIds } = getKnownAndStarredIds();
 
     setTotalLearned(tracked);
     setAvgMemoryStrength(summary.average_memory_strength);
     setHighRiskCount(summary.high_forgetting_risk_objects);
+    setStarredCount(starredIds.length);
 
-    // 오늘 학습할 개수 동적 계산 (최소 기본 수치 보장)
     const activeCount = Math.max(initialTodayTotal, tracked > 0 ? Math.min(tracked + 3, 15) : initialTodayTotal);
     setTodayLearningCount(activeCount);
 
-    // 2. AI 맞춤 학습 큐 동적 하이브리드 정렬 (공부한 내용 실시간 반영)
     const trackedMap = new Map(records.map(r => [r.learning_object_id, r]));
 
-    // 복습이 필요한 항목 (이미 공부했고 망각 위험도가 높은 순)
-    const reviewQueue = recommendationsPool
+    // 이미 아는 단어(knownIds)는 AI 맞춤 학습 큐에서 완벽히 필터링 제외
+    const validPool = recommendationsPool.filter(rec => !knownIds.includes(rec.learning_object_id));
+
+    const reviewQueue = validPool
       .filter(rec => trackedMap.has(rec.learning_object_id))
       .map(rec => {
         const r = trackedMap.get(rec.learning_object_id)!;
         return {
           ...rec,
           activity_type: r.forgetting_risk >= 50 ? "review" : "contrast",
-          priority_score: r.forgetting_risk, // 망각 위험도를 우선도로 실시간 반영
+          priority_score: r.forgetting_risk,
         };
       })
       .sort((a, b) => b.priority_score - a.priority_score);
 
-    // 아직 공부하지 않은 신규 항목
-    const newQueue = recommendationsPool
+    const newQueue = validPool
       .filter(rec => !trackedMap.has(rec.learning_object_id))
       .map(rec => ({ ...rec, activity_type: "new_learning" }));
 
-    // 복습 대상과 신규 대상을 스마트하게 배합하여 최종 8개 큐 완성
     const combined = [...reviewQueue, ...newQueue].slice(0, 8);
     if (combined.length > 0) {
       setActiveQueue(combined);
+    } else {
+      setActiveQueue(recommendationsPool.slice(0, 8)); // 모든 단어를 안다면 폴백
     }
   }, [recommendationsPool, initialTodayTotal]);
 
@@ -139,13 +141,21 @@ export function HomeClientView({
               <p className="mt-1.5 text-xs sm:text-base text-white/90">
                 새로운 표현을 배우고, 기억 속 표현을 실시간으로 복습하세요.
               </p>
-              <Link
-                href="/session"
-                className="mt-5 inline-flex h-11 sm:h-12 items-center gap-2 rounded-btn bg-white px-6 sm:px-8 text-sm sm:text-base font-extrabold text-primary shadow-btn transition hover:shadow-btn-hover hover:scale-[1.02] active:scale-[0.98]"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                학습 시작하기
-              </Link>
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/session"
+                  className="inline-flex h-11 sm:h-12 items-center gap-2 rounded-btn bg-white px-6 sm:px-8 text-sm sm:text-base font-extrabold text-primary shadow-btn transition hover:shadow-btn-hover hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  학습 시작하기
+                </Link>
+                <Link
+                  href="/bookmarks"
+                  className="inline-flex h-11 sm:h-12 items-center gap-2 rounded-btn bg-white/10 border border-white/30 px-5 sm:px-6 text-sm sm:text-base font-extrabold text-white backdrop-blur-md shadow-xs transition hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  ⭐ 내 별표 단어장 ({isClient ? starredCount : 0})
+                </Link>
+              </div>
             </div>
 
             {/* Sheen effect & decorative shapes */}
@@ -165,7 +175,7 @@ export function HomeClientView({
                 AI 맞춤 학습 큐 <span className="text-faint font-bold text-sm sm:text-base ml-1">Today&apos;s Queue</span>
               </h2>
               <p className="text-xs sm:text-sm text-muted mt-1">
-                내 장기 기억 전환을 위해 오늘 우선적으로 학습하고 복습해야 할 추천 표현 목록입니다. 공부할 때마다 실시간 갱신됩니다.
+                내 장기 기억 전환을 위해 오늘 우선적으로 학습하고 복습해야 할 추천 표현 목록입니다. (이미 아는 단어는 자동 제외됩니다)
               </p>
             </div>
             <span className="rounded-full bg-primary-soft px-3.5 py-1 sm:px-4 sm:py-1.5 text-xs font-bold text-primary self-start sm:self-auto shadow-sm">

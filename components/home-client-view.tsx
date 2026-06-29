@@ -79,10 +79,12 @@ export function HomeClientView({
   const completionPercent = initialTotalAvailable > 0 ? Math.round((totalLearned / initialTotalAvailable) * 100) : 0;
 
   return (
-    <div className="relative mx-auto max-w-5xl px-4 py-8 sm:px-5 sm:py-10 w-full overflow-x-hidden box-border">
-      {/* Background floating decor */}
-      <div className="pointer-events-none absolute -left-20 -top-20 z-0 h-80 w-80 rounded-full bg-radial from-primary-light/20 to-transparent blur-xl animate-mn-float" />
-      <div className="pointer-events-none absolute -right-16 bottom-0 z-0 h-96 w-96 rounded-full bg-radial from-accent/15 to-transparent blur-xl animate-mn-float2" />
+    <div className="relative mx-auto max-w-5xl px-4 py-8 sm:px-5 sm:py-10 w-full box-border">
+      {/* Background floating decor - iOS 스크롤 버벅임/잠금 방지를 위해 절대 래퍼 내부에 완벽 격리 */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="absolute -left-20 -top-20 h-80 w-80 rounded-full bg-radial from-primary-light/20 to-transparent blur-xl animate-mn-float" />
+        <div className="absolute -right-16 bottom-0 h-96 w-96 rounded-full bg-radial from-accent/15 to-transparent blur-xl animate-mn-float2" />
+      </div>
 
       {/* Welcome section */}
       <div className="relative z-10 animate-fade-in">

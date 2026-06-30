@@ -50,47 +50,64 @@ export function SessionFlow({ items, mode = "general" }: { items: SessionItem[];
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const { knownIds, starredIds } = getKnownAndStarredIds();
+    const initializeQueue = () => {
     const records = getTrackedRecords();
     const trackedMap = new Map(records.map(r => [r.learning_object_id, r]));
+    const { knownIds, starredIds } = getKnownAndStarredIds();
 
-    let pool: SessionItem[] = [];
+    let pool = items;
 
+    // 1단계: 모드별 기초 풀(Pool) 필터링 (아는 단어 제외 등)
     if (mode === "starred") {
-      // 별표 모드: 별표 쳐둔 단어만 모아서 큐 생성
       pool = items.filter(item => starredIds.includes(item.learningObject.learning_object_id));
       if (pool.length === 0) {
         alert("⭐ 별표 쳐둔 단어가 아직 없습니다! 일반 세션으로 전환합니다.");
         pool = items.filter(item => !knownIds.includes(item.learningObject.learning_object_id));
       }
     } else {
-      // 일반 모드: 이미 아는 단어(knownIds)를 100% 완벽히 제외
       pool = items.filter(item => !knownIds.includes(item.learningObject.learning_object_id));
     }
 
     if (pool.length === 0) {
-      // 모든 단어를 다 아는 경우 풀백
       pool = items.slice(0, 3);
     }
 
-    // 1. 미학습 아이템 무작위 셔플 (사용자 요청: 학습하지 않은 새로운 단어 최우선 배치)
-    const newCandidates = pool.filter(item => !trackedMap.has(item.learningObject.learning_object_id)).sort(() => Math.random() - 0.5);
+    // 2단계: 모드별 맞춤형 추천 알고리즘 적용
+    const unlearned = pool.filter(item => !trackedMap.has(item.learningObject.learning_object_id));
+    const learned = pool.filter(item => trackedMap.has(item.learningObject.learning_object_id));
 
-    // 2. 복습 권장(망각 위험도가 높은) 아이템 필터링 및 정렬
-    const reviewCandidates = pool.filter(item => trackedMap.has(item.learningObject.learning_object_id));
-    reviewCandidates.sort((a, b) => {
-      const rA = trackedMap.get(a.learningObject.learning_object_id)!;
-      const rB = trackedMap.get(b.learningObject.learning_object_id)!;
-      return rB.forgetting_risk - rA.forgetting_risk; // 망각 위험도 높은 순
-    });
+    let combined: typeof items = [];
 
-    // 복습 그룹 내에서도 고착화를 막기 위해 상위 15개를 추출하여 무작위 셔플
-    const topReviews = reviewCandidates.slice(0, 15).sort(() => Math.random() - 0.5);
+    if (mode === "review") {
+      // [프로그레스 화면 진입] 복습 집중 모드: 망각 위험도가 높은 단어를 1순위로!
+      learned.sort((a, b) => {
+        const rA = trackedMap.get(a.learningObject.learning_object_id)!;
+        const rB = trackedMap.get(b.learningObject.learning_object_id)!;
+        return rB.forgetting_risk - rA.forgetting_risk; // 망각 위험도 내림차순
+      });
+      const topReviews = learned.slice(0, 15).sort(() => Math.random() - 0.5); // 고착화 방지 셔플
+      const randomNew = unlearned.sort(() => Math.random() - 0.5).slice(0, 10);
+      combined = [...topReviews, ...randomNew];
+    } else if (mode === "starred") {
+      // [별표 모드] 무작위 셔플
+      combined = pool.sort(() => Math.random() - 0.5);
+    } else {
+      // [홈 화면 진입] 일반(새 단어) 학습 모드: 완전히 새로운 미학습 단어를 1순위로!
+      const randomNew = unlearned.sort(() => Math.random() - 0.5).slice(0, 15);
+      
+      // 미학습 단어가 부족할 경우, 학습 횟수(정답+오답)가 "가장 적은" 단어들로 2순위 채움
+      learned.sort((a, b) => {
+        const rA = trackedMap.get(a.learningObject.learning_object_id)!;
+        const rB = trackedMap.get(b.learningObject.learning_object_id)!;
+        const countA = rA.correct_count + rA.incorrect_count;
+        const countB = rB.correct_count + rB.incorrect_count;
+        return countA - countB; // 학습 횟수 오름차순 (적은 순)
+      });
+      const lowCountLearned = learned.slice(0, 15).sort(() => Math.random() - 0.5); // 고착화 방지 셔플
+      combined = [...randomNew, ...lowCountLearned];
+    }
 
-    // 3. 큐 결합: 새로운 단어(newCandidates)를 무조건 배열의 맨 앞(최우선)에 배치하고, 부족할 경우 복습 단어로 채움
-    let combined = [...newCandidates, ...topReviews];
-
-    // 4. 세션당 최종 개수만큼 커팅
+    // 3단계: 세션당 최종 개수만큼 커팅
     combined = combined.slice(0, mode === "starred" ? 10 : 3);
 
     if (combined.length > 0) {
@@ -104,6 +121,9 @@ export function SessionFlow({ items, mode = "general" }: { items: SessionItem[];
     if (window.speechSynthesis.onvoiceschanged !== undefined) {
       window.speechSynthesis.onvoiceschanged = updateVoices;
     }
+  };
+
+  initializeQueue();
   }, [items, mode]);
 
   const currentItem = activeItems[currentIndex];

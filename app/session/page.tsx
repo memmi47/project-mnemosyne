@@ -19,7 +19,7 @@ interface PageProps {
 
 export default async function SessionPage({ searchParams }: PageProps) {
   const params = searchParams ? await searchParams : {};
-  const mode = params.mode === "starred" ? "starred" : "general";
+  const mode = params.mode === "review" ? "review" : params.mode === "starred" ? "starred" : "general";
   const mission = await getTodayMission();
   const allTemplates = await loadQuizTemplates();
   const dataset = await loadLearningObjects();

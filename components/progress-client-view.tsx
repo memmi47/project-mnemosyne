@@ -172,10 +172,10 @@ export function ProgressClientView({ initialTotal, initialUsable, initialReviewR
             </p>
             <div className="mt-4 flex flex-wrap gap-3 justify-center sm:justify-start">
               <PwaNavLink
-                href="/session"
+                href="/session?mode=review"
                 className="inline-flex h-11 items-center rounded-btn bg-primary px-6 text-xs sm:text-sm font-bold text-white shadow-btn transition hover:shadow-btn-hover hover:-translate-y-0.5"
               >
-                🚀 즉시 복습 / 학습 시작
+                🚀 즉시 집중 복습 시작
               </PwaNavLink>
             </div>
           </div>

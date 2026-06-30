@@ -78,13 +78,23 @@ export function SessionFlow({ items, mode = "general" }: { items: SessionItem[];
     reviewCandidates.sort((a, b) => {
       const rA = trackedMap.get(a.learningObject.learning_object_id)!;
       const rB = trackedMap.get(b.learningObject.learning_object_id)!;
-      return rB.forgetting_risk - rA.forgetting_risk;
+      return rB.forgetting_risk - rA.forgetting_risk; // 망각 위험도 높은 순
     });
 
-    // 미학습 아이템 무작위 셔플
-    const newCandidates = pool.filter(item => !trackedMap.has(item.learningObject.learning_object_id)).sort(() => Math.random() - 0.5);
+    // 1. 망각 위험도 최상위 그룹 추출 (매번 똑같은 단어만 나오지 않게 풀 확장)
+    const topReviews = reviewCandidates.slice(0, 15);
 
-    const combined = [...reviewCandidates, ...newCandidates].slice(0, mode === "starred" ? 10 : 3);
+    // 2. 미학습 아이템 무작위 셔플
+    const newCandidates = pool.filter(item => !trackedMap.has(item.learningObject.learning_object_id)).sort(() => Math.random() - 0.5);
+    const selectedNews = newCandidates.slice(0, 15);
+
+    // 3. 리뷰 큐와 미학습 큐를 합친 뒤, 최종적으로 한 번 더 무작위 셔플!
+    // 이렇게 하면 go over, go with 같은 단어가 매번 1, 2번에 고정되어 나오는 고착화 현상을 완벽히 타파합니다.
+    let combined = [...topReviews, ...selectedNews].sort(() => Math.random() - 0.5);
+
+    // 4. 세션당 최종 개수만큼 커팅
+    combined = combined.slice(0, mode === "starred" ? 10 : 3);
+
     if (combined.length > 0) {
       setActiveItems(combined);
     }

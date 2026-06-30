@@ -188,7 +188,6 @@ export function ProgressClientView({ initialTotal, initialUsable, initialReviewR
         <div className="mt-4 space-y-3">
           <StatBar label="잔여 학습 가능 표현" value={isClient ? usableCount : initialUsable} max={initialTotal} color="bg-success" />
           <StatBar label="💡 아는 단어 (졸업 완료)" value={isClient ? knownCount : 0} max={initialTotal} color="bg-primary" />
-          <StatBar label="검수 대기" value={initialReviewRequired} max={initialTotal} color="bg-warning" />
           <StatBar label="기억 추적 중 (로컬 저장소)" value={isClient ? tracked : 0} max={isClient ? usableCount || 1 : initialUsable || 1} color="bg-accent" />
         </div>
       </div>

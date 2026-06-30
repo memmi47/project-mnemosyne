@@ -73,7 +73,10 @@ export function SessionFlow({ items, mode = "general" }: { items: SessionItem[];
       pool = items.slice(0, 3);
     }
 
-    // 복습 권장(망각 위험도가 높은) 아이템 우선 정렬
+    // 1. 미학습 아이템 무작위 셔플 (사용자 요청: 학습하지 않은 새로운 단어 최우선 배치)
+    const newCandidates = pool.filter(item => !trackedMap.has(item.learningObject.learning_object_id)).sort(() => Math.random() - 0.5);
+
+    // 2. 복습 권장(망각 위험도가 높은) 아이템 필터링 및 정렬
     const reviewCandidates = pool.filter(item => trackedMap.has(item.learningObject.learning_object_id));
     reviewCandidates.sort((a, b) => {
       const rA = trackedMap.get(a.learningObject.learning_object_id)!;
@@ -81,16 +84,11 @@ export function SessionFlow({ items, mode = "general" }: { items: SessionItem[];
       return rB.forgetting_risk - rA.forgetting_risk; // 망각 위험도 높은 순
     });
 
-    // 1. 망각 위험도 최상위 그룹 추출 (매번 똑같은 단어만 나오지 않게 풀 확장)
-    const topReviews = reviewCandidates.slice(0, 15);
+    // 복습 그룹 내에서도 고착화를 막기 위해 상위 15개를 추출하여 무작위 셔플
+    const topReviews = reviewCandidates.slice(0, 15).sort(() => Math.random() - 0.5);
 
-    // 2. 미학습 아이템 무작위 셔플
-    const newCandidates = pool.filter(item => !trackedMap.has(item.learningObject.learning_object_id)).sort(() => Math.random() - 0.5);
-    const selectedNews = newCandidates.slice(0, 15);
-
-    // 3. 리뷰 큐와 미학습 큐를 합친 뒤, 최종적으로 한 번 더 무작위 셔플!
-    // 이렇게 하면 go over, go with 같은 단어가 매번 1, 2번에 고정되어 나오는 고착화 현상을 완벽히 타파합니다.
-    let combined = [...topReviews, ...selectedNews].sort(() => Math.random() - 0.5);
+    // 3. 큐 결합: 새로운 단어(newCandidates)를 무조건 배열의 맨 앞(최우선)에 배치하고, 부족할 경우 복습 단어로 채움
+    let combined = [...newCandidates, ...topReviews];
 
     // 4. 세션당 최종 개수만큼 커팅
     combined = combined.slice(0, mode === "starred" ? 10 : 3);

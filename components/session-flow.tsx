@@ -107,8 +107,8 @@ export function SessionFlow({ items, mode = "general" }: { items: SessionItem[];
       combined = [...randomNew, ...lowCountLearned];
     }
 
-    // 3단계: 세션당 최종 개수만큼 커팅
-    combined = combined.slice(0, mode === "starred" ? 10 : 3);
+    // 3단계: 세션당 최종 개수만큼 커팅 (기존 3개에서 10개로 대폭 상향하여 성취감 및 템포 확보)
+    combined = combined.slice(0, mode === "starred" ? 15 : 10);
 
     if (combined.length > 0) {
       setActiveItems(combined);

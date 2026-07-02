@@ -31,8 +31,9 @@ export function HomeClientView({
   const [avgMemoryStrength, setAvgMemoryStrength] = useState(0);
   const [highRiskCount, setHighRiskCount] = useState(0);
   const [activeQueue, setActiveQueue] = useState<RecommendationData[]>(() => recommendationsPool.slice(0, 8));
-  const [todayLearningCount, setTodayLearningCount] = useState(initialTodayTotal);
+  const [todayLearningCount, setTodayLearningCount] = useState(15); // 기본 목표 15개
   const [starredCount, setStarredCount] = useState(0);
+  const [missionQuote, setMissionQuote] = useState("오늘의 맞춤형 학습 목표입니다.");
 
   useEffect(() => {
     setIsClient(true);
@@ -46,8 +47,22 @@ export function HomeClientView({
     setHighRiskCount(summary.high_forgetting_risk_objects);
     setStarredCount(starredIds.length);
 
-    const activeCount = Math.max(initialTodayTotal, tracked > 0 ? Math.min(tracked + 3, 15) : initialTodayTotal);
-    setTodayLearningCount(activeCount);
+    // [버그 수정]: 로컬 기기에서 오늘 퀴즈를 푼 기록 개수를 파악하여 15개에서 실시간 차감
+    const todayStr = new Date().toISOString().slice(0, 10);
+    const todayStudiedCount = records.filter(r => r.last_reviewed_at && r.last_reviewed_at.startsWith(todayStr)).length;
+    const remainingToday = Math.max(0, 15 - todayStudiedCount);
+    setTodayLearningCount(remainingToday);
+
+    // [문구 개선]: 의미 없는 하드코딩 문구 대신 매일 바뀌는 동기부여 문구 랜덤 표출
+    const quotes = [
+      "오늘은 망각하기 쉬운 표현들을 집중 복구해 보세요!",
+      "꾸준한 반복이 장기 기억의 핵심입니다!",
+      "새로운 구동사를 마스터할 준비가 되셨나요?",
+      "뇌가 가장 활성화되는 지금, 바로 학습을 시작하세요!",
+      "어제보다 1% 성장하는 오늘의 영단어 학습!",
+      "틀리는 것을 두려워하지 마세요. 기억의 디딤돌입니다."
+    ];
+    setMissionQuote(quotes[Math.floor(Math.random() * quotes.length)]);
 
     const trackedMap = new Map(records.map(r => [r.learning_object_id, r]));
 
@@ -105,9 +120,9 @@ export function HomeClientView({
       {/* Stats cards - 사용자 요청 완벽 원복 및 실시간 통계 100% 동기화 (무조건 한 줄에 3개 표시 + min-w-0 적용) */}
       <div className="relative z-10 mt-6 sm:mt-8 grid grid-cols-3 gap-2 sm:gap-4 w-full box-border">
         <StatCard
-          label="오늘 학습"
-          value={`${isClient ? todayLearningCount : initialTodayTotal}개`}
-          sublabel="일일 권장량"
+          label="오늘 목표"
+          value={isClient ? `${todayLearningCount}개` : "15개"}
+          sublabel={isClient && todayLearningCount === 0 ? "🎉 달성 완료!" : "일일 권장 잔여량"}
           color="primary"
           delay={0}
         />
@@ -137,7 +152,7 @@ export function HomeClientView({
                 AI MISSION · 추천 미션
               </span>
               <h2 className="mt-3 text-xl sm:text-3xl font-extrabold leading-snug text-white">
-                {initialMissionSummary}
+                {isClient ? missionQuote : "오늘의 맞춤형 학습 목표입니다!"}
               </h2>
               <p className="mt-1.5 text-xs sm:text-base text-white/90">
                 새로운 표현을 배우고, 기억 속 표현을 실시간으로 복습하세요.
